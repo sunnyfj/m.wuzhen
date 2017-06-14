@@ -17,31 +17,64 @@ $(function(){
 	//弹出层
 	$('#btn_moreComment').on('click',function(){
 		$('.more-comment').fadeIn();
-		$('html').addClass('popup_prohibit_html');
+		$('html').addClass('more_prohibit_html');
 	})
 	$('.more-comment-close').on('click',function(){
 		$('.more-comment').fadeOut(100);
-		$('html').removeClass('popup_prohibit_html');
+		$('html').removeClass('more_prohibit_html');
 	})
 
 	$('#btn_morePackage').on('click',function(){
 		$('.more-package').fadeIn(100);
-		$('html').addClass('popup_prohibit_html');
+		$('html').addClass('more_prohibit_html');
 	})
 	$('.more-package-close').on('click',function(){
 		$('.more-package').fadeOut(100);
-		$('html').removeClass('popup_prohibit_html');
+		$('html').removeClass('more_prohibit_html');
 	})
 
 	$('#btn_moreTrip').on('click',function(){
 		$('.more-trip').fadeIn(100);
-		$('html').addClass('popup_prohibit_html');
+		$('html').addClass('more_prohibit_html');
 	})
 	$('.more-trip-close').on('click',function(){
 		$('.more-trip').fadeOut(100);
-		$('html').removeClass('popup_prohibit_html');
+		$('html').removeClass('more_prohibit_html');
 	})
+	//酒店设施弹出
+	$('#btn_H-detail').on('click',function(){
+		$('.more-H-detail').fadeIn(100);
+		$('html').addClass('more_prohibit_html');
+	})
+	$('.more-H-detail-close').on('click',function(){
+		$('.more-H-detail').fadeOut(100);
+		$('html').removeClass('more_prohibit_html');
+	})
+	//房间详情预订须知弹出
+	$('#room-detailsNotice-btn').on('click',function(){
+		$('.more-detailsNotice').fadeIn(100);
+		$('html').addClass('more_prohibit_html');
+	})
+	$('.more-detailsNotice-close').on('click',function(){
+		$('.more-detailsNotice').fadeOut(100);
+		$('html').removeClass('more_prohibit_html');
+	})
+
+
+
+	//房间详情温馨提示弹出
+	$('#room-detailsPrompt-btn').on('click',function(){
+		$('.more-detailsPrompt').fadeIn(100);
+		$('html').addClass('more_prohibit_html');
+	})
+	$('.more-detailsPrompt-close').on('click',function(){
+		$('.more-detailsPrompt').fadeOut(100);
+		$('html').removeClass('more_prohibit_html');
+	})
+
+
 	//列表页展开
+	var AthisText = $('.nio-bottom-btn .btn-a').text();
 	$('.nio-bottom-btn .btn-a').on('click',function(){
 		if($(this).parent().prev().hasClass('ul-height')){
 			if ($(this).parent().prev().find('li').length>2) {
@@ -52,7 +85,7 @@ $(function(){
 			}
 		}else{
 			$(this).parent().prev().addClass('ul-height')
-			$(this).text('展开');
+			$(this).text(AthisText);
 		}
 	})
 	//美食详情页加减
@@ -90,10 +123,14 @@ $(function(){
 		$(this).next().val(num);
 	})
 	//票务 购物娱乐 筛选
-	$('.shopping-option ul li').click(function(){
-		$(this).addClass('active').siblings().removeClass('active');
-		$('.newList-modular .newList-modular-certain').eq($(this).index()).show().siblings().hide();
-	})
+	var $aLi = $('.shopping-option ul li');
+	for(var i=0; i<$aLi.length-1; i++){
+		$aLi.eq(i).click(function(){
+			$(this).addClass('active').siblings().removeClass('active');
+			$('.newList-modular .newList-modular-certain').eq($(this).index()).show().siblings().hide();
+		})
+	}
+
 	$('.click-open a').click(function(event) {
 		$(this).toggleClass('open');
 		if($(this).hasClass('open')){
@@ -159,5 +196,4 @@ $(function(){
 		}
 		
 	});
-	
 })
