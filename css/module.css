@@ -193,20 +193,20 @@
 	padding: 0.426667rem 0;
 	border-bottom: 1px solid #D5DAE1;
 }
-.shopping-dc-padding .choice-title {
+/*.shopping-dc-padding .choice-title {
 	color: #2A2A2F;
 	font-size: 0.426667rem;
-}
+}*/
 .shopping-dm-padding {
 	width: 100%;
 	padding-bottom: 0.426667rem;
 }
-.shopping-dm-padding .choice-title {
+/*.shopping-dm-padding .choice-title {
 	margin-bottom:0;
 	line-height: 1.066667rem;
 	color: #2A2A2F;
 	font-size: 0.426667rem;
-}
+}*/
 
 .choice-package {
 	padding-bottom: 0.426667rem;
@@ -1034,6 +1034,7 @@ body .package-btn a {
 	margin-right: 0.213333rem;
 }
 .contactOrDetails div.contact {
+	border: 1px solid #FF1431;
 	background-color: #FF1431;
 	color: #fff;
 }
