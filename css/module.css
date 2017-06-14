@@ -112,7 +112,7 @@
 	height: 1.066667rem;
 	border: 1px solid #D5DAE1;
 }
-.choice-date-number .number input{
+.choice-date-number .number span{
 	width: 1.066667rem;
 	height: 100%;
 	background-color: #F3F4F8;
@@ -120,8 +120,8 @@
 	vertical-align: top;
 	float: left;
 	text-align: center;
-	line-height: 0.9rem;
-	font-size: 0.32rem;
+	line-height: 1.066667rem;
+	font-size: 0.373333rem;
 }
 .choice-date-number .number a {
 	display: inline-block;
@@ -170,7 +170,7 @@
 .shopping-munber .modify {
 	border:  1px solid #D5DAE1;
 }
-.shopping-munber .modify input{
+.shopping-munber .modify a{
 	display: block;
 	width: 1.093333rem;
 	height: 1.066667rem;
@@ -182,11 +182,12 @@
 	border: none;
 	background-color: #fff;
 }
-.shopping-munber .modify input[type='button']{
+.shopping-munber .modify a.reduce,.shopping-munber .modify a.add{
 	font-size: 0.666667rem;
+	line-height: 1.0rem;
 }
-.shopping-munber .modify input[type='text']{
-	background-color: #D5DAE1;
+.shopping-munber .modify a.shows{
+	background-color: #F3F4F8;
 }
 
 .shopping-dc-padding {

@@ -90,18 +90,18 @@ $(function(){
 	})
 	//美食详情页加减
 	$('.choice-date-number .number .add').on('click',function(){
-		var num=Number($(this).prev().val());
+		var num=Number($(this).prev().text());
 		num++;
-		$(this).prev().val(num);
+		$(this).prev().text(num);
 	})
 	$('.choice-date-number .number .reduce').on('click',function(){
-		var num=Number($(this).next().val());
+		var num=Number($(this).next().text());
 		num--;
 		if(num<1){
 			num=1;
 			alert('不能再减少了');
 		}
-		$(this).next().val(num);
+		$(this).next().text(num);
 	})
 	//会议列表页 选项
 	/*$('.newList-choice li').click(function(){
@@ -109,18 +109,18 @@ $(function(){
 	})*/
 	//购物娱乐详情页 加减
 	$('.shopping-munber .add').on('click',function(){
-		var num=Number($(this).prev().val());
+		var num=Number($(this).prev().text());
 		num++;
-		$(this).prev().val(num);
+		$(this).prev().text(num);
 	})
 	$('.shopping-munber .reduce').on('click',function(){
-		var num=Number($(this).next().val());
+		var num=Number($(this).next().text());
 		num--;
 		if(num<1){
 			num=1;
 			alert('不能再减少了');
 		}
-		$(this).next().val(num);
+		$(this).next().text(num);
 	})
 	//票务 购物娱乐 筛选
 	var $aLi = $('.shopping-option ul li');
