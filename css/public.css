@@ -443,7 +443,7 @@ footer{
 	
 	/*transform: translate(-100%, 0px);*/
 	left: -85%;
-	transition: 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89) left;
+	-webkit-transition: 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89) left;
 	overflow-y :auto;
 	-webkit-overflow-scrolling : touch;
 }
@@ -452,8 +452,8 @@ footer{
 	transition: 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89) left;
 }
 .pageContent{
-	transform: translate(0px, 0px);
-	transition: transform 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89);
+	-webkit-transform: translate(0px, 0px);
+	-webkit-transition: transform 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89);
 }
 .pageContent.active {
 	-webkit-transform: translate(85%, 0px);
