@@ -440,14 +440,16 @@ footer{
 	background-color: #fff;
 	position: absolute;
 	z-index: 210;
-	transition: 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89) transform;
-	transform: translate(-100%, 0px);
+	
+	/*transform: translate(-100%, 0px);*/
+	left: -85%;
+	transition: 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89) left;
 	overflow-y :auto;
 	-webkit-overflow-scrolling : touch;
 }
 .sidenav.active {
-	transform: translate(0px, 0px);
-	transition: 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89) transform;
+	left: 0;
+	transition: 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89) left;
 }
 .pageContent{
 	transform: translate(0px, 0px);

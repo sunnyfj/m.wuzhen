@@ -155,7 +155,7 @@
             }
             return n;
         }
-        //过去日期调整
+        //过去日期为灰色
         function showColor(table1Td,year,month,date){
             var result = [];
             if(date==Date()){
@@ -177,7 +177,7 @@
             }              
         }
 
-        
+
         //选择后一天日期
         function getDateStr(date,addDayCount) {
             var dd = date;
@@ -200,6 +200,7 @@
         function trHide(){
             var allTbody = $('.calendar').find('tbody');
             var arr = [];
+            var smum = 0;
             for(var j=0;j<allTbody.length;j++){
                 arr.push(allTbody.eq(j).find('tr:last'));
                 arr.push(allTbody.eq(j).find('tr:last').prev());
@@ -207,12 +208,36 @@
             for(var i=0;i<arr.length;i++){            
                 for(var t=0;t<arr[i].find('td').length;t++){
                     if(!arr[i].find('td').eq(t).hasClass('optional') && !arr[i].find('td').eq(t).hasClass('gray')){
-                    arr[i].find('td').eq(t).hide();
+                        //arr[i].find('td').eq(t).hide();
+                        smum++;
                     }
                 }
+                if(smum==7){
+                    arr[i].eq(i).hide();
+                }
+                smum=0;
             } 
         }
         
+
+        //过去日期的tr隐藏
+        function pastDay(){
+            if($('.calendar-day').html()){
+                var num = 0;
+                var tableTr = $('.calendar-day').find('tbody').eq(0).find('tr');
+                for(var i=0; i< tableTr.length; i++){
+                    for(var j=0; j<tableTr.eq(i).find('td').length; j++){
+                        if(!tableTr.eq(i).find('td').eq(j).hasClass('optional')){
+                            num++;
+                        }
+                    }
+                    if(num==7){
+                        tableTr.eq(i).hide();
+                    }
+                    num=0;
+                }
+            }
+        }
         //给可选日期加事件
         $('.calendar').on('click','td.optional',function(){
             var allTd = $('.calendar').find('td.optional');
@@ -254,6 +279,10 @@
             showDate($('.calendar-day'),myDate.getFullYear(),myDate.getMonth(),resetDate);
             showColor($('.calendar table').eq(0).find('td.optional'),myDate.getFullYear(),myDate.getMonth()+1,Date());
             trHide();
+            pastDay();
+            //替换当天日期
+            //$('.calendar-content').find('td.optional span i').eq(0).text('今天');
+
             $('html').addClass('popup_prohibit_html');
         });
 
@@ -272,6 +301,7 @@
             showDate($('.calendar-day'),nextDayDate.getFullYear(),nextDayDate.getMonth(),resetDate);
             showColor($('.calendar table').eq(0).find('td.optional'),nextDayDate.getFullYear(),nextDayDate.getMonth()+1,nextDayDate);
             trHide();
+            pastDay();
             $('html').addClass('popup_prohibit_html');
         });
         $('.calendar-opa').click(function(event) {

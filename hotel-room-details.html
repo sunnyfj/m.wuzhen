@@ -158,14 +158,14 @@
                 <div class="room-details-date">
                     <div class="container">
                         <div class="newList-co-option room-co-option">
-                            <div class="date clearfix" id="choice_date">
-                                <div class="date-arrive left borderR">
+                            <div class="date clearfix">
+                                <div class="date-arrive left borderR" id="start">
                                     <p>入住</p>
-                                    <span data-reset="5" data-whether-end="true">2016-12-28</span>
+                                    <span data-reset="5" data-type="start">2016-12-28</span>
                                 </div>
-                                <div class="date-leave left">
+                                <div class="date-leave left" id="leave">
                                     <p>离店</p>
-                                    <span>2016-12-28</span>
+                                    <span data-reset="5" data-type="leave">2016-12-28</span>
                                 </div>
                             </div>
                         </div>
@@ -546,18 +546,9 @@
         </div>
         <!-- 日期选择部分 -->
         <div class="calendar" style="">
+            <div class="calendar-opa"></div>
             <div class="calendar-content">
                 <div class="newList-co-option calendar-top">
-                    <div class="date clearfix" id="show_choice_date">
-                        <div class="date-arrive left borderR">
-                            <p>入住</p>
-                            <span>2016-12-28</span>
-                        </div>
-                        <div class="date-leave left">
-                            <p>离店</p>
-                            <span>2016-12-28</span>
-                        </div>
-                    </div>
                     <div class="week-bar"> 
                         <div class="container">
                             <ul> 
@@ -579,10 +570,10 @@
                         </div>
                     </div>
                 </div>
-                <div class="calendar-btn">
+                <!-- <div class="calendar-btn">
                     <a class="cancel" href="javascript:;">取消</a>
                     <a class="determine" href="javascript:;">确定</a>
-                </div>
+                </div> -->
             </div>
         </div>
         <script src="js/calendar.js"></script>
