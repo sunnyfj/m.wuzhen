@@ -456,8 +456,8 @@ footer{
 	transition: transform 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89);
 }
 .pageContent.active {
-	transform: translate(85%, 0px);
-	transition: transform 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89);
+	-webkit-transform: translate(85%, 0px);
+	-webkit-transition: transform 0.4s cubic-bezier(0.07, 0.7, 0.63, 0.89);
 }
 .sidenav ul {
 	padding-top:0.213333rem;
