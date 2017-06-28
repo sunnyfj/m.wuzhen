@@ -98,7 +98,9 @@ html {
 	color: #FDFDFF;
 	border: none;
 }
-
+.arrow-lower{
+	background: url(../images/format1.png) right center no-repeat;
+}
 /*头部*/
 header {
 	width: 100%;
@@ -291,6 +293,7 @@ footer{
 	position: fixed;
 	left: 0;
 	bottom: 0;
+	z-index: 999;
 }
 .bottom_bar .sys_button{
 	width: 50%;
@@ -321,6 +324,7 @@ footer{
 	left: 0;
 	bottom: 0;
 	background-color: #fff;
+	z-index: 999;
 }
 .contactUs .contactUs-mode{
 	height: 1.333333rem;
@@ -368,6 +372,7 @@ footer{
 	left: 0;
 	bottom: 0;
 	background-color: #fff;
+	z-index: 999;
 }
 .appointed-text {
 	padding-top: 0.213333rem;
@@ -734,6 +739,7 @@ body{
 	height:100%;
 	background-color: rgba(0,0,0,.4);
 	display: none;
+	z-index: 999;
 }
 .submit-prompt .sp-content {
 	width: 70%;
@@ -768,11 +774,34 @@ body{
 .submit-prompt .sp-content div a.bor{
 	border-right: 1px solid #4D4D4D;
 }
-
-
-
-
-
-
-
 /*弹窗提示*/
+
+/*提交订单*/
+.submit-order {
+	width: 100%;
+	height: 1.333333rem;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	background-color: #2A2A2F;
+	border-top: 1px solid #fff;
+	z-index: 999;
+}
+.submit-order a {
+	display: block;
+	width: 100%;
+	height: 1.333333rem;
+	text-align: center;
+	line-height:1.333333rem; 
+	font-size: 0.373333rem;
+	color: #FFFFFF;
+}
+
+
+
+
+/*提交订单*/
+
+
+
+

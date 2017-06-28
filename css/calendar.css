@@ -6,6 +6,7 @@
 	height:100%;
 	display: none;
 	padding-top: 4.266667rem;
+	z-index: 999;
 }
 .calendar-opa {
 	width: 100%;
@@ -80,7 +81,6 @@
 
 }
 .calendar-day table tbody tr td{
-	width: 14.28%;
 	padding-bottom: 0.266667rem;
 	text-align: center;
 	color: #2A2A2F;

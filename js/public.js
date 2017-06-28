@@ -42,15 +42,12 @@ $(function(){
 		$('body').addClass('sidenav-active');
 		$('.sidenav').addClass('active');
 		$('.pageContent').addClass('active');
-		/*$('header').addClass('active');*/
 		$('.sidenav-opa').fadeIn(400);
 	});
 	$('.sidenav-opa').click(function(event) {
 		$('body').removeClass('sidenav-active');
 		$('.sidenav').removeClass('active');
 		$('.pageContent').removeClass('active');
-		$('.sidenav-opa').removeClass('active');
-		/*$('header').removeClass('active');*/
 		$('.sidenav-opa').fadeOut(400);
 	});
 
@@ -136,5 +133,43 @@ $(function(){
 			$('#g_position').hide();
 			$('html').removeClass('popup_prohibit_html');
 		});
+	//确认订单  优惠卷选择
+	$('#order-select1').click(function(event) {
+		$('#os_content1').show();
+		$('html').addClass('more_prohibit_html');
+	});
 
+	$('#os_content1 .determine').click(function(event) {
+		//赋值选中的优惠卷
+		var thisActiveText = $(this).parents('#os_content1').find('li.active').find('p').text();
+		$('#order-select1').find('span').text(thisActiveText);
+		$('#os_content1').hide();
+		$('html').removeClass('more_prohibit_html');
+	});
+
+	$('#order-select2').click(function(event) {
+		$('#os_content2').show();
+		$('html').addClass('more_prohibit_html');
+	});
+
+	$('#os_content2 .determine').click(function(event) {
+		//赋值选中的优惠卷
+		var thisActiveText = $(this).parents('#os_content2').find('li.active').find('p').text();
+		$('#order-select2').find('span').text(thisActiveText);
+		$('#os_content2').hide();
+		$('html').removeClass('more_prohibit_html');
+	});
+
+	$('#order-select3').click(function(event) {
+		$('#os_content3').show();
+		$('html').addClass('more_prohibit_html');
+	});
+
+	$('#os_content3 .determine').click(function(event) {
+		//赋值选中的优惠卷
+		var thisActiveText = $(this).parents('#os_content3').find('li.active').find('p').text();
+		$('#order-select3').find('span').text(thisActiveText);
+		$('#os_content3').hide();
+		$('html').removeClass('more_prohibit_html');
+	});
 })

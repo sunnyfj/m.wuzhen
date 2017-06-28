@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>确认订单</title>
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection">
+        <link rel="stylesheet" href="../css/swiper.css">
+        <link rel="stylesheet" href="../css/public.css">
+        <link rel="stylesheet" href="../css/module.css">
+
+        <script src="../build/flexible_css.debug.js"></script>
+        <script src="../build/flexible.debug.js"></script>
+        <script src="../js/zepto.js"></script>
+        <script src="../js/public.js"></script>
+        <script src="../js/module.js"></script>
+    </head>
+    <body>
+        <!-- 侧边导航栏 -->
+        <div class="sidenav-opa"></div>
+        <div class="sidenav">
+            <ul>
+                <li>
+                    <a class="sidenav-a" href="package-list.html">
+                        <div class="clearfix">
+                            <p class="p1">套餐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="hotel-list.html">
+                        <div class="clearfix">
+                            <p class="p2">酒店</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="food-list.html">
+                        <div class="clearfix">
+                            <p class="p3">美食</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="ticket-list.html">
+                        <div class="clearfix">
+                            <p class="p4">票务</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="quickSelection borNo">
+                    <a href="javascript:;">
+                        <p class="p5">私人订制</p>
+                    </a>
+                    <a href="javascript:;">
+                        <p class="p6">懒人模式</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="conference-list.html">
+                        <div class="clearfix">
+                            <p class="p7">会展婚宴</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="shopping-list-specialty.html">
+                        <div class="clearfix">
+                            <p class="p8">购物娱乐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p9">景区导览</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p10">语音导游</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p11">积分商城</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p12">卡券</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pageContent">
+            <!-- 页头 -->
+        	<header class="clearfix">
+                <div class="header-l">
+                    <a id="header-btn" class="btn" href="javascript:;"><img src="../images/header-btn.png"></a>
+                    <a class="logo" href="index.html"><img src="../images/logo.png"></a>
+                </div>
+                <div class="header-r">
+                    <a href="tel:13855555555"><img src="../images/tel.png"></a>
+                    <a class="personal" href="javascript:;"><img src="../images/geren.png"></a>
+                    <a href="javascript:;"><img src="../images/shopping-cart.png"></a>
+                </div>      
+            </header>
+            <!-- 内容 -->
+            <div class="order newList">
+                <div class="newList-content">
+                    <div class="newList-title">
+                        <h4 class="conference-form">确认订单</h4><br>
+                        <div class="order-title">
+                            <span class="active"><i></i>确认订单</span>
+                            <span><i></i>付款</span>
+                            <span><i></i>交易结果</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="order-address">
+                    <div class="form-list">
+                        <div class="container">
+                            <div class="line"></div>
+                            <h4>订单内所有商品共用信息</h4>
+                            <div class="form-list-modular">
+                                <div class="small">
+                                    <p>姓名</p>
+                                    <input type="" name="" placeholder="预订人姓名（收货人姓名）">
+                                </div>
+                                <div class="small">
+                                    <p>手机</p>
+                                    <input type="" name="" placeholder="预订人手机（收货人手机）">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 产品模块 -->
+                <div class="order-list">
+                    <div class="container">
+                        <div class="order-module">
+                            <div class="order-module-title">
+                                <h4>套餐</h4>
+                                <span>满减</span>
+                                <p>活动期间酒店商品满3000立减100元</p>
+                            </div>
+                            <div class="order-module-content">
+                                <div class="order-mc-product">
+                                    <div class="order-mcp-info">
+                                        <div class="order-mcpi-l">
+                                            <img src="../images/order-product1.png">
+                                        </div>
+                                        <div class="order-mcpi-r">
+                                            <h4>西栅晨暮A</h4>
+                                            <div class="order-date">
+                                                <div class="start">
+                                                    日期
+                                                    <span class="arrow-lower">2016-12-26</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-modify">
+                                        <div class="choice-date-number order-number">
+                                            <div class="number clearfix">
+                                                <a class="reduce" href="javascript:;">-</a>
+                                                <span>1</span>
+                                                <a class="add" href="javascript:;">+</a>
+                                                <p>间</p>
+                                            </div>
+                                        </div>
+                                        <div class="order-select">
+                                            <div class="order-select-show" id="order-select1">
+                                                <span>选择优惠券</span>
+                                                <b></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-detail-price">
+                                        <ul class="package-ul">
+                                            <li>
+                                                <span>1套</span>
+                                            </li>
+                                            <li class="gray">
+                                                <span>乌镇民宿1.5米大床A</span>
+                                                <b>1间1晚</b>
+                                            </li>
+                                            <li class="gray">
+                                                <span>清晨游船体验双人</span>
+                                                <b> 07：30–09：30</b>
+                                            </li>
+                                            <li class="gray">
+                                                <span>登塔鸟瞰，暮色小镇</span>
+                                            </li>
+                                            <li class="gray">
+                                                <span>西栅景区门票两张</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="order-remarks"></div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-total-priceInfo">
+                            <div class="otp-integral">
+                                <div class="form-list-modular">
+                                    <div class="small">
+                                        <p>您共有积分 80000 分，可使用积分（50积分可抵1元人民币）</p>
+                                        <input type="" name="" placeholder="积分">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="otp-listinfo">
+                                <div class="order-detail-price">
+                                    <ul>
+                                        <li class="gray">
+                                            <span>共7件4类商品，总金额</span>
+                                            <b>6674元</b>
+                                        </li>
+                                        <li>
+                                            <span>已优惠</span>
+                                            <b>-100元</b>
+                                        </li>
+                                        <li>
+                                            <span>积分抵用</span>
+                                            <b>-20元</b>
+                                        </li>
+                                        <li class="total_price">
+                                            <span>需付金额</span>
+                                            <b>6504元</b>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="order-remarks">
+                                <div class="form-list-modular">
+                                    <div class="small">
+                                        <p>备注</p>
+                                        <input type="" name="" placeholder="选填">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="order-sendAddress">
+                        <div class="container">
+                            <p class="twoline_ellipsis">其中特产商品寄送至：北京市朝阳区双桥世通国际大厦B座...</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 页脚 -->
+            <footer class="footer2 footer2-pb">
+                <div class="footer2-content">
+                    <div class="footer2-contact clearfix">
+                        <h5 class="left">联系我们</h5>
+                        <p class="left">0573-88731088</p>
+                    </div>
+                    <div class="footer2-copyright">
+                        <p>版权申明 | 乌镇旅游股份有限公司©版本所有©浙ICP备09047744号</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- 回到顶部及咨询 -->
+        <div class="sidebar">
+            <a class="help" href="javascript:;"></a>
+            <div class="gotop" id="gotop"></div>
+        </div> 
+
+        <!-- 提交订单 -->
+        <div class="submit-order">
+            <a href="javascript:;">提交订单</a>
+        </div>
+
+
+        <!-- 优惠券选择1 -->
+        <div class="M_PageSelection" id="os_content1">
+            <div class="newList-title M_PageSelection-title">
+                <h5>优惠券</h5><br>
+                <p>更多优惠供你选择</p>
+                <div class="title_line">
+                    <div class="container">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="M_PageSelection_content padding-s">
+                <div class="container">
+                    <ul>
+                        <li class="active">
+                            <p>每满1000元立减100</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>50元代金券</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>100元代金券</p>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="M_btn S_btn">
+                <div class="container clearfix">
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
