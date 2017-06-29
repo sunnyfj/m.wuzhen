@@ -189,13 +189,17 @@
         }        
            
 
-        var myDate = new Date();
-        //页面展示日期当前
-        $('#start').find('span').text(getDateStr(myDate,0));
-        if($('#leave')){
-            $('#leave').find('span').text(getDateStr(myDate,1));
-        }    
+        
+        //判断是否需要页面展示日期为当前
+        var myDate = new Date(); //页面展示的初始时间
 
+
+        if($('.activeStart').find('span').attr('data-isShowTime') == 'true'){
+            $('.activeStart').find('span').text(getDateStr(myDate,0));
+            if($('.activeLeave')){
+                $('.activeLeave').find('span').text(getDateStr(myDate,1));
+            } 
+        }
         //判断table多出的空行
         function trHide(){
             var allTbody = $('.calendar').find('tbody');
@@ -213,7 +217,7 @@
                     }
                 }
                 if(smum==7){
-                    arr[i].eq(i).hide();
+                    arr[i].hide();
                 }
                 smum=0;
             } 
@@ -238,6 +242,10 @@
                 }
             }
         }
+
+
+        var thisStartAvtive = null;
+        var thisLeaveAvtive = null;
         //给可选日期加事件
         $('.calendar').on('click','td.optional',function(){
             var allTd = $('.calendar').find('td.optional');
@@ -248,14 +256,14 @@
 
             //显示日期
             if(dateType=='start'){
-                $('#start').find('span').text($(this).attr('data-date-format'));
-                if($('#leave')){
+                $('.activeStart').eq(thisStartAvtive).find('span').text($(this).attr('data-date-format'));
+                if($('.activeStart').eq(thisStartAvtive).next('.activeLeave')){
                     var startTime = $(this).attr('data-date-format');
                     var startDate = new Date(startTime);
-                    $('#leave').find('span').text(getDateStr(startDate,1));
+                    $('.activeStart').eq(thisStartAvtive).next('.activeLeave').find('span').text(getDateStr(startDate,1));
                 }
             }else{
-                $('#leave').find('span').text($(this).attr('data-date-format'));
+                $('.activeLeave').eq(thisLeaveAvtive).find('span').text($(this).attr('data-date-format'));
             }
             $('.calendar-content').removeClass('active');
             $('.calendar-opa').css({'background-color': 'rgba(0,0,0,0)'});
@@ -266,11 +274,17 @@
                 }
             },300);
 
-            $('html').removeClass('popup_prohibit_html');
+            $('html').removeClass('more_prohibit_html');
         });
 
-
-        $('#start').click(function(event) {
+        $('.activeStart').each(function(index,item){
+            $(item).attr('data-target',index);
+        })
+        $('.activeLeave').each(function(index,item){
+            $(item).attr('data-target',index);
+        })
+        $('.activeStart').on('click',function(event) {
+            thisStartAvtive = $(this).attr('data-target');
             $('.calendar').show();
             $('.calendar-opa').css({'background-color': 'rgba(0,0,0,.5)'});
             $('.calendar-content').addClass('active');
@@ -283,17 +297,18 @@
             //替换当天日期
             //$('.calendar-content').find('td.optional span i').eq(0).text('今天');
 
-            $('html').addClass('popup_prohibit_html');
+            $('html').addClass('more_prohibit_html');
         });
 
-        $('#leave').click(function(event) {
+        $('.activeLeave').click(function(event) {
+            thisLeaveAvtive= $(this).attr('data-target');
             $('.calendar').show();
             $('.calendar-opa').css({'background-color': 'rgba(0,0,0,.5)'});
             $('.calendar-content').addClass('active');
             dateType = $(this).find('span').attr('data-type');
             var resetDate = $(this).find('span').attr('data-reset');
 
-            var leaveText = $('#start').find('span').text();
+            var leaveText = $(this).prev('.activeStart').find('span').text();
             var leaveDate = new Date(leaveText);
             var leaveNextDayDate = getDateStr(leaveDate,1);
             var nextDayDate = new Date(leaveNextDayDate);
@@ -302,7 +317,7 @@
             showColor($('.calendar table').eq(0).find('td.optional'),nextDayDate.getFullYear(),nextDayDate.getMonth()+1,nextDayDate);
             trHide();
             pastDay();
-            $('html').addClass('popup_prohibit_html');
+            $('html').addClass('more_prohibit_html');
         });
         $('.calendar-opa').click(function(event) {
             event.stopPropagation();
@@ -310,7 +325,7 @@
             setTimeout(function(){
                 $('.calendar').hide();
             },300);
-            $('html').removeClass('popup_prohibit_html');
+            $('html').removeClass('more_prohibit_html');
         });    
 
            

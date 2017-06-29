@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../css/swiper.css">
         <link rel="stylesheet" href="../css/public.css">
         <link rel="stylesheet" href="../css/module.css">
+        <link rel="stylesheet" href="../css/calendar.css">
 
         <script src="../build/flexible_css.debug.js"></script>
         <script src="../build/flexible.debug.js"></script>
@@ -181,13 +182,13 @@
                                         <div class="order-mcpi-r">
                                             <h4>望津里豪华家庭房</h4>
                                             <div class="order-date">
-                                                <div class="start">
+                                                <div class="start activeStart">
                                                     入住
-                                                    <span class="arrow-lower">2016-12-26</span>
+                                                    <span class="arrow-lower" data-reset="5" data-type="start" data-isShowTime="false">2016-12-26</span>
                                                 </div>
-                                                <div class="leave">
+                                                <div class="leave activeLeave">
                                                     离店
-                                                    <span class="arrow-lower">2016-12-26</span>
+                                                    <span class="arrow-lower" data-reset="5" data-type="leave">2016-12-26</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -243,6 +244,69 @@
                                             </div>
                                         </div>
                                     </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-module">
+                            <div class="order-module-title">
+                                <h4>套餐</h4>
+                                <span>满减</span>
+                                <p>活动期间酒店商品满3000立减100元</p>
+                            </div>
+                            <div class="order-module-content">
+                                <div class="order-mc-product">
+                                    <div class="order-mcp-info">
+                                        <div class="order-mcpi-l">
+                                            <img src="../images/order-product1.png">
+                                        </div>
+                                        <div class="order-mcpi-r">
+                                            <h4>西栅晨暮A</h4>
+                                            <div class="order-date">
+                                                <div class="start activeStart">
+                                                    日期
+                                                    <span class="arrow-lower" data-reset="5" data-type="start" data-isShowTime="false">2016-12-26</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-modify">
+                                        <div class="choice-date-number order-number">
+                                            <div class="number clearfix">
+                                                <a class="reduce" href="javascript:;">-</a>
+                                                <span>1</span>
+                                                <a class="add" href="javascript:;">+</a>
+                                                <p>间</p>
+                                            </div>
+                                        </div>
+                                        <div class="order-select">
+                                            <div class="order-select-show" id="order-select1">
+                                                <span>选择优惠券</span>
+                                                <b></b>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="order-detail-price">
+                                        <ul class="package-ul">
+                                            <li>
+                                                <span>1套</span>
+                                            </li>
+                                            <li class="gray">
+                                                <span>乌镇民宿1.5米大床A</span>
+                                                <b>1间1晚</b>
+                                            </li>
+                                            <li class="gray">
+                                                <span>清晨游船体验双人</span>
+                                                <b> 07：30–09：30</b>
+                                            </li>
+                                            <li class="gray">
+                                                <span>登塔鸟瞰，暮色小镇</span>
+                                            </li>
+                                            <li class="gray">
+                                                <span>西栅景区门票两张</span>
+                                            </li>
+                                        </ul>
+                                    </div>
+                                    <div class="order-remarks"></div>
                                 </div>
                             </div>
                         </div>
@@ -316,9 +380,9 @@
                                         <div class="order-mcpi-r">
                                             <h4>东栅门票</h4>
                                             <div class="order-date">
-                                                <div class="start">
+                                                <div class="start activeStart">
                                                     到达
-                                                    <span class="arrow-lower">2016-12-26</span>
+                                                    <span class="arrow-lower" data-reset="5" data-type="start" data-isShowTime="false">2016-12-26</span>
                                                 </div>
                                             </div>
                                         </div>
@@ -359,7 +423,7 @@
                                         <div class="form-list-modular">
                                             <div class="small">
                                                 <p>备注</p>
-                                                <input type="" name="" placeholder="选填">
+                                                <input type="text" name="" placeholder="选填">
                                             </div>
                                         </div>
                                     </div>
@@ -544,5 +608,37 @@
                 </div>
             </div>
         </div>
+    <!-- 日期选择部分 -->
+        <div class="calendar" style="">
+            <div class="calendar-opa"></div>
+            <div class="calendar-content">
+                <div class="newList-co-option calendar-top">
+                    <div class="week-bar"> 
+                        <div class="container">
+                            <ul> 
+                                <li class="weekend">日</li> 
+                                <li>一</li> 
+                                <li>二</li> 
+                                <li>三</li> 
+                                <li>四</li> 
+                                <li>五</li> 
+                                <li class="weekend">六</li> 
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-scroll">
+                    <div class="container">
+                        <div class="calendar-day" id="calendar-day">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="calendar-btn">
+                    <a class="cancel" href="javascript:;">取消</a>
+                    <a class="determine" href="javascript:;">确定</a>
+                </div> -->
+            </div>
+        </div>
+    <script src="../js/calendar.js"></script>
     </body>
 </html>
