@@ -28,8 +28,9 @@
 	margin-left:-0.613333rem;
 }
 .main_layout {
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 }
 
 .title_share h1{
@@ -445,8 +446,9 @@ body .package-btn a {
 	padding-bottom: 1.333333rem;
 }
 .more-comment-content ,.more-package-content,.more-trip-content,.more-H-detail-content{
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 }
 .more-comment-close ,.more-package-close,.more-trip-close,.more-H-detail-close,.more-detailsNotice-close,.more-detailsPrompt-close{
 	width: 100%;
@@ -526,8 +528,9 @@ body .package-btn a {
 	width: 100%;
 }
 .newList-content {
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 	padding-top: 1.333333rem;
 }
 .newList-title {
@@ -1052,8 +1055,9 @@ body .package-btn a {
 	text-decoration: none;
 }
 .nio-bottom-conference {
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 	border-bottom: 1px solid #D5DAE1;
 }
 .nio-bottom-conference dl{
@@ -1117,8 +1121,9 @@ body .package-btn a {
 	padding: 0.426667rem 0;
 }
 .cfc-introduce .line {
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 	height: 2px;
 	background-color: #D5DAE1;
 	margin-bottom: 0.426667rem;

@@ -1,9 +1,11 @@
  (
  	function() {
- 		function showDate(obj,year,month){
+        var dateType = ''; //判断点击为start或者leave
+
+ 		function showDate(obj,year,month,resetDate){
+            obj.html('');
  			var oDate = new Date();
  			var dayNum = 0;
-            var resetDate = $('#choice_date').find('span').eq(0).attr('data-reset');
 
 			for(var t=0;t<resetDate;t++){
                 var oTable = $("<table></table>");
@@ -156,7 +158,12 @@
         //过去日期调整
         function showColor(table1Td,year,month,date){
             var result = [];
-            var oDate = new Date();
+            if(date==Date()){
+                var oDate = new Date();
+            }else{
+                var oDate = date;
+            }
+            
 
             for(var i=0;i<table1Td.length;i++){
                 result.push(table1Td.eq(i));
@@ -167,133 +174,115 @@
                     table1Td.eq(i).removeClass();
                     table1Td.eq(i).addClass('gray');
                 }
-            }
-
-            //页面和 日期部分的展示日期设置为当前的
-            var dataWhetherEnd = $('#choice_date').find('span').eq(0).attr('data-whether-end');
-            //判断需不需要结束日期
-            if(dataWhetherEnd=='true'){
-                var td0_data_format_start = $('#calendar-day').find('.optional').eq(0).attr('data-date-format');
-                var td0_data_format_end = $('#calendar-day').find('.optional').eq(1).attr('data-date-format');
-                $('#choice_date').find('span').eq(0).text(td0_data_format_start);
-                $('#choice_date').find('span').eq(1).text(td0_data_format_end);   
-                $('#show_choice_date').find('span').eq(0).text(td0_data_format_start);
-                $('#show_choice_date').find('span').eq(1).text(td0_data_format_end);
-            }else{
-                var td0_data_format_start = $('#calendar-day').find('.optional').eq(0).attr('data-date-format');
-                $('#choice_date').find('span').eq(0).text(td0_data_format_start);
-                $('#choice_date').find('span').eq(1).text('');   
-                $('#show_choice_date').find('span').eq(0).text(td0_data_format_start);
-                $('#show_choice_date').find('span').eq(1).text('');
-            }
-            
+            }              
         }
+
         
+        //选择后一天日期
+        function getDateStr(date,addDayCount) {
+            var dd = date;
+            dd.setDate(dd.getDate()+addDayCount);//获取AddDayCount天后的日期
+            var y = dd.getFullYear();
+            var m = dd.getMonth()+1;//获取当前月份的日期
+            var d = dd.getDate();
+            return y+"-"+tuDou(m)+"-"+tuDou(d);
+        }        
+           
+
         var myDate = new Date();
-        showDate($('.calendar-day'),myDate.getFullYear(),myDate.getMonth());
-        showColor($('.calendar table').eq(0).find('td.optional'),myDate.getFullYear(),myDate.getMonth()+1,Date());
-        
+        //页面展示日期当前
+        $('#start').find('span').text(getDateStr(myDate,0));
+        if($('#leave')){
+            $('#leave').find('span').text(getDateStr(myDate,1));
+        }    
+
         //判断table多出的空行
-        var allTbody = $('.calendar').find('tbody');
-        var arr = [];
-        for(var j=0;j<allTbody.length;j++){
-            arr.push(allTbody.eq(j).find('tr:last'));
-            arr.push(allTbody.eq(j).find('tr:last').prev());
-        }
-        for(var i=0;i<arr.length;i++){            
-            for(var t=0;t<arr[i].find('td').length;t++){
-                if(!arr[i].find('td').eq(t).hasClass('optional') && !arr[i].find('td').eq(t).hasClass('gray')){
-                arr[i].find('td').eq(t).hide();
-                }
+        function trHide(){
+            var allTbody = $('.calendar').find('tbody');
+            var arr = [];
+            for(var j=0;j<allTbody.length;j++){
+                arr.push(allTbody.eq(j).find('tr:last'));
+                arr.push(allTbody.eq(j).find('tr:last').prev());
             }
-        }
-        
-
-
-
-
-        var bFlag = true;
-        $('.calendar').find('td.optional').click(function(event){
-            var $atd = $('.calendar').find('td.optional');
-            var dataWhetherEnd = $('#choice_date').find('span').eq(0).attr('data-whether-end');
-            //判断需不需要结束日期
-            if(dataWhetherEnd =='true'){
-                if(bFlag){
-                    $atd.removeClass('selected-start');
-                    $atd.removeClass('selected-end');
-                    $atd.removeClass('selected-line');
-                    $(this).addClass('selected-start');
-                    $('#show_choice_date').find('span').eq(0).text($(this).attr('data-date-format'));
-                    //$('#show_choice_date').find('span').eq(1).text($(this).next().attr('data-date-format'));
-                    bFlag = false;
-                }else{
-                    if($(this).attr('date-sec') <= $(this).parents('.calendar').find('.selected-start').attr('date-sec')){
-                        $atd.removeClass('selected-start');
-                        $atd.removeClass('selected-end');
-                        $atd.removeClass('selected-line');
-                        $(this).addClass('selected-start');
-                        $('#show_choice_date').find('span').eq(0).text($(this).attr('data-date-format'));
-                        //$('#show_choice_date').find('span').eq(1).text($(this).next().attr('data-date-format'));
-                        bFlag = false;
-                    }else{
-                        $(this).addClass('selected-end');
-                        $('#show_choice_date').find('span').eq(1).text($(this).attr('data-date-format'));
-                        var startTime = $(this).parents('.calendar').find('.selected-start').attr('date-sec');
-                        var endTime = $(this).attr('date-sec');
-
-                        for(var i=0;i<$atd.length;i++){
-                            if($atd.eq(i).attr('date-sec') >= startTime && $atd.eq(i).attr('date-sec') <= endTime){
-                                $atd.eq(i).addClass('selected-line');
-                            }
-                        }
-                        bFlag = true;
+            for(var i=0;i<arr.length;i++){            
+                for(var t=0;t<arr[i].find('td').length;t++){
+                    if(!arr[i].find('td').eq(t).hasClass('optional') && !arr[i].find('td').eq(t).hasClass('gray')){
+                    arr[i].find('td').eq(t).hide();
                     }
                 }
-            }else{
-                $atd.removeClass('selected-start');
-                $atd.removeClass('selected-end');
-                $atd.removeClass('selected-line');
-                $(this).addClass('selected-start');
-                $('#show_choice_date').find('span').eq(0).text($(this).attr('data-date-format'));
-                $('#show_choice_date').find('span').eq(1).text('');
+            } 
+        }
+        
+        //给可选日期加事件
+        $('.calendar').on('click','td.optional',function(){
+            var allTd = $('.calendar').find('td.optional');
+            for(var i=0; i<allTd.length; i++){
+                allTd.eq(i).removeClass('selected-start');
             }
+            $(this).addClass('selected-start');
 
-        });
-
-        $('#choice_date').click(function(event) {
-            //判断需不需要结束日期
-            var dataWhetherEnd = $('#choice_date').find('span').eq(0).attr('data-whether-end');
-            if(dataWhetherEnd!='true'){
-                $('#show_choice_date').find('.date-leave').hide();
-            }
-            $('.calendar').show();
-            $('html').addClass('popup_prohibit_html');
-        });
-        $('.calendar').find('.calendar-btn').find('.cancel').click(function(event) {
-            $('.calendar').hide();
-            $('html').removeClass('popup_prohibit_html');
-        });
-        $('.calendar').find('.calendar-btn').find('.determine').click(function(event) {
-            
-
-            //判断需不需要结束日期
-            var dataWhetherEnd = $('#choice_date').find('span').eq(0).attr('data-whether-end');
-            if(dataWhetherEnd=='true'){
-                if($('.calendar').find('td').hasClass('selected-start') && $('.calendar').find('td').hasClass('selected-end')){
-                    $('.calendar').hide();
-                    $('html').removeClass('popup_prohibit_html');
-                }else{
-                    alert('请选择离店时间');
-                    return;
+            //显示日期
+            if(dateType=='start'){
+                $('#start').find('span').text($(this).attr('data-date-format'));
+                if($('#leave')){
+                    var startTime = $(this).attr('data-date-format');
+                    var startDate = new Date(startTime);
+                    $('#leave').find('span').text(getDateStr(startDate,1));
                 }
             }else{
-                $('.calendar').hide();
-                $('html').removeClass('popup_prohibit_html');
+                $('#leave').find('span').text($(this).attr('data-date-format'));
             }
-            var show_choice_date_start =$('#show_choice_date').find('span').eq(0).text();
-            var show_choice_date_end =$('#show_choice_date').find('span').eq(1).text();
-            $('#choice_date').find('span').eq(0).text(show_choice_date_start);
-            $('#choice_date').find('span').eq(1).text(show_choice_date_end);
+            $('.calendar-content').removeClass('active');
+            $('.calendar-opa').css({'background-color': 'rgba(0,0,0,0)'});
+            setTimeout(function(){
+                $('.calendar').hide();
+                for(var i=0; i<allTd.length; i++){
+                    allTd.eq(i).removeClass('selected-start');
+                }
+            },300);
+
+            $('html').removeClass('popup_prohibit_html');
         });
+
+
+        $('#start').click(function(event) {
+            $('.calendar').show();
+            $('.calendar-opa').css({'background-color': 'rgba(0,0,0,.5)'});
+            $('.calendar-content').addClass('active');
+            dateType = $(this).find('span').attr('data-type');
+            var resetDate = $(this).find('span').attr('data-reset');
+            showDate($('.calendar-day'),myDate.getFullYear(),myDate.getMonth(),resetDate);
+            showColor($('.calendar table').eq(0).find('td.optional'),myDate.getFullYear(),myDate.getMonth()+1,Date());
+            trHide();
+            $('html').addClass('popup_prohibit_html');
+        });
+
+        $('#leave').click(function(event) {
+            $('.calendar').show();
+            $('.calendar-opa').css({'background-color': 'rgba(0,0,0,.5)'});
+            $('.calendar-content').addClass('active');
+            dateType = $(this).find('span').attr('data-type');
+            var resetDate = $(this).find('span').attr('data-reset');
+
+            var leaveText = $('#start').find('span').text();
+            var leaveDate = new Date(leaveText);
+            var leaveNextDayDate = getDateStr(leaveDate,1);
+            var nextDayDate = new Date(leaveNextDayDate);
+
+            showDate($('.calendar-day'),nextDayDate.getFullYear(),nextDayDate.getMonth(),resetDate);
+            showColor($('.calendar table').eq(0).find('td.optional'),nextDayDate.getFullYear(),nextDayDate.getMonth()+1,nextDayDate);
+            trHide();
+            $('html').addClass('popup_prohibit_html');
+        });
+        $('.calendar-opa').click(function(event) {
+            event.stopPropagation();
+            $('.calendar-content').removeClass('active');
+            setTimeout(function(){
+                $('.calendar').hide();
+            },300);
+            $('html').removeClass('popup_prohibit_html');
+        });    
+
+           
  	}
  )()

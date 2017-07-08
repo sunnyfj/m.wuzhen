@@ -203,9 +203,11 @@
 	margin-bottom: 0.666667rem;
 }
 .quick-selection-mode {
-	width: 88.8%;
-	padding: 0.4rem 0;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
+	padding-top: 0.4rem;
+	padding-bottom: 0.4rem;
 }
 .quick-selection .border-b {
 	border-bottom: 1px solid #D5DAE1;
@@ -238,8 +240,9 @@
 	padding-bottom: 0.746667rem;
 }
 #swiper-container2 .slide-link {
-	width: 88.8%;
-	margin: 0 auto;
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
 }
 #swiper-container2 .slide-img {
 	width: 2.133333rem;
