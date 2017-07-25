@@ -14,7 +14,7 @@
 .clearfix:after{visibility:hidden;display:block;font-size:0;content:" ";clear:both;height:0;}
 .clearfix{zoom:1;}
 body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td,hr,button,article,
-aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{margin:0;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box;letter-spacing: 0.8px;}
+aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section,a{margin:0;padding:0;box-sizing:border-box;-webkit-box-sizing:border-box;letter-spacing: 0.8px;}
 
 @font-face { 
   font-family: myfont;
@@ -34,17 +34,38 @@ i,em,b,{font-weight: normal;font-style: normal;}
     display: -webkit-box;
     display: box;
 }
-
+body {
+	position: relative;
+}
+::-webkit-placeholder{
+	color: #7E808A;
+}
+.minHeight{
+	min-height: 12.4rem;
+}
 body .mybtn {
 	display: inline-block;
-	border: 1px solid #7E808A;
+	/*border: 1px solid #7E808A;
 	text-align: center;
 	font-size: 0.266667rem;
 	color: #7E808A;
 	letter-spacing: 0.57px;
 	text-decoration: none;
 	padding:0.24rem  0.373333rem;
-	margin: 0.266667rem 0;
+	margin: 0.266667rem 0;*/
+	font-size: 0.32rem;
+	color: #2A2A2F;
+	background: url(../images/down.png) right center no-repeat;
+	padding: 0.106667rem 0.426667rem  0.106667rem 0;
+	background-size: 0.32rem 0.32rem;
+}
+body .mybtn.active {
+	display: inline-block;
+	font-size: 0.32rem;
+	color: #2A2A2F;
+	background: url(../images/up.png) right center no-repeat;
+	padding: 0.106667rem 0.426667rem  0.106667rem 0;
+	background-size: 0.32rem 0.32rem;
 }
 html {
     max-width: 100%;
@@ -100,6 +121,15 @@ html {
 }
 .arrow-lower{
 	background: url(../images/format1.png) right center no-repeat;
+}
+.choice-title {
+	font-size: 0.373333rem;
+	color: #7E808A;
+	padding: 0.08rem 0;
+	margin-bottom: 0.213333rem;
+}
+.border-b {
+	border-bottom: 0.013333rem solid #7E808A;
 }
 /*头部*/
 header {
@@ -293,7 +323,7 @@ footer{
 	position: fixed;
 	left: 0;
 	bottom: 0;
-	z-index: 999;
+	z-index: 10;
 }
 .bottom_bar .sys_button{
 	width: 50%;
@@ -324,7 +354,7 @@ footer{
 	left: 0;
 	bottom: 0;
 	background-color: #fff;
-	z-index: 999;
+	z-index: 10;
 }
 .contactUs .contactUs-mode{
 	height: 1.333333rem;
@@ -372,7 +402,7 @@ footer{
 	left: 0;
 	bottom: 0;
 	background-color: #fff;
-	z-index: 999;
+	z-index: 10;
 }
 .appointed-text {
 	padding-top: 0.213333rem;
@@ -460,16 +490,18 @@ body{
 }
 .pageContent{
 	width: 100%;
-	position: absolute;
-	left: 0;
+	/*position: absolute;
+	left: 0;*/
+	position: relative;
+	margin-left: 0;
 	/*transform: translate(0px, 0px);*/
-	transition: 0.4s ease left;
+	transition: 0.4s ease margin-left;
 }
-.pageContent.active {
+/*.pageContent.active {
 	left: 85%;
-	/*transform: translate(85%, 0px);*/
+	transform: translate(85%, 0px);
 	transition: 0.4s ease left;
-}
+}*/
 
 
 .sidenav ul {
@@ -487,7 +519,7 @@ body{
 	color:#2A2A2F;
 }
 .sidenav-a div{
-	width: 100%;
+	width: 100%; 
 }
 .sidenav-a div p {
 	font-size: 0.373333rem;
@@ -756,14 +788,17 @@ body{
 	font-size: 0.426667rem;
 	color: #030303;
 	line-height: 1.6;
+	text-align: center;
 }
 .submit-prompt .sp-content div {
-	display: flex;
 	border-top: 1px solid #4D4D4D;
+	display: -webkit-box;
+    display: flex;
 }
 .submit-prompt .sp-content div a{
 	display: block;
-	width: 50%;
+	-webkit-box-flex: 1;
+    flex: 1;
 	text-align: center;
 	height: 1.173333rem;
 	line-height: 1.173333rem;
@@ -796,12 +831,97 @@ body{
 	font-size: 0.373333rem;
 	color: #FFFFFF;
 }
-
-
-
-
 /*提交订单*/
 
+/*弹出公用模板*/
+.more-pop{
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 300;
+	background-color: #fff;
+	overflow-y:auto;
+	display: none;
+	padding-bottom: 1.333333rem;
+}
+.more-pop-content{
+	width: 100%;
+	padding-right: 0.426667rem;
+	padding-left: 0.426667rem;
+}
+.more-pop-close{
+	width: 100%;
+	height: 1.333333rem;
+	background-color: #fff;
+	position: fixed;
+	left: 0;
+	bottom: 0;
+	text-align: center;
+	line-height: 1.333333rem;
+	font-size: 0.666667rem;
+}
 
 
+.more-pop-main {
+	width: 100%;
+}
+.more-pop-main .more-pop-info {
+	border-bottom: 1px solid #D5DAE1;
+	padding: 0.426667rem 0;
+}
+.more-pop-main .more-pop-info  p {
+	width: 100%;
+	font-size: 0.373333rem;
+	color: #7E808A;
+	line-height: 1.7;
+}
+.more-pop-main .more-pop-info p:first-child {
+	margin-bottom: 0.16rem;
+}
+.more-pop-main .more-pop-info  span {
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	padding-left: 0.32rem;
+}
+.more-pop-main ul {
+	padding: 0.64rem 0;
+	width: 100%;
+}
+.more-pop-main ul li {
+	width: 100%;
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+}
+.more-pop-prompt {
+	font-size: 0.32rem;
+	color: #7E808A;
+}
+.more-pop-prompt em {
+	font-style: normal;
+	color: #f00;
+}
 
+/*弹出公用模板*/
+
+
+/*立即兑换*/
+.redeem-now {
+	width: 100%;
+    height: 1.333333rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 10;
+    line-height: 1.333333rem;
+    background-color: #FF1431;
+}
+.redeem-now a {
+	font-size: 0.373333rem;
+	color: #FFFFFF;
+	display: block;
+	width: 100%;
+	height: 100%;
+	text-align: center;
+}

@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="css/swiper.css">
         <link rel="stylesheet" href="css/public.css">
         <link rel="stylesheet" href="css/module.css">
+        <link rel="stylesheet" href="css/calendar.css">
 
         <script src="build/flexible_css.debug.js"></script>
         <script src="build/flexible.debug.js"></script>
@@ -158,6 +159,18 @@
                 </div>
                 <div class="nio-bottom margin-tb">
                     <div class="container">
+                        <div class="newList-co-option room-co-option border-b">
+                            <div class="date clearfix">
+                                <div class="date-arrive left borderR activeStart">
+                                    <p>入住</p>
+                                    <span data-reset="5" data-type="start" data-isShowTime="true">2016-12-28</span>
+                                </div>
+                                <div class="date-leave left activeLeave">
+                                    <p>离店</p>
+                                    <span data-reset="5" data-type="leave">2016-12-28</span>
+                                </div>
+                            </div>
+                        </div>
                         <ul class="ul-height">
                             <li class="clearfix">
                                 <div class="li-text left">
@@ -212,7 +225,7 @@
                                 </div>
                             </li>
                         </ul>
-                        <div class="nio-bottom-btn"><a class="btn-a" href="javascript:;">展开全部15个房型</a></div>
+                        <div class="nio-bottom-btn"><a class="mybtn btn-a" href="javascript:;">展开全部15个房型</a></div>
                     </div>
                 </div>
                 <div class="container">
@@ -223,29 +236,40 @@
                     		<ul>
                     			<li>
                     				<img src="images/H-detailInfo1.png">
-                    				<div>中小型会议室</div>
+                    				<div>会议室</div>
                     			</li>
                     			<li>
                     				<img src="images/H-detailInfo2.png">
                     				<div>VIP接待厅</div>
                     			</li>
                     			<li>
-                    				<img src="images/H-detailInfo3.png">
-                    				<div>酒店客房</div>
-                    			</li>
-                    			<li>
                     				<img src="images/H-detailInfo4.png">
-                    				<div>中餐厅 </div>
+                    				<div>餐厅</div>
                     			</li>
                     			<li>
                     				<img src="images/H-detailInfo5.png">
-                    				<div>WIFI网络</div>
+                    				<div>WIFI</div>
                     			</li>
                     		</ul>
+                            <ul>
+                                <li>
+                                    <img src="images/H-detailInfo3.png">
+                                    <div>咖啡厅</div>
+                                </li>
+                                <li>
+                                    <img src="images/H-detailInfo6.png">
+                                    <div>健身房</div>
+                                </li>
+                                <li>
+                                    <img src="images/H-detailInfo7.png">
+                                    <div>商务中心</div>
+                                </li>
+                                <li>
+                                    <img src="images/H-detailInfo8.png">
+                                    <div>游泳池</div>
+                                </li>
+                            </ul>
                     	</div>
-                    	<div class="package-btn">
-                            <a class="mybtn" href="javascript:;" id="btn_H-detail">查看完整图文内容</a>
-                        </div>
                     </div>
                     <div class="package-content" style="border:none;">
                         <div class="package-info">
@@ -256,8 +280,8 @@
                             <ol class="package-list">
                                 <li>古典硬山式明清园林建筑风格，毗邻乌镇洛神SPA，北可隔河眺望 湿地，配套设施精致、完备、豪华却又清幽雅致，十足“大隐隐于市”的气势。</li>
                             </ol>
-                            <div class="package-btn">
-                                <a class="mybtn" href="javascript:;" id="btn_morePackage">查看完整图文内容</a>
+                            <div class="open-btn">
+                                <a class="mybtn" href="javascript:;" id="btn_morePackage">查看全部</a>
                             </div>
                         </div>
                     </div>
@@ -310,8 +334,8 @@
                                 <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
                             </li>
                         </ul>
-                        <div class="package-btn">
-                            <a class="mybtn" href="javascript:;" id="btn_moreComment">查看更多评价</a>
+                        <div class="open-btn">
+                            <a class="mybtn" href="javascript:;" id="btn_moreComment">查看全部</a>
                         </div>
                     </div>
                     <div class="Recommend">
@@ -611,48 +635,45 @@
         </div>
         <!-- 跟多套餐弹出 -->
 
-        <!-- 跟多设施弹出 -->
-        <div class="more-H-detail">
-            <div class="more-H-detail-content">
-               	<div class="H-detail">
-                	<p class="choice-title">酒店配套</p>
-                	<div class="H-detailInfo">
-                		<ul>
-                			<li>
-                				<img src="images/H-detailInfo1.png">
-                				<div>中小型会议室</div>
-                			</li>
-                			<li>
-                				<img src="images/H-detailInfo2.png">
-                				<div>VIP接待厅</div>
-                			</li>
-                			<li>
-                				<img src="images/H-detailInfo3.png">
-                				<div>酒店客房</div>
-                			</li>
-                			<li>
-                				<img src="images/H-detailInfo4.png">
-                				<div>中餐厅 </div>
-                			</li>
-                			<li>
-                				<img src="images/H-detailInfo5.png">
-                				<div>WIFI网络</div>
-                			</li>
-                		</ul>
-                	</div>
-                </div>
-            </div>
-            <div class="more-H-detail-close">×</div>
-        </div>
-        <!-- 跟多设施弹出 -->
-
 
         <!-- 加入购物车 -->
         <div class="bottom_bar">
             <a class="sys_button cart" href="javascript:;">加入购物车</a>
             <a class="sys_button buy" href="javascript:;">立即购买</a>
         </div>
-    
+        <!-- 日期选择部分 -->
+        <div class="calendar" style="">
+            <div class="calendar-opa"></div>
+            <div class="calendar-content">
+                <div class="newList-co-option calendar-top">
+                    <div class="week-bar"> 
+                        <div class="container">
+                            <ul> 
+                                <li class="weekend">日</li> 
+                                <li>一</li> 
+                                <li>二</li> 
+                                <li>三</li> 
+                                <li>四</li> 
+                                <li>五</li> 
+                                <li class="weekend">六</li> 
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-scroll">
+                    <div class="container">
+                        <div class="calendar-day" id="calendar-day">
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="calendar-btn">
+                    <a class="cancel" href="javascript:;">取消</a>
+                    <a class="determine" href="javascript:;">确定</a>
+                </div> -->
+            </div>
+        </div>
+        <script src="js/calendar.js"></script>
 
         <script>
             var swiper = new Swiper('.swiper-container', {

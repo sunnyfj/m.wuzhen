@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>账户注册</title>
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection">
+
+        <link rel="stylesheet" href="../css/public.css">  
+        <link rel="stylesheet" href="../css/other-blocks.css">
+
+        <script src="../build/flexible_css.debug.js"></script>
+        <script src="../build/flexible.debug.js"></script>
+        <script src="../js/zepto.js"></script>
+        <script src="../js/module.js"></script>
+	</head>
+	<body>
+        <div class="register">
+        	<div class="register-title">
+        		<h4>账户注册</h4>
+        		<p>开启乌镇之旅</p>
+        		<div>
+        			<a class="loginUp" href="javascript:;">登录</a>
+        		</div>
+        	</div>
+        	<div class="register-bottom">
+        		<div class="container">
+        			<ul class="register-tab">
+		        		<li class="active">手机号注册</li>
+		        		<li>邮箱注册</li>
+		        	</ul>
+    				<div class="register-form">
+    					<div class="register-form-item active">
+	    					<form class="login-form">
+				        		<div class="login-form-item">
+				        			<p>账号</p>
+					                <input type="text" name="" placeholder="用户名">
+					                <label>账号或密码错误。</label>
+				        		</div>
+				        		<div class="login-form-item">
+				        			<p>手机号</p>
+					                <input type="text" name="" placeholder="填写手机号">
+				        		</div>
+				        		<div class="login-form-item code">
+				        			<p>验证码</p>
+					                <div>
+					                	<input type="text" name="" placeholder="输入右图显示的验证码">
+						                <a href="javascript:;">
+						                	<img src="../images/code-a.jpg">
+						                </a>
+					                </div>
+				        		</div>
+				        		<div class="login-form-item code">
+				        			<p>动态码</p>
+					                <div>
+					                	<input type="text" name="" placeholder="输入获取的动态码">
+						                <input class="button" id="phoneReg" type="button" name="" value="获取动态验证码">
+					                </div>
+				        		</div>
+				        		<div class="login-form-item">
+				        			<p>真实姓名</p>
+					                <input type="text" name="" placeholder="请如实填写您的姓名">
+				        		</div>
+				        		<div class="login-form-item">
+				        			<p>登录密码</p>
+					                <input type="text" name="" placeholder="登录密码">
+				        		</div>
+				        		<div class="login-form-item">
+				        			<p>密码确认</p>
+					                <input type="text" name="" placeholder="确认登录密码">
+				        		</div>
+				        		<div class="register-see">
+				        			<div>
+				        				<input id="checked-phone" type="checkbox" class="check">
+					        			<label for="checked-phone">用户勾选即代表同意</label>
+					        			<a href="javascript:;">《服务条款》</a>
+				        			</div>
+				        			<p>注册成功后将获得200积分可用于兑换商品</p>
+				        		</div>
+				        	</form>
+				        	<div class="login-in register-in">
+				        		<input type="submit" name="" value="注册">
+				        	</div>
+	    				</div>
+	    				<div class="register-form-item">
+	    					<form class="login-form">
+				        		<div class="login-form-item">
+				        			<p>账号</p>
+					                <input type="text" name="" placeholder="用户名">
+					                <label>账号或密码错误。</label>
+				        		</div>
+				        		<div class="login-form-item">
+				        			<p>邮箱</p>
+					                <input type="text" name="" placeholder="填写邮箱地址">
+				        		</div>
+				        		<div class="login-form-item code">
+				        			<p>验证码</p>
+					                <div>
+					                	<input type="text" name="" placeholder="输入右图显示的验证码">
+						                <a href="javascript:;">
+						                	<img src="../images/code-a.jpg">
+						                </a>
+					                </div>
+				        		</div>
+				        		<div class="login-form-item code">
+				        			<p>动态码</p>
+					                <div>
+					                	<input type="text" name="" placeholder="输入获取的动态码">
+						                <input class="button" id="emailReg" type="button" name="" value="获取动态验证码">
+					                </div>
+				        		</div>
+				        		<div class="login-form-item">
+				        			<p>真实姓名</p>
+					                <input type="text" name="" placeholder="请如实填写您的姓名">
+				        		</div>
+				        		<div class="login-form-item">
+				        			<p>登录密码</p>
+					                <input type="text" name="" placeholder="登录密码">
+				        		</div>
+				        		<div class="login-form-item">
+				        			<p>密码确认</p>
+					                <input type="text" name="" placeholder="确认登录密码">
+				        		</div>
+				        		<div class="register-see">
+				        			<div>
+				        				<input id="checked-email" type="checkbox" class="check">
+					        			<label for="checked-email">用户勾选即代表同意</label>
+					        			<a href="javascript:;">《服务条款》</a>
+				        			</div>
+				        			<p>注册成功后将获得200积分可用于兑换商品</p>
+				        		</div>
+				        	</form>
+				        	<div class="login-in register-in">
+				        		<input type="submit" name="" value="注册">
+				        	</div>
+	    				</div>
+    				</div>
+        		</div>
+        	</div>
+        </div>
+        <!-- 成功反馈 -->
+        <div class="submit-prompt">
+            <div class="sp-content">
+                <p>注册成功</p>
+                <div>
+                    <a class="bor" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+	</body>
+</html>

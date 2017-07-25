@@ -1,0 +1,838 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>购物车</title>
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection">
+        <link rel="stylesheet" href="../css/swiper.css">
+        <link rel="stylesheet" href="../css/public.css">
+        <link rel="stylesheet" href="../css/module.css">
+        <link rel="stylesheet" href="../css/calendar.css">
+
+        <script src="../build/flexible_css.debug.js"></script>
+        <script src="../build/flexible.debug.js"></script>
+        <script src="../js/zepto.js"></script>
+        <script src="../js/public.js"></script>
+        <script src="../js/module.js"></script>
+    </head>
+    <body>
+        <!-- 侧边导航栏 -->
+        <div class="sidenav-opa"></div>
+        <div class="sidenav">
+            <ul>
+                <li>
+                    <a class="sidenav-a" href="package-list.html">
+                        <div class="clearfix">
+                            <p class="p1">套餐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="hotel-list.html">
+                        <div class="clearfix">
+                            <p class="p2">酒店</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="food-list.html">
+                        <div class="clearfix">
+                            <p class="p3">美食</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="ticket-list.html">
+                        <div class="clearfix">
+                            <p class="p4">票务</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="quickSelection borNo">
+                    <a href="javascript:;">
+                        <p class="p5">私人订制</p>
+                    </a>
+                    <a href="javascript:;">
+                        <p class="p6">懒人模式</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="conference-list.html">
+                        <div class="clearfix">
+                            <p class="p7">会展婚宴</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="shopping-list-specialty.html">
+                        <div class="clearfix">
+                            <p class="p8">购物娱乐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p9">景区导览</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p10">语音导游</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p11">积分商城</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p12">卡券</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pageContent">
+            <!-- 页头 -->
+        	<header class="clearfix">
+                <div class="header-l">
+                    <a id="header-btn" class="btn" href="javascript:;"><img src="../images/header-btn.png"></a>
+                    <a class="logo" href="index.html"><img src="../images/logo.png"></a>
+                </div>
+                <div class="header-r">
+                    <a href="tel:13855555555"><img src="../images/tel.png"></a>
+                    <a class="personal" href="javascript:;"><img src="../images/geren.png"></a>
+                    <a href="javascript:;"><img src="../images/shopping-cart.png"></a>
+                </div>      
+            </header>
+            <!-- 内容 -->
+            <div class="order newList">
+                <div class="newList-content">
+                    <div class="newList-title">
+                        <h4 class="shopping-cart-title">购物车</h4><br>
+                        <p>喜欢就赶紧下单吧</p>
+                    </div>
+                </div>
+                <!-- 产品模块 -->
+                <div class="order-list">
+                    <div class="container">
+                        <div class="order-module">
+                            <div class="order-module-title">
+                                <!-- <div class="shopcb" id="shopcb"></div> -->
+                                <input type="checkbox" class="check goods-check shopCheck" />
+                                <h4>酒店</h4>
+                                <span>满减</span>
+                                <p>活动期间酒店商品满3000立减100元</p>
+                            </div>
+                            <div class="order-module-content shopping-cart-content">
+                                <div class="order-mc-product">
+                                    <div class="shopping-cart-content-cb">
+                                        <input type="checkbox" class="check goods-check goodsCheck" />
+                                    </div>
+                                    <div class="shopping-cart-content-info">
+                                        <div class="order-mcp-info">
+                                            <div class="order-mcpi-l">
+                                                <img src="../images/order-product1.png">
+                                            </div>
+                                            <div class="order-mcpi-r">
+                                                <h4 class="del">望津里豪华家庭房<span></span></h4>
+                                                <div class="order-date">
+                                                    <div class="start activeStart">
+                                                        入住
+                                                        <span class="arrow-lower" data-reset="5" data-type="start" data-isShowTime="false">2016-12-26</span>
+                                                    </div>
+                                                    <div class="leave activeLeave">
+                                                        离店
+                                                        <span class="arrow-lower" data-reset="5" data-type="leave">2016-12-26</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-modify">
+                                            <div class="choice-date-number order-number">
+                                                <div class="number clearfix">
+                                                    <a class="reduce" href="javascript:;">-</a>
+                                                    <span>1</span>
+                                                    <a class="add" href="javascript:;">+</a>
+                                                    <p>间</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-select">
+                                                <div class="order-select-show" id="order-select1">
+                                                    <span>选择优惠券</span>
+                                                    <b></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-detail-price">
+                                            <ul>
+                                                <li>
+                                                    <span>1间3晚</span>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>2016-12-26</span>
+                                                    <b>1500元</b>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>2016-12-27</span>
+                                                    <b>1500元</b>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>2016-12-28</span>
+                                                    <b>1700元</b>
+                                                </li>
+                                                <li>
+                                                    <span>已优惠</span>
+                                                    <b>-500元</b>
+                                                </li>
+                                                <li>
+                                                    <span>合计</span>
+                                                    <b>4200元</b>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-remarks"></div>
+                                    </div>
+                                </div>
+                                <div class="order-mc-product">
+                                    <div class="shopping-cart-content-cb">
+                                        <input type="checkbox" class="check goods-check goodsCheck" />
+                                    </div>
+                                    <div class="shopping-cart-content-info">
+                                        <div class="order-mcp-info">
+                                            <div class="order-mcpi-l">
+                                                <img src="../images/order-product1.png">
+                                            </div>
+                                            <div class="order-mcpi-r">
+                                                <h4 class="del">望津里豪华家庭房<span></span></h4>
+                                                <div class="order-date">
+                                                    <div class="start activeStart">
+                                                        入住
+                                                        <span class="arrow-lower" data-reset="5" data-type="start" data-isShowTime="false">2016-12-26</span>
+                                                    </div>
+                                                    <div class="leave activeLeave">
+                                                        离店
+                                                        <span class="arrow-lower" data-reset="5" data-type="leave">2016-12-26</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-modify">
+                                            <div class="choice-date-number order-number">
+                                                <div class="number clearfix">
+                                                    <a class="reduce" href="javascript:;">-</a>
+                                                    <span>1</span>
+                                                    <a class="add" href="javascript:;">+</a>
+                                                    <p>间</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-select">
+                                                <div class="order-select-show" id="order-select1">
+                                                    <span>选择优惠券</span>
+                                                    <b></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-detail-price">
+                                            <ul>
+                                                <li>
+                                                    <span>1间3晚</span>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>2016-12-26</span>
+                                                    <b>1500元</b>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>2016-12-27</span>
+                                                    <b>1500元</b>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>2016-12-28</span>
+                                                    <b>1700元</b>
+                                                </li>
+                                                <li>
+                                                    <span>已优惠</span>
+                                                    <b>-500元</b>
+                                                </li>
+                                                <li>
+                                                    <span>合计</span>
+                                                    <b>4200元</b>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-remarks"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-module">
+                            <div class="order-module-title">
+                                <input type="checkbox" class="check goods-check shopCheck" />
+                                <h4>套餐</h4>
+                                <span>满减</span>
+                                <p>活动期间酒店商品满3000立减100元</p>
+                            </div>
+                            <div class="order-module-content shopping-cart-content">
+                                <div class="order-mc-product">
+                                    <div class="shopping-cart-content-cb">
+                                        <input type="checkbox" class="check goods-check goodsCheck" />
+                                    </div>
+                                    <div class="shopping-cart-content-info">
+                                        <div class="order-mcp-info">
+                                            <div class="order-mcpi-l">
+                                                <img src="../images/order-product1.png">
+                                            </div>
+                                            <div class="order-mcpi-r">
+                                                <h4 class="del">西栅晨暮A<span></span></h4>
+                                                <div class="order-date">
+                                                    <div class="start activeStart">
+                                                        日期
+                                                        <span class="arrow-lower" data-reset="5" data-type="start" data-isShowTime="false">2016-12-26</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-modify">
+                                            <div class="choice-date-number order-number">
+                                                <div class="number clearfix">
+                                                    <a class="reduce" href="javascript:;">-</a>
+                                                    <span>1</span>
+                                                    <a class="add" href="javascript:;">+</a>
+                                                    <p>间</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-select">
+                                                <div class="order-select-show" id="order-select4">
+                                                    <span>选择优惠券</span>
+                                                    <b></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-detail-price">
+                                            <ul class="package-ul">
+                                                <li>
+                                                    <span>1套</span>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>乌镇民宿1.5米大床A</span>
+                                                    <b>1间1晚</b>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>清晨游船体验双人</span>
+                                                    <b> 07：30–09：30</b>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>登塔鸟瞰，暮色小镇</span>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>西栅景区门票两张</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-remarks"></div>
+                                    </div>
+                                </div>
+                                <div class="order-mc-product">
+                                    <div class="shopping-cart-content-cb">
+                                        <input type="checkbox" class="check goods-check goodsCheck" />
+                                    </div>
+                                    <div class="shopping-cart-content-info">
+                                        <div class="order-mcp-info">
+                                            <div class="order-mcpi-l">
+                                                <img src="../images/order-product1.png">
+                                            </div>
+                                            <div class="order-mcpi-r">
+                                                <h4 class="del">西栅晨暮A<span></span></h4>
+                                                <div class="order-date">
+                                                    <div class="start activeStart">
+                                                        日期
+                                                        <span class="arrow-lower" data-reset="5" data-type="start" data-isShowTime="false">2016-12-26</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-modify">
+                                            <div class="choice-date-number order-number">
+                                                <div class="number clearfix">
+                                                    <a class="reduce" href="javascript:;">-</a>
+                                                    <span>1</span>
+                                                    <a class="add" href="javascript:;">+</a>
+                                                    <p>间</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-select">
+                                                <div class="order-select-show" id="order-select4">
+                                                    <span>选择优惠券</span>
+                                                    <b></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-detail-price">
+                                            <ul class="package-ul">
+                                                <li>
+                                                    <span>1套</span>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>乌镇民宿1.5米大床A</span>
+                                                    <b>1间1晚</b>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>清晨游船体验双人</span>
+                                                    <b> 07：30–09：30</b>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>登塔鸟瞰，暮色小镇</span>
+                                                </li>
+                                                <li class="gray">
+                                                    <span>西栅景区门票两张</span>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-remarks"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-module">
+                            <div class="order-module-title">
+                                <input type="checkbox" class="check goods-check shopCheck" />
+                                <h4>购物娱乐</h4>
+                            </div>
+                            <div class="order-module-content shopping-cart-content">
+                                <div class="order-mc-product">
+                                    <div class="shopping-cart-content-cb">
+                                        <input type="checkbox" class="check goods-check goodsCheck" />
+                                    </div>
+                                    <div class="shopping-cart-content-info">
+                                        <div class="order-mcp-info">
+                                            <div class="order-mcpi-l">
+                                                <img src="../images/order-product2.png">
+                                            </div>
+                                            <div class="order-mcpi-r">
+                                                <h4 class="del">精选狼羊鼠兔毫套（五支装）<span></span></h4>
+                                            </div>
+                                        </div>
+                                        <div class="order-modify">
+                                            <div class="choice-date-number order-number">
+                                                <div class="number clearfix">
+                                                    <a class="reduce" href="javascript:;">-</a>
+                                                    <span>1</span>
+                                                    <a class="add" href="javascript:;">+</a>
+                                                    <p>间</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-select">
+                                                <div class="order-select-show" id="order-select2">
+                                                    <span>选择优惠券</span>
+                                                    <b></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-detail-price">
+                                            <ul>
+                                                <li class="gray">
+                                                    <span>原价</span>
+                                                    <b>4589元</b>
+                                                </li>
+                                                <li>
+                                                    <span>已优惠</span>
+                                                    <b>-100元</b>
+                                                </li>
+                                                <li>
+                                                    <span>合计</span>
+                                                    <b>4489元</b>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-remarks"></div>
+                                    </div>
+                                </div>
+                                <div class="order-mc-product">
+                                    <div class="shopping-cart-content-cb">
+                                        <input type="checkbox" class="check goods-check goodsCheck" />
+                                    </div>
+                                    <div class="shopping-cart-content-info">
+                                        <div class="order-mcp-info">
+                                            <div class="order-mcpi-l">
+                                                <img src="../images/order-product2.png">
+                                            </div>
+                                            <div class="order-mcpi-r">
+                                                <h4 class="del">精选狼羊鼠兔毫套（五支装）<span></span></h4>
+                                            </div>
+                                        </div>
+                                        <div class="order-modify">
+                                            <div class="choice-date-number order-number">
+                                                <div class="number clearfix">
+                                                    <a class="reduce" href="javascript:;">-</a>
+                                                    <span>1</span>
+                                                    <a class="add" href="javascript:;">+</a>
+                                                    <p>间</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-select">
+                                                <div class="order-select-show" id="order-select2">
+                                                    <span>选择优惠券</span>
+                                                    <b></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-detail-price">
+                                            <ul>
+                                                <li class="gray">
+                                                    <span>原价</span>
+                                                    <b>4589元</b>
+                                                </li>
+                                                <li>
+                                                    <span>已优惠</span>
+                                                    <b>-100元</b>
+                                                </li>
+                                                <li>
+                                                    <span>合计</span>
+                                                    <b>4489元</b>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-remarks"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="order-module">
+                            <div class="order-module-title">
+                                <input type="checkbox" class="check goods-check shopCheck" />
+                                <h4>票务</h4>
+                            </div>
+                            <div class="order-module-content shopping-cart-content">
+                                <div class="order-mc-product">
+                                    <div class="shopping-cart-content-cb">
+                                        <input type="checkbox" class="check goods-check goodsCheck" />
+                                    </div>
+                                    <div class="shopping-cart-content-info">
+                                        <div class="order-mcp-info">
+                                            <div class="order-mcpi-l">
+                                                <img src="../images/order-product2.png">
+                                            </div>
+                                            <div class="order-mcpi-r">
+                                                <h4 class="del">东栅门票<span></span></h4>
+                                                <div class="order-date">
+                                                    <div class="start activeStart">
+                                                        到达
+                                                        <span class="arrow-lower" data-reset="5" data-type="start" data-isShowTime="false">2016-12-26</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-modify">
+                                            <div class="choice-date-number order-number">
+                                                <div class="number clearfix">
+                                                    <a class="reduce" href="javascript:;">-</a>
+                                                    <span>1</span>
+                                                    <a class="add" href="javascript:;">+</a>
+                                                    <p>张</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-select">
+                                                <div class="order-select-show" id="order-select3">
+                                                    <span>选择优惠券</span>
+                                                    <b></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-detail-price">
+                                            <ul>
+                                                <li class="gray">
+                                                    <span>原价</span>
+                                                    <b>4589元</b>
+                                                </li>
+                                                <li>
+                                                    <span>已优惠</span>
+                                                    <b>-100元</b>
+                                                </li>
+                                                <li>
+                                                    <span>合计</span>
+                                                    <b>4489元</b>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-remarks"></div>
+                                    </div>
+                                </div>
+                                <div class="order-mc-product">
+                                    <div class="shopping-cart-content-cb">
+                                        <input type="checkbox" class="check goods-check goodsCheck" />
+                                    </div>
+                                    <div class="shopping-cart-content-info">
+                                        <div class="order-mcp-info">
+                                            <div class="order-mcpi-l">
+                                                <img src="../images/order-product2.png">
+                                            </div>
+                                            <div class="order-mcpi-r">
+                                                <h4 class="del">东栅门票<span></span></h4>
+                                                <div class="order-date">
+                                                    <div class="start activeStart">
+                                                        到达
+                                                        <span class="arrow-lower" data-reset="5" data-type="start" data-isShowTime="false">2016-12-26</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-modify">
+                                            <div class="choice-date-number order-number">
+                                                <div class="number clearfix">
+                                                    <a class="reduce" href="javascript:;">-</a>
+                                                    <span>1</span>
+                                                    <a class="add" href="javascript:;">+</a>
+                                                    <p>张</p>
+                                                </div>
+                                            </div>
+                                            <div class="order-select">
+                                                <div class="order-select-show" id="order-select3">
+                                                    <span>选择优惠券</span>
+                                                    <b></b>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="order-detail-price">
+                                            <ul>
+                                                <li class="gray">
+                                                    <span>原价</span>
+                                                    <b>4589元</b>
+                                                </li>
+                                                <li>
+                                                    <span>已优惠</span>
+                                                    <b>-100元</b>
+                                                </li>
+                                                <li>
+                                                    <span>合计</span>
+                                                    <b>4489元</b>
+                                                </li>
+                                            </ul>
+                                        </div>
+                                        <div class="order-remarks"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- 回到顶部及咨询 -->
+        <div class="sidebar">
+            <a class="help" href="javascript:;"></a>
+            <div class="gotop" id="gotop"></div>
+        </div> 
+
+        <!-- payment-bar -->
+        <div class="payment-bar">
+            <div class="payment-bar-l">
+                <div>
+                    <input type="checkbox" id="AllCheck" class="check goods-check">
+                    <label for="AllCheck">全选</label>
+                </div>
+                <span>应付总额<b><i id="AllTotal">6506</i>元</b></span>
+            </div>
+            <div class="payment-bar-r">
+                <a href="javascript:;">去结算</a>
+            </div>
+        </div>
+        
+
+        
+
+
+
+        <!-- 优惠券选择1 -->
+        <div class="M_PageSelection" id="os_content1">
+            <div class="newList-title M_PageSelection-title">
+                <h5>优惠券</h5><br>
+                <p>更多优惠供你选择</p>
+                <div class="title_line">
+                    <div class="container">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="M_PageSelection_content padding-s">
+                <div class="container">
+                    <ul>
+                        <li class="active">
+                            <p>每满1000元立减100</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>50元代金券</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>100元代金券</p>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="M_btn S_btn">
+                <div class="container clearfix">
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+        <!-- 优惠券选择2 -->
+        <div class="M_PageSelection" id="os_content2">
+            <div class="newList-title M_PageSelection-title">
+                <h5>优惠券</h5><br>
+                <p>更多优惠供你选择</p>
+                <div class="title_line">
+                    <div class="container">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="M_PageSelection_content padding-s">
+                <div class="container">
+                    <ul>
+                        <li class="active">
+                            <p>每满1000元立减100</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>50元代金券</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>100元代金券</p>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="M_btn S_btn">
+                <div class="container clearfix">
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+        <!-- 优惠券选择3 -->
+        <div class="M_PageSelection" id="os_content3">
+            <div class="newList-title M_PageSelection-title">
+                <h5>优惠券</h5><br>
+                <p>更多优惠供你选择</p>
+                <div class="title_line">
+                    <div class="container">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="M_PageSelection_content padding-s">
+                <div class="container">
+                    <ul>
+                        <li class="active">
+                            <p>每满1000元立减100</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>50元代金券</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>100元代金券</p>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="M_btn S_btn">
+                <div class="container clearfix">
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+        <!-- 优惠券选择4 -->
+        <div class="M_PageSelection" id="os_content4">
+            <div class="newList-title M_PageSelection-title">
+                <h5>优惠券</h5><br>
+                <p>更多优惠供你选择</p>
+                <div class="title_line">
+                    <div class="container">
+                        <div class="line"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="M_PageSelection_content padding-s">
+                <div class="container">
+                    <ul>
+                        <li class="active">
+                            <p>每满1000元立减100</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>50元代金券</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>100元代金券</p>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="M_btn S_btn">
+                <div class="container clearfix">
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+    <!-- 日期选择部分 -->
+        <div class="calendar" style="">
+            <div class="calendar-opa"></div>
+            <div class="calendar-content">
+                <div class="newList-co-option calendar-top">
+                    <div class="week-bar"> 
+                        <div class="container">
+                            <ul> 
+                                <li class="weekend">日</li> 
+                                <li>一</li> 
+                                <li>二</li> 
+                                <li>三</li> 
+                                <li>四</li> 
+                                <li>五</li> 
+                                <li class="weekend">六</li> 
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-scroll">
+                    <div class="container">
+                        <div class="calendar-day" id="calendar-day">
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="calendar-btn">
+                    <a class="cancel" href="javascript:;">取消</a>
+                    <a class="determine" href="javascript:;">确定</a>
+                </div> -->
+            </div>
+        </div>
+    <script src="../js/calendar.js"></script>
+    </body>
+</html>

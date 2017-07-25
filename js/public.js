@@ -41,13 +41,13 @@ $(function(){
 	$('#header-btn').click(function(event) {
 		$('body').addClass('sidenav-active');
 		$('.sidenav').addClass('active');
-		$('.pageContent').addClass('active');
+		$('.pageContent').css('margin-left','85%');
 		$('.sidenav-opa').fadeIn(400);
 	});
 	$('.sidenav-opa').click(function(event) {
 		$('body').removeClass('sidenav-active');
 		$('.sidenav').removeClass('active');
-		$('.pageContent').removeClass('active');
+		$('.pageContent').css('margin-left',0);
 		$('.sidenav-opa').fadeOut(400);
 	});
 
@@ -170,6 +170,18 @@ $(function(){
 		var thisActiveText = $(this).parents('#os_content3').find('li.active').find('p').text();
 		$('#order-select3').find('span').text(thisActiveText);
 		$('#os_content3').hide();
+		$('html').removeClass('more_prohibit_html');
+	});
+	$('#order-select4').click(function(event) {
+		$('#os_content4').show();
+		$('html').addClass('more_prohibit_html');
+	});
+
+	$('#os_content4 .determine').click(function(event) {
+		//赋值选中的优惠卷
+		var thisActiveText = $(this).parents('#os_content4').find('li.active').find('p').text();
+		$('#order-select4').find('span').text(thisActiveText);
+		$('#os_content4').hide();
 		$('html').removeClass('more_prohibit_html');
 	});
 })
