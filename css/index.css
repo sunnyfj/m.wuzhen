@@ -88,31 +88,31 @@
 	text-align: center;
 }
 .product .product-title h4 {
-	padding-left: 0.8rem;
+	padding-left: 0.613333rem;
 	display: inline-block;
-	background: url(../images/product1.png) no-repeat;
-	-webkit-background-size: contain;
-	background-size: contain;
+	background: url(../images/product1.png) left center no-repeat;
+	-webkit-background-size: 0.56rem 0.56rem;
+    background-size: 0.56rem 0.56rem;
 	font-size: 0.533333rem;
 	color: #000;
 	letter-spacing: 0.8px;
 }
 .product .product-title3 h4 {
-	padding-left: 0.8rem;
+	padding-left: 0.613333rem;
 	display: inline-block;
-	background: url(../images/product3.png) no-repeat;
-	-webkit-background-size: contain;
-	background-size: contain;
+	background: url(../images/product3.png) left center no-repeat;
+	-webkit-background-size: 0.56rem 0.56rem;
+    background-size: 0.56rem 0.56rem;
 	font-size: 0.533333rem;
 	color: #000;
 	letter-spacing: 0.8px;
 }
 .product .product-title2 h4 {
-	padding-left: 0.8rem;
+	padding-left: 0.613333rem;
 	display: inline-block;
-	background: url(../images/product2.png) no-repeat;
-	-webkit-background-size: contain;
-	background-size: contain;
+	background: url(../images/product2.png) left center no-repeat;
+	-webkit-background-size: 0.56rem 0.56rem;
+    background-size: 0.56rem 0.56rem;
 	font-size: 0.533333rem;
 	color: #000;
 	letter-spacing: 0.8px;
