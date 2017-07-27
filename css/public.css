@@ -40,6 +40,9 @@ body {
 ::-webkit-placeholder{
 	color: #7E808A;
 }
+.minHeight-fullScreen {
+	min-height: 14.346667rem;
+}
 .minHeight{
 	min-height: 12.4rem;
 }
@@ -252,6 +255,9 @@ footer{
 }
 .footer2-pb {
 	padding-bottom: 1.333333rem;
+}
+.footer2-pb2{
+	padding-bottom:3.04rem;
 }
 .footer2-content {
 	width: 100%;

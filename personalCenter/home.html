@@ -15,7 +15,6 @@
         <script src="../js/zepto.js"></script>
         <script src="../js/public.js"></script>
         <script src="../js/module.js"></script>
-        <script src="../js/iscroll.js"></script>
     </head>
     <body>
         <!-- 侧边导航栏 -->
@@ -168,19 +167,13 @@
                                 <a href="javascript:;">现有积分</a>      
                             </div>
 	                	</div>
-                        <div class="home-nav" id="wrapper">
+                        <div class="home-nav">
                             <ul class="clearfix">
                                 <li><a href="javascript:;">待付款</a><span>1</span></li>
                                 <li><a href="javascript:;">已付款</a><span>11</span></li>
                                 <li><a href="javascript:;">待评价</a><span>122</span></li>
-                                <li><a href="javascript:;">已评价</a></li>
-                                <li><a href="javascript:;">已评价</a></li>
-                                <li><a href="javascript:;">待付款</a></li>
-                                <li><a href="javascript:;">待付款</a></li>
-                                <li><a href="javascript:;">待付款</a></li>
-                                <li><a href="javascript:;">待付款</a></li>
+                                <li><a href="javascript:;">退款/售后</a></li>
                             </ul>
-                            <a class="home-nav-btn" id="home-btn" href="javascript:;"><img src="../images/wrapper-btn.png"></a>
                         </div>
                         <div class="home-list">
                             <ul>
@@ -243,27 +236,5 @@
             <a class="help" href="javascript:;"></a>
             <div class="gotop" id="gotop"></div>
         </div>
-       <script>
-            window.addEventListener('load',function(){ 
-                var $carousel = document.getElementById('wrapper'),
-                    $ul = $carousel.querySelector('ul'),
-                    liArray = $carousel.querySelectorAll('li'),
-                    liNum = liArray.length;
-                $ul.style.width = (liArray[0].clientWidth)*liArray.length +"px";               
-                var carousel=new iScroll("wrapper",{hScrollbar:false, vScrollbar:false});
-
-                var $homeNavBtn = document.getElementById('home-btn');
-                var Bflag = true;
-                $homeNavBtn.onclick = function(){
-                    if($ul.style.left == '0px'){
-                        $ul.style.left = -($ul.clientWidth - $carousel.clientWidth)+'px';
-                        this.className = 'home-nav-btn active';
-                    }else{
-                        $ul.style.left = 0;
-                        this.className = 'home-nav-btn';
-                    }
-                }
-            }); 
-    </script>
     </body>
 </html>

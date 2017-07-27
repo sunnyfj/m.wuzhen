@@ -456,4 +456,12 @@ $(function(){
 	$('.account-sub #test').on('click',function(){
 		$('.submit-prompt').show();
 	})
+
+	//收藏夹 筛选
+	$('#favorites-btn').click(function(event) {
+		$('#favorites').show();
+	});
+	$('#favorites .determine').click(function(event) {
+		$('#favorites').hide();
+	});
 })

@@ -16,11 +16,11 @@
 	position: relative;
 }
 .login-top h4 {
-	padding-left: 0.773333rem;
+	padding-left: 0.613333rem;
     display: inline-block;
-    background: url(../images/login-title1.png) no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
+    background: url(../images/login-title1.png) left center no-repeat;
+    -webkit-background-size: 0.56rem 0.56rem;
+    background-size:0.56rem 0.56rem;
     font-size: 0.533333rem;
 	color: #FFFFFF;
 	margin-top:0.64rem;
@@ -100,8 +100,8 @@
 .login-form-item label {
 	display: block;
     padding-top: 0.213333rem;
-    color: #7E808A;
-    font-size: 0.373333rem;
+    color:#FF1431;
+    font-size: 0.32rem;
 }
 .login-form-item.code div{
 	display: -webkit-box;
@@ -212,14 +212,16 @@
 	padding: 0.426667rem 0;
 }
 .register-title h4 {
-	padding-left: 0.773333rem;
+	padding-left: 0.613333rem;
     display: inline-block;
-    background: url(../images/register-title.png) no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
     font-size: 0.533333rem;
 	margin-bottom: 0.08rem;
 	color: #2A2A2F;
+}
+.register-title h4.register-h4 {	
+    background: url(../images/register-title.png) left center no-repeat;
+    -webkit-background-size: 0.56rem 0.56rem;
+    background-size:0.56rem 0.56rem;    
 }
 .register-title p{
 	font-size: 0.266667rem;
@@ -360,11 +362,11 @@
     border-bottom: 0.013333rem solid #7E808A;
 }
 .ordersList-h4 {
-	padding-left: 0.773333rem;
+	padding-left: 0.613333rem;
     display: inline-block;
-    background: url(../images/conference-form.png) no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
+    background: url(../images/conference-form.png) left center no-repeat;
+    -webkit-background-size: 0.56rem 0.56rem;
+    background-size:0.56rem 0.56rem;
     font-size: 0.533333rem;
     color: #000;
     letter-spacing: 0.8px;
@@ -380,48 +382,57 @@
     letter-spacing: 0.8px;
 }
 .home-h4 {
-	padding-left: 0.773333rem;
+	padding-left: 0.613333rem;
     display: inline-block;
-    background: url(../images/product212.png) no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
+    background: url(../images/product212.png) left center no-repeat;
+    -webkit-background-size: 0.56rem 0.56rem;
+    background-size:0.56rem 0.56rem;
+    font-size: 0.533333rem;
+    color: #000;
+}
+.card-title {
+	padding-left: 0.613333rem;
+    display: inline-block;
+    background: url(../images/card.png) left center no-repeat;
+    -webkit-background-size: 0.56rem 0.56rem;
+    background-size:0.56rem 0.56rem;
     font-size: 0.533333rem;
     color: #000;
 }
 .integal-title {
-	padding-left: 0.773333rem;
+	padding-left: 0.68rem;
     display: inline-block;
-    background: url(../images/integal-title.png) no-repeat!important;
-    -webkit-background-size: contain!important;
-    background-size: contain!important;
+    background: url(../images/integal-title.png) left center no-repeat;
+    -webkit-background-size: 0.56rem 0.56rem;
+    background-size:0.56rem 0.56rem;
     font-size: 0.533333rem;
     color: #000;
 }
 .favorites-h4 {
-	padding-left: 0.773333rem;
+	padding-left: 0.613333rem;
     display: inline-block;
-    background: url(../images/favorites-h4.png) no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
+    background: url(../images/favorites-h4.png) left center no-repeat;
+    -webkit-background-size: 0.56rem 0.56rem;
+    background-size:0.56rem 0.56rem;
     font-size: 0.533333rem;
     color: #000;
 }
 .evaluate-h4{
-	padding-left: 0.773333rem;
+	padding-left: 0.613333rem;
     display: inline-block;
     letter-spacing: 0.8px;
-    background: url(../images/evaluate-title.png) no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
+    background: url(../images/evaluate-title.png) left center no-repeat;
+    -webkit-background-size: 0.56rem 0.56rem;
+    background-size:0.56rem 0.56rem;
     font-size: 0.533333rem;
     color: #000;
 }
 .news-h4 {
-	padding-left: 0.773333rem;
+	padding-left: 0.613333rem;
     display: inline-block;
-    background: url(../images/newsCenter.png) no-repeat;
-    -webkit-background-size: contain;
-    background-size: contain;
+    background: url(../images/newsCenter.png) left center no-repeat;
+    -webkit-background-size: 0.56rem 0.56rem;
+    background-size:0.56rem 0.56rem;
     font-size: 0.533333rem;
     color: #000;
 }
@@ -478,43 +489,43 @@
 	float: left;
 }
 .orders-list .list-title b.hotel{
-	background: url(../images/sidenav2.png) no-repeat;
-    background-size: contain;
+	background: url(../images/sidenav2.png) left center no-repeat;
+    background-size: 0.48rem 0.48rem;
     padding-left: 0.693333rem;
 }
 .orders-list .list-title b.custom{
-	background: url(../images/sidenav5.png) no-repeat;
-    background-size: contain;
+	background: url(../images/sidenav5.png) left center  no-repeat;
+    background-size: 0.48rem 0.48rem;
     padding-left: 0.693333rem;
 }
 .orders-list .list-title b.package{
-	background: url(../images/sidenav1.png) no-repeat;
-    background-size: contain;
+	background: url(../images/sidenav1.png) left center  no-repeat;
+    background-size: 0.48rem 0.48rem;
     padding-left: 0.693333rem;
 }
 .orders-list .list-title b.ticket{
-	background: url(../images/sidenav4.png) no-repeat;
-    background-size: contain;
+	background: url(../images/sidenav4.png) left center no-repeat;
+    background-size: 0.48rem 0.48rem;
     padding-left: 0.693333rem;
 }
 .orders-list .list-title b.food{
-	background: url(../images/sidenav3.png) no-repeat;
-    background-size: contain;
+	background: url(../images/sidenav3.png) left center no-repeat;
+    background-size: 0.48rem 0.48rem;
     padding-left: 0.693333rem;
 }
 .orders-list .list-title b.shopping{
-	background: url(../images/sidenav8.png) no-repeat;
-    background-size: contain;
+	background: url(../images/sidenav8.png) left center no-repeat;
+    background-size: 0.48rem 0.48rem;
     padding-left: 0.693333rem;
 }
 .orders-list .list-title b.card{
-	background: url(../images/sidenav22.png) no-repeat;
-    background-size: contain;
+	background: url(../images/sidenav22.png) left center no-repeat;
+    background-size: 0.48rem 0.48rem;
     padding-left: 0.693333rem;
 }
 .orders-list .list-title b.combination{
-	background: url(../images/sidenav23.png) no-repeat;
-    background-size: contain;
+	background: url(../images/sidenav23.png) left center no-repeat;
+    background-size: 0.48rem 0.48rem;
     padding-left: 0.693333rem;
 }
 
@@ -540,6 +551,7 @@
 	border-radius: 2.666667rem;
 	position: relative;
 	/*top:-0.053333rem;*/
+	background-color: #fff;
 }
 .orders-list .list-title div span.red {
 	color: #f00;
@@ -635,7 +647,7 @@
 	border: none;
 }
 .detail-item-top {
-	margin-bottom: 0.426667rem;
+	margin-bottom: 0.213333rem;
     border: 0.013333rem solid #D5DAE1;
     border-top: none;
 }
@@ -646,13 +658,13 @@
 	background: #F3F4F8;
 	border: 1px solid #D5DAE1;
 	/*border-bottom: none;*/
-	margin-bottom:0.426667rem;
+	margin-bottom:0.213333rem;
 }
 .detail-item-calculation .dic-info div{
 	width: 100%;
 	display: -webkit-box;
     display: flex;
-    padding: 0.213333rem;
+    padding:0.133333rem 0.213333rem;
 }
 .detail-item-calculation .dic-info div b {
 	font-size: 0.373333rem;
@@ -800,7 +812,7 @@
 	line-height: 0.666667rem;
 }
 .die-score-item p{
-	width: 2.4rem;
+	width: 2rem;
 }
 .die-score-item .die-score-star {
 	-webkit-box-flex: 1;
@@ -1073,7 +1085,8 @@
 .home-title div a {
 	display: inline-block;
     padding-top: 0.693333rem;
-    width: 0.693333rem;
+   /* width: 0.693333rem;*/
+    width: 0.746667rem;
     background: url(../images/home-news.png) no-repeat;
     background-size: 0.693333rem 0.693333rem;
     font-size: 0.266667rem;
@@ -1211,13 +1224,16 @@
 	position: relative;
 }
 .home-nav ul {
+	display: -webkit-flex-box;
+	display: flex;
 	padding: 0.32rem 0;
 	/*transition: 0.2s ease left;*/
 }
 .home-nav ul li {
-	width: 1.893333rem;
-	float: left;
+	-webkit-flex:1;
+	flex:1;
 	position: relative;
+	text-align: center;
 }
 .home-nav ul li a {
 	font-size: 0.373333rem;
@@ -1225,9 +1241,9 @@
 }
 .home-nav ul li span {
 	position: absolute;
-    left: 1.013333rem;
+    left: 1.6rem;
     top: -0.08rem;
-    padding: 0 0.106667rem;
+    padding: 0 0.12rem;
     height: 0.426667rem;
     line-height: 0.426667rem;
     text-align: center;
@@ -1391,7 +1407,7 @@
 
 }
 .acc-management ul.ul-binding {
-	margin-top: 0.746667rem;
+	margin-top: 0.213333rem;
 	padding-top: 0.213333rem;
 	border-top: 0.026667rem solid #7E808A;
 }
@@ -1441,12 +1457,17 @@
 	top: 0.24rem;
 }
 .acc-management li a div i {
-	font-style: normal;
+	/*font-style: normal;
     color: #7E808A;
     float: right;
     margin-left: 0.213333rem;
     font-size: 0.373333rem;
-    transform: scaleY(1.5);
+    transform: scaleY(1.5);*/
+    display: inline-block;
+    width: 0.32rem;
+    height:0.32rem;
+    background: url(../images/right.png) no-repeat;
+    background-size: contain;
 }
 .acc-btn {
 	display: -webkit-box;
@@ -1775,6 +1796,7 @@
 	color: #2A2A2F;
 	padding-left: 0.213333rem;
 	background: #F3F4F8 url(../images/right.png) 98% center no-repeat;
+	background-size: 0.32rem 0.32rem;
 }
 .id-record {
 	width: 100%;
@@ -1816,6 +1838,145 @@
 .id-record ul li .idr-quantity span.orange {
 	color: #EC9F19;
 }
+
+
+/*一卡通*/
+.card-options {
+	width: 100%;
+	padding: 0.32rem 0;
+	border-top: 0.013333rem solid #7E808A;
+	border-bottom: 0.013333rem solid #7E808A;
+	text-align: center;
+}
+.card-options a {
+	display: inline-block;
+    background: #F3F4F8;
+    border-radius: 2.666667rem;
+    padding: 0.106667rem 0.266667rem;
+    margin: 0 0.426667rem;
+    font-size: 0.373333rem;
+	color: #2A2A2F;
+}
+.card-options a.active{
+	background: #2A2A2F;
+	color: #fff;
+}
+.cards {
+	width: 100%;
+}
+.cards-item {
+	padding: 0.64rem 0;
+	width: 100%;
+	text-align: center;
+}
+.cards-item:first-child{
+	border-bottom: 0.013333rem solid #D4DAE1;
+}
+.cards-item img	{
+	width: 2.853333rem;
+	height: 1.76rem;
+}
+.cards-item h3	{
+	padding:0.64rem 0 0.426667rem;
+	font-size: 0.426667rem;
+	color: #7E808A;
+}
+.cards-item p {
+	padding: 0 0.533333rem;
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	line-height: 1.7;
+	text-align: left;
+}
+.card-btn {
+	width: 100%;
+	display: -webkit-box;
+	display: flex;
+	padding-top: 0.32rem;
+	padding-bottom: 0.64rem;
+}
+.card-btn a{
+	width: 100%;
+	-webkit-box-flex: 1;
+    flex: 1;
+    display: block;
+    height: 1.066667rem;
+    text-align: center;
+    line-height: 1.066667rem;
+    font-size: 0.373333rem;
+	color: #FFFFFF;
+}
+.card-btn .pur {
+	background: #FF1431;
+	margin-right: 0.426667rem;
+}
+.card-btn .bd {
+	background: #2A2A2F;
+}
+.card-btn .cancel {
+	background: #FFF;
+	margin-right: 0.426667rem;
+	color: #2A2A2F;
+	border: 0.013333rem solid  #2A2A2F;
+}
+.card-from {
+	width: 100%;
+}
+.card-from p.text {
+	font-size: 0.373333rem;
+	color: #7E808A;
+	padding-top: 0.426667rem;
+	padding-bottom: 0.213333rem;
+}
+.card-from p em {
+	color: #f00;
+}
+.card-from p.prompt {
+	padding-top: 0.426667rem;
+	padding-bottom: 0.64rem;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 

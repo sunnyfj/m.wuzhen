@@ -146,6 +146,7 @@
                                 <div class="small">
                                     <p>姓名</p>
                                     <input type="" name="" placeholder="预订人姓名（收货人姓名）">
+                                    <label>请填写姓名</label>
                                 </div>
                                 <div class="small">
                                     <p>手机</p>
@@ -165,7 +166,7 @@
                 </div>
 
                 <!-- 产品模块 -->
-                <div class="order-list">
+                <div class="order-list" style="padding-bottom: 0;">
                     <div class="container">
                         <div class="order-module">
                             <div class="order-module-title">
@@ -250,8 +251,6 @@
                         <div class="order-module">
                             <div class="order-module-title">
                                 <h4>套餐</h4>
-                                <span>满减</span>
-                                <p>活动期间酒店商品满3000立减100元</p>
                             </div>
                             <div class="order-module-content">
                                 <div class="order-mc-product">
@@ -275,7 +274,7 @@
                                                 <a class="reduce" href="javascript:;">-</a>
                                                 <span>1</span>
                                                 <a class="add" href="javascript:;">+</a>
-                                                <p>间</p>
+                                                <p>套</p>
                                             </div>
                                         </div>
                                         <div class="order-select">
@@ -285,7 +284,22 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="order-detail-price">
+                                    <div class="choice-package" style="padding-top: 0.213333rem;">
+                                        <p class="choice-title">房型选择</p>
+                                        <ul>
+                                            <li class="active">高级大床房</li>
+                                            <li>经济双标房</li>
+                                        </ul>
+                                    </div>
+                                    <div class="choice-package">
+                                        <p class="choice-title">用餐地点</p>
+                                        <ul>
+                                            <li class="active">将军府火锅店</li>
+                                            <li>京杭河鲜馆</li>
+                                            <li>后街酒家</li>
+                                        </ul>
+                                    </div>
+                                    <div class="order-detail-price" style="padding-top:0;">
                                         <ul class="package-ul">
                                             <li>
                                                 <span>1套</span>
@@ -330,7 +344,7 @@
                                                 <a class="reduce" href="javascript:;">-</a>
                                                 <span>1</span>
                                                 <a class="add" href="javascript:;">+</a>
-                                                <p>间</p>
+                                                <p>件</p>
                                             </div>
                                         </div>
                                         <div class="order-select">
@@ -471,11 +485,6 @@
                             </div>
                         </div>
                     </div>
-                    <div class="order-sendAddress">
-                        <div class="container">
-                            <p class="twoline_ellipsis">其中特产商品寄送至：北京市朝阳区双桥世通国际大厦B座...</p>
-                        </div>
-                    </div>
                 </div>
             </div>
             <!-- 页脚 -->
@@ -497,6 +506,12 @@
             <div class="gotop" id="gotop"></div>
         </div> 
 
+        <!-- 置底地址提示 -->
+        <div class="order-sendAddress">
+            <div class="container">
+                <p class="twoline_ellipsis">其中特产商品寄送至：北京市朝阳区双桥世通国际大厦B座...</p>
+            </div>
+        </div>
         <!-- 提交订单 -->
         <div class="submit-order">
             <a href="javascript:;">提交订单</a>
