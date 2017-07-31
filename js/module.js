@@ -248,7 +248,7 @@ $(function(){
 				datails_bFlag = false;
 			}
 		}else{
-			$('.datails-text-hidden').height('1.04rem');
+			$('.datails-text-hidden').height('0.96rem');
 			$(this).text('查看更多 > ');
 			datails_bFlag = true;
 		}
