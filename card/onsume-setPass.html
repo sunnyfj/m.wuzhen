@@ -126,8 +126,8 @@
             <!-- 内容 -->
             <div class="ordersList">
                 <div class="ordersList-content">
-                    <div class="ordersList-title">
-                        <h4 class="card-title">一卡通</h4><br>
+                    <div class="register-title">
+                        <h4 class="card-title">一卡通</h4>
                         <p>消费卡绑定说明</p>
                     </div>
                 </div>
@@ -151,7 +151,7 @@
                         </form>
                     </div>
                     <div class="card-btn">
-                        <a class="bd" href="javascript:;">确定</a>
+                        <a class="bd" id="subPass" href="javascript:;">确定</a>
                     </div>
                 </div>
             </div>     
@@ -174,12 +174,16 @@
             <a class="help" href="javascript:;"></a>
             <div class="gotop" id="gotop"></div>
         </div> 
-        <div class="submit-prompt">
+
+        <!-- 设置密码反馈 -->
+        <div class="submit-prompt" id="subPassPrompt">
             <div class="sp-content">
-                <p>活动信息提交成功，我们会在24小时内联系您核实预约信息</p>
+                <section class="padding-bot">
+                    <p>密码设置成功</p>
+                    <span>您的消费卡密码设置成功，<br>后期无需再设支付密码，<br>可直接绑定消费卡</span>
+                </section>
                 <div>
-                    <a class="bor" href="">返回</a>
-                    <a href="conference-from-activity.html">查看进度</a>
+                    <a class="determine" href="javascript:;">确定</a>
                 </div>
             </div>
         </div>

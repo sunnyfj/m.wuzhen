@@ -464,4 +464,50 @@ $(function(){
 	$('#favorites .determine').click(function(event) {
 		$('#favorites').hide();
 	});
+
+
+
+	//一卡通
+
+
+	//消费卡密码绑定
+	$('#card_bd').on('click',function(){
+		$('#confirmBinding').show();
+	})
+	$('#confirmBinding .cancel').on('click',function(){
+		$('#confirmBinding').hide();
+	})
+
+	$('#confirmBinding .confirmbd').on('click',function(){
+		$('#confirmBinding').hide();
+		$('#succBinding').show();
+	})
+	$('#succBinding .determine').on('click',function(){
+		$('#succBinding').hide();
+	})
+
+	//消费卡设置密码提示
+	$('#subPass').on('click', function() {
+		$('#subPassPrompt').show();
+	});
+	$('#subPassPrompt .determine').on('click',function(){
+		$('#subPassPrompt').hide();
+	})
+
+	//消费卡重置密码反馈
+	$('#resetPass').on('click', function() {
+		$('#resetPassPrompt').show();
+	});
+	$('#resetPassPrompt .determine').on('click',function(){
+		$('#resetPassPrompt').hide();
+	})
+
+	//密码管理反馈
+	$('.adminPass').on('click', function() {
+		$('#adminPassPrompt').show();
+	});
+	$('#adminPassPrompt .determine').on('click',function(){
+		$('#adminPassPrompt').hide();
+	})
+	
 })

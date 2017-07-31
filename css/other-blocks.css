@@ -93,7 +93,7 @@
     padding: 0.346667rem 0 0.346667rem 0.213333rem;
     line-height: 1;
     background: #F3F4F8;
-    border: 1px solid #D5DAE1;
+    border: 0.013333rem solid #D5DAE1;
     font-size: 0.373333rem;
     color: #7E808A;
 }
@@ -236,7 +236,7 @@
 .register-title a.loginUp{
 	display: inline-block;
 	padding-top: 0.693333rem;
-	width: 0.693333rem;
+	width: 0.72rem;
 	background:url(../images/register-a.png) no-repeat;
 	background-size: 0.693333rem 0.693333rem;
 	font-size: 0.266667rem;
@@ -245,7 +245,7 @@
 .register-title a.loginRegister{
 	display: inline-block;
 	padding-top: 0.693333rem;
-	width: 0.693333rem;
+	width: 0.72rem;
 	background:url(../images/register-a1.png) no-repeat;
 	background-size: 0.693333rem 0.693333rem;
 	font-size: 0.266667rem;
@@ -262,7 +262,7 @@
 .register-title a.back {
 	display: inline-block;
 	padding-top: 0.693333rem;
-	width: 0.693333rem;
+	width: 0.72rem;
 	background:url(../images/back.png) no-repeat;
 	background-size: 0.693333rem 0.693333rem;
 	font-size: 0.266667rem;
@@ -284,7 +284,7 @@
 	font-size: 0.373333rem;
 	color: #2A2A2F;
 	background: #F3F4F8;
-	border-radius: 200px;
+	border-radius: 2.666667rem;
 	margin:0 0.373333rem;
 }
 .register-tab li.active {
@@ -461,7 +461,7 @@
     display: inline-block;
     width: 0.32rem;
     height: 0.32rem;
-    top: 3px;
+    top: 0.04rem;
     background: url(../images/format1.png) no-repeat;
     background-size: cover;
 }
@@ -539,6 +539,7 @@
 	font-size: 0.373333rem;
 	color: #7E808A;
 	background: url(../images/del.png) no-repeat;
+	background-size: contain;
 	padding-left: 0.586667rem;
 	margin-right: 0.213333rem;
 }
@@ -656,7 +657,7 @@
 }
 .detail-item-calculation .dic-info {
 	background: #F3F4F8;
-	border: 1px solid #D5DAE1;
+	border: 0.013333rem solid #D5DAE1;
 	/*border-bottom: none;*/
 	margin-bottom:0.213333rem;
 }
@@ -715,7 +716,7 @@
 }
 .dic-discount div.dic-btn {
 	padding: 0;
-	border-top: 1px solid #D5DAE1;
+	border-top: 0.013333rem solid #D5DAE1;
 }
 .dic-discount div.dic-btn a{
 	display: block;
@@ -729,7 +730,7 @@
 }
 .dic-discount-c {
 	background: #F3F4F8;
-    border: 1px solid #D5DAE1;
+    border: 0.013333rem solid #D5DAE1;
     /* border-bottom: none; */
     /*margin-bottom: 0.426667rem;*/
 }
@@ -905,7 +906,7 @@
 	color: #000000;
 }
 .my-evaluated .me-content p{
-	font-size: 28px;
+	font-size: 0.373333rem;
 	color: #2A2A2F;
 	line-height: 1.7;
 }
@@ -1195,7 +1196,7 @@
 	display: -webkit-box;
 	display: flex;
 	margin-top: 0.426667rem;
-	border-bottom: 1px solid #EAEBF0;
+	border-bottom: 0.013333rem solid #EAEBF0;
 	padding-bottom:  0.426667rem;
 }
 .home-alls div {
@@ -1377,7 +1378,7 @@
 .news-list-item li{
 	width: 100%;
 	padding: 0.426667rem 0 0.32rem;
-	border-bottom: 1px solid #D5DAE1;
+	border-bottom: 0.013333rem solid #D5DAE1;
 } 
 .news-list-item li p {
 	font-size: 0.32rem;
@@ -1553,7 +1554,7 @@
 	display: inline-block;
 	width: 0.32rem;
 	height: 0.32rem;
-	top: 3px;
+	top: 0.04rem;
 	background: url(../images/format1.png) no-repeat;
 	background-size: cover;
 }
@@ -1770,8 +1771,8 @@
     padding: 0.426667rem 0;
 }
 .id-total div:nth-child(2){
-	border-right: 1px solid #D5DAE1;
-	border-left: 1px solid #D5DAE1;
+	border-right: 0.013333rem solid #D5DAE1;
+	border-left: 0.013333rem solid #D5DAE1;
 }
 .id-total div h5{
 	font-size: 0.373333rem;
@@ -1936,36 +1937,158 @@
 	padding-bottom: 0.64rem;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+.card-list {
+	width: 100%;
+	padding-top: 0.426667rem;
+	padding-bottom: 0.213333rem;
+}
+.card-list li {
+	width: 100%;
+	background: #F3F4F8;
+	border: 0.026667rem solid #D4DAE1;
+	margin-bottom: 0.426667rem;
+}
+.card-list li .cl-type {
+	display: -webkit-box;
+	display: flex;
+	padding:0.426667rem;
+}
+.card-list li .cl-type span{
+	display: block;
+	width: 1.333333rem;
+	padding: 0.106667rem 0;
+	line-height: 1;
+	background: #FFFFFF;
+	border: 0.026667rem solid #2A2A2F;
+	border-radius: 2.666667rem;
+	text-align: center;
+	font-size: 0.32rem;
+	color: #2A2A2F;
+}
+.card-list li .cl-type p {
+	-webkit-box-flex: 1;
+    flex: 1;
+	font-size: 0.32rem;
+	color: #7E808A;
+	text-align: right;
+	line-height: 1.7;
+}
+.card-list li .cl-number {
+	width: 100%;
+	height: 0.96rem;
+	line-height:  0.96rem;
+	color:#fff;
+	font-size: 0.373333rem;
+	padding: 0 0.426667rem;
+}
+.card-list li .cl-number.blue1 {
+	background: #367DCD;
+}
+.card-list li .cl-number.blue2 {
+	background: #36AFCD;
+}
+.card-list li .cl-number span {
+	margin-left: 0.426667rem;
+}
+.card-list li .cl-price {
+	font-size: 0.373333rem;
+	color: #7E808A;
+	padding: 0.533333rem 0.426667rem;
+}
+.card-list li .cl-price b{
+	font-weight: normal;
+	font-size: 0.373333rem;
+	color: #000000;
+	padding-left: 0.213333rem;
+}
+.card-list li .cl-price b span{
+	font-size: 0.746667rem;
+	color: #2A2A2F;
+	font-family:myfont;
+}
+.card-list li .cl-btn {
+	display: -webkit-box;
+	display: flex;
+	border-top: 0.026667rem solid #D4DAE1;
+}
+.card-list li .cl-btn a {
+	-webkit-box-flex: 1;
+    flex: 1;
+    height: 1.066667rem;
+    text-align: center;
+    line-height: 1.066667rem;
+    font-size: 0.373333rem;
+	color: #2A2A2F;
+}
+.card-list li .cl-btn a.bor{
+	border-right: 0.026667rem solid #D4DAE1;
+}
+.card-list-btn {
+	width: 100%;
+	margin-bottom: 0.213333rem;
+}
+.card-list-btn a {
+	margin-bottom: 0.426667rem;
+}
+.card-list-btn .addcard {
+	display: block;
+	background: #2A2A2F;
+	height: 1.066667rem;
+	text-align: center;
+	line-height: 1.066667rem;
+	font-size: 0.373333rem;
+	color: #FFFFFF;
+}
+.card-list-btn .addcard img {
+	position: relative;
+	width: 0.48rem;
+	height: 0.48rem;
+	top: 0.08rem;
+}
+.card-list-btn .addcard span {
+	padding-left: 0.133333rem;
+}
+.card-list-btn .clb-pass {
+	display: block;
+	background: #F3F4F8;
+	height: 1.066667rem;
+	text-align: center;
+	line-height: 1.066667rem;
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+}
+.codeShow {
+	width: 100%;
+	background-color: #fff;
+}
+.codeShow-info {
+	background: #F3F4F8;
+	border: 0.026667rem solid #D4DAE1;
+}
+.codeShow-info .ci-number {
+	background: #367DCD;
+	display: -webkit-box;
+	display: flex;
+	font-size: 0.373333rem;
+	color: #FFFFFF;
+	padding: 0 0.426667rem;
+}
+.codeShow-info .ci-number p {
+	-webkit-box-flex: 1;
+    flex: 1;
+}
+.codeShow-info .ci-number p b {
+	font-weight: normal;
+	padding-left: 0.426667rem;
+}
+.codeShow-info .ci-number span {
+	display: block;
+	background: #FFFFFF;
+	border: 0.026667rem solid #2A2A2F;
+	border-radius: 2.666667rem;
+	font-size: 0.266667rem;
+	color: #2A2A2F;
+}
 
 
 

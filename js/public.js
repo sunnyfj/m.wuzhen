@@ -133,55 +133,28 @@ $(function(){
 			$('#g_position').hide();
 			$('html').removeClass('popup_prohibit_html');
 		});
-	//确认订单  优惠卷选择
-	$('#order-select1').click(function(event) {
-		$('#os_content1').show();
+
+
+	//购物车  优惠卷选择
+	$('.on-select').click(function(event) {
+		$('.on-select').removeClass('on');
+		$(this).addClass('on');
+		$('#os_content').show();
 		$('html').addClass('more_prohibit_html');
 	});
-
-	$('#os_content1 .determine').click(function(event) {
+	$('#os_content .determine').click(function(event) {
 		//赋值选中的优惠卷
-		var thisActiveText = $(this).parents('#os_content1').find('li.active').find('p').text();
-		$('#order-select1').find('span').text(thisActiveText);
+		var thisActiveText = $(this).parents('#os_content').find('li.active').find('p').text();
+		for(var i=0;i<$('.on-select').length; i++){
+			if ($('.on-select').eq(i).hasClass('on')) {
+				$('.on-select').eq(i).find('span').text(thisActiveText);
+			}
+		}	
 		$('#os_content1').hide();
 		$('html').removeClass('more_prohibit_html');
 	});
 
-	$('#order-select2').click(function(event) {
-		$('#os_content2').show();
-		$('html').addClass('more_prohibit_html');
-	});
 
-	$('#os_content2 .determine').click(function(event) {
-		//赋值选中的优惠卷
-		var thisActiveText = $(this).parents('#os_content2').find('li.active').find('p').text();
-		$('#order-select2').find('span').text(thisActiveText);
-		$('#os_content2').hide();
-		$('html').removeClass('more_prohibit_html');
-	});
+	
 
-	$('#order-select3').click(function(event) {
-		$('#os_content3').show();
-		$('html').addClass('more_prohibit_html');
-	});
-
-	$('#os_content3 .determine').click(function(event) {
-		//赋值选中的优惠卷
-		var thisActiveText = $(this).parents('#os_content3').find('li.active').find('p').text();
-		$('#order-select3').find('span').text(thisActiveText);
-		$('#os_content3').hide();
-		$('html').removeClass('more_prohibit_html');
-	});
-	$('#order-select4').click(function(event) {
-		$('#os_content4').show();
-		$('html').addClass('more_prohibit_html');
-	});
-
-	$('#os_content4 .determine').click(function(event) {
-		//赋值选中的优惠卷
-		var thisActiveText = $(this).parents('#os_content4').find('li.active').find('p').text();
-		$('#order-select4').find('span').text(thisActiveText);
-		$('#os_content4').hide();
-		$('html').removeClass('more_prohibit_html');
-	});
 })

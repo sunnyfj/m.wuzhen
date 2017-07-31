@@ -2,7 +2,7 @@
 <html lang="en">
     <head>
         <meta charset="utf-8">
-        <title>一卡通(消费卡绑定)</title>
+        <title>消费卡密码管理</title>
         <meta content="yes" name="apple-mobile-web-app-capable">
         <meta content="yes" name="apple-touch-fullscreen">
         <meta content="telephone=no,email=no" name="format-detection">
@@ -127,38 +127,36 @@
             <div class="ordersList">
                 <div class="ordersList-content">
                     <div class="register-title">
-                        <h4 class="card-title">一卡通</h4>
-                        <p>消费卡绑定说明</p>
+                        <h4 class="card-title">消费卡密码管理</h4>
+                        <p>账户安全</p>
+                        <div>
+                            <a class="back" href="javascript:;">返回</a>
+                        </div>
                     </div>
                 </div>
-                <div class="container minHeight" >
+                <div class="container minHeight">
                     <div class="card-options">
-                        <a class="active" href="javascript:;">消费卡</a>
-                        <a href="javascript:;">休闲卡</a>
-                        <a href="javascript:;">我的历史卡</a>
+                        <a href="javascript:;">找回密码</a>
+                        <a class="active" href="javascript:;">修改密码</a>
                     </div>
-                    <div class="card-from">
+                    <div class="card-from padding-t16">
                         <form class="login-form">
-                            <p class="text">为保证您的账户安全，请设置支付密码，再进行消费卡绑定</p>
                             <div class="login-form-item">
-                                <p><em>*</em>卡号</p>
-                                <input type="text" name="" placeholder="请填写消费卡卡号">
-                                <label>卡号格式不正确</label>
+                                <p>旧密码</p>
+                                <input type="text" name="" placeholder="请输入6位数字旧密码，以验证身份">
                             </div>
                             <div class="login-form-item">
-                                <p><em>*</em>校验码</p>
-                                <input type="text" name="" placeholder="请填写消费卡校验码">
+                                <p>设置新密码</p>
+                                <input type="text" name="" placeholder="6位数字密码">
                             </div>
                             <div class="login-form-item">
-                                <p><em>*</em>支付密码</p>
-                                <input type="text" name="" placeholder="请填写消费卡支付密码">
+                                <p>密码确认</p>
+                                <input type="text" name="" placeholder="6位数字密码">
                             </div>
-                            <p class="prompt"><em>*</em>为必填项</p>
                         </form>
                     </div>
                     <div class="card-btn">
-                        <a class="cancel" href="javascript:;">取消</a>
-                        <a class="bd" id="card_bd" href="javascript:;">立即绑定</a>
+                        <a class="bd adminPass" href="javascript:;">确定</a>
                     </div>
                 </div>
             </div>     
@@ -181,43 +179,12 @@
             <a class="help" href="javascript:;"></a>
             <div class="gotop" id="gotop"></div>
         </div> 
-        <div class="submit-prompt">
-            <div class="sp-content">
-                <p>活动信息提交成功，我们会在24小时内联系您核实预约信息</p>
-                <div>
-                    <a class="bor" href="">返回</a>
-                    <a href="conference-from-activity.html">查看进度</a>
-                </div>
-            </div>
-        </div>
 
-        <!-- 确认绑定提示 -->
-        <div class="submit-prompt" id="confirmBinding">
+        <!-- 修改密码反馈 -->
+        <div class="submit-prompt" id="adminPassPrompt">
             <div class="sp-content">
-                <section>
-                    <p>绑定消费卡卡号</p>
-                    <span>20160823000039232523</span>
-                </section>
-                <section>
-                    <p>绑定帐号</p>
-                    <span>138******98</span>
-                </section>
-                <div>
-                    <a class="bor cancel" href="javascript:;">取消</a>
-                    <a class="confirmbd" href="javascript:;">确认绑定</a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 绑定成功提示 -->
-        <div class="submit-prompt" id="succBinding">
-            <div class="sp-content">
-                <section>
-                    <p>绑定成功</p>
-                </section>
-                <section>
-                    <p>您的消费卡</p>
-                    <span>20160823000039232523</span>
+                <section class="padding-bot">
+                    <p>密码修改成功</p>
                 </section>
                 <div>
                     <a class="determine" href="javascript:;">确定</a>

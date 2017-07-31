@@ -42,7 +42,7 @@
 	z-index: 99;
 }
 .week-bar ul{
-	border-top: 1px solid #D5DAE1;
+	border-top: 0.013333rem solid #D5DAE1;
 	display: flex;
 }
 .week-bar ul li {
@@ -156,7 +156,7 @@
 .calendar-btn a.cancel {
 	color: #2A2A2F;
 	background: #fff;
-	border-top:1px solid #D5DAE1;
+	border-top:0.013333rem solid #D5DAE1;
 }
 .calendar-btn a.determine {
 	color: #fff;
