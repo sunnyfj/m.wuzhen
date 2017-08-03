@@ -191,13 +191,15 @@
 
         
         //判断是否需要页面展示日期为当前
-        var myDate = new Date(); //页面展示的初始时间
+        var myDate = new Date(); //日历展示的初始时间
 
+
+        var nextDate = new Date();//页面展示的初始时间
 
         if($('.activeStart').find('span').attr('data-isShowTime') == 'true'){
-            $('.activeStart').find('span').text(getDateStr(myDate,0));
+            $('.activeStart').find('span').text(getDateStr(nextDate,0));
             if($('.activeLeave')){
-                $('.activeLeave').find('span').text(getDateStr(myDate,1));
+                $('.activeLeave').find('span').text(getDateStr(nextDate,1));
             } 
         }
         //判断table多出的空行

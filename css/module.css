@@ -1417,7 +1417,7 @@ body .package-btn a {
 	border:0.013333rem solid #D5DAE1;
 	/*padding-left: 0.213333rem;*/
 	font-size: 0.373333rem;
-	color: #7E808A;
+	/*color: #7E808A;*/
 }
 .form-list-modular .small span{
 	display: inline-block;
@@ -1995,6 +1995,105 @@ body .package-btn a {
 .order-detail-price .package-ul li b {
 	color: #2A2A2F;
 }
+.confirm-pay {
+	width: 100%;
+}
+.confirm-pay-info {
+	width: 100%;
+	padding-top: 0.426667rem;
+	margin-bottom: 0.32rem;
+}
+.confirm-pay-info p {
+	font-size: 0.373333rem;
+	color: #7E808A;
+	line-height: 1.7;
+}
+.confirm-pay-info p span {
+	color: #000000;
+}
+.confirm-pay-mode {
+	width: 100%;
+}
+.confirm-pay-mode h4 {
+	font-size: 0.426667rem;
+	color: #7E808A;
+	padding-bottom: 0.106667rem;
+}
+.confirm-pay-mode p {
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	padding: 0.213333rem 0;
+}
+.mode-list {
+
+}
+.mode-list-item {
+	display: -webkit-box;
+    display: flex;
+    height: 1.68rem;
+    padding: 0.213333rem 0;
+    border-bottom: 0.013333rem solid #D4DAE1;
+}
+.mode-list-item:last-child {
+	border-bottom:none;
+}
+.mode-list-item:nth-child(4){
+	border-bottom:none;
+}
+.mode-list-item div {
+	height: 100%;
+    -webkit-box-flex: 1;
+    flex: 1;
+}
+.mode-list-item div img {
+	height: 100%;
+}
+.mode-list-item i {
+	display: block;
+    width: 0.426667rem;
+    height: 0.426667rem;
+    border-radius: 50%;
+    border: 0.026667rem solid #2A2A2F;
+    margin-top: 0.373333rem;
+}
+.mode-list-item.active i {
+    background-color: #2A2A2F;
+    border: 0.026667rem solid #2A2A2F;
+}
+.confirm-pay-btn {
+	width: 100%;
+    display: -webkit-box;
+    display: flex;
+    padding-top: 0.32rem;
+    padding-bottom: 0.64rem;
+}
+.confirm-pay-btn a {
+	width: 100%;
+    -webkit-box-flex: 1;
+    flex: 1;
+    display: block;
+    height: 1.066667rem;
+    text-align: center;
+    line-height: 1.066667rem;
+    font-size: 0.373333rem;
+    background: #FF1431;
+    color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 /*反馈页 结果页*/
 .order-result {
 	width: 100%;

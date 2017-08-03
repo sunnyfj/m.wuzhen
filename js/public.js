@@ -155,6 +155,24 @@ $(function(){
 	});
 
 
+	//确认订单  优惠卷选择
+	$('.on-selects').click(function(event) {
+		$('.on-selects').removeClass('on');
+		$(this).addClass('on');
+		$('#on-selects-content').show();
+		$('html').addClass('more_prohibit_html');
+	});
+	$('#on-selects-content .determine').click(function(event) {
+		//赋值选中的优惠卷
+		var thisActiveText = $(this).parents('#on-selects-content').find('li.active').find('p').text();
+		for(var i=0;i<$('.on-selects').length; i++){
+			if ($('.on-selects').eq(i).hasClass('on')) {
+				$('.on-selects').eq(i).find('span').text(thisActiveText);
+			}
+		}	
+		$('#on-selects-content').hide();
+		$('html').removeClass('more_prohibit_html');
+	});
 	
 
 })

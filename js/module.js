@@ -226,6 +226,14 @@ $(function(){
 	$('.co-option .options a').click(function(){
 		$(this).addClass('active').siblings().removeClass('active');
 	})
+	//桐乡市民from反馈
+	$('#t-sm').on('click',function(event) {
+		$('#t-Prompt').show();
+	});
+	/*$('#t-Prompt .determine').on('click',function(){
+		$('#t-Prompt').hide();
+	})*/
+
 	//会议马上预约按钮
 	$('.appointed-link a').click(function(event) {
         $('.submit-prompt').show();
@@ -509,5 +517,53 @@ $(function(){
 	$('#adminPassPrompt .determine').on('click',function(){
 		$('#adminPassPrompt').hide();
 	})
+
+	//消费记录 卡号下拉
+	$('#record-select-btn').on('click',function(event) {
+        $('#record-selectNum').show();
+        $('html').addClass('popup_prohibit_html');
+    });
+    $('#record-selectNum .determine').on('click',function(){
+        $('#record-selectNum').hide();
+        $('html').removeClass('popup_prohibit_html');
+    })
+
+    //消费记录 消费场景
+    $('#onsume-scene').on('click',function(event) {
+        $('#record-selectScene').show();
+        $('html').addClass('popup_prohibit_html');
+    });
+    $('#record-selectScene .determine').on('click',function(){
+        $('#record-selectScene').hide();
+        $('html').removeClass('popup_prohibit_html');
+    })
+    //消费记录 交易类型
+    $('#onsume-type').on('click',function(event) {
+        $('#record-selectType').show();
+        $('html').addClass('popup_prohibit_html');
+    });
+    $('#record-selectType .determine').on('click',function(){
+        $('#record-selectType').hide();
+        $('html').removeClass('popup_prohibit_html');
+    })
 	
+
+
+	//休闲卡 支付选择
+	$('.pay-method .pay-method-item').on('click',function(){
+		$(this).addClass('active').siblings().removeClass('active');
+	})
+	//休闲卡解除绑定
+	$('#unbinding-btn').on('click',function(){
+		$('#unbinding-prompt').show();
+	})
+	$('#unbinding-prompt .determine').on('click',function(){
+		$('#unbinding-prompt').hide();
+	})
+
+
+	//确认订单页选择支付方式
+	$('.confirm-pay-mode .mode-list-item').on('click',function(){
+		$(this).addClass('active').siblings().removeClass('active');
+	})
 })

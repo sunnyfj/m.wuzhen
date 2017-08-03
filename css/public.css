@@ -137,6 +137,12 @@ html {
 .border-top {
 	border-top: 0.013333rem solid #7E808A;
 }
+.border-top2 {
+	border-top: 0.026667rem solid #7E808A;
+}
+.border-bottom {
+	border-bottom: 0.013333rem solid #7E808A;
+}
 .padding-t16 {
 	padding-top: 0.213333rem;
 }
@@ -817,6 +823,10 @@ body{
 	padding-top: 0.426667rem;
 	padding-bottom: 0.64rem;
 }
+.submit-prompt .sp-content section.p-lr {
+	padding-left: 0.64rem;
+	padding-right:0.64rem;
+}
 .submit-prompt .sp-content section p {
 	padding:0;
 	padding-bottom: 0.106667rem;
@@ -825,8 +835,6 @@ body{
 .submit-prompt .sp-content section span {
 	line-height: 1.7;
 }
-
-
 
 .submit-prompt .sp-content span {
 	font-size: 0.426667rem;

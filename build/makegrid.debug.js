@@ -1,7 +1,7 @@
 (function(win, lib){
     var doc = win.document;
     var docEl = doc.documentElement;
-    var gridEl = doc.querySelector('meta[name="grid"]');
+   /* var gridEl = doc.querySelector('meta[name="grid"]');*/
     var styleEl;
     var flexible = lib.flexible || (lib.flexible = {});
 
