@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>一卡通(休闲卡绑定)</title>
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection">
+        <link rel="stylesheet" href="../css/public.css">
+        <link rel="stylesheet" href="../css/other-blocks.css">
+
+        <script src="../build/flexible_css.debug.js"></script>
+        <script src="../build/flexible.debug.js"></script>
+        <script src="../js/zepto.js"></script>
+        <script src="../js/public.js"></script>
+        <script src="../js/module.js"></script>
+    </head>
+    <body>
+        <!-- 侧边导航栏 -->
+        <div class="sidenav-opa"></div>
+        <div class="sidenav">
+            <ul>
+                <li>
+                    <a class="sidenav-a" href="package-list.html">
+                        <div class="clearfix">
+                            <p class="p1">套餐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="hotel-list.html">
+                        <div class="clearfix">
+                            <p class="p2">酒店</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="food-list.html">
+                        <div class="clearfix">
+                            <p class="p3">美食</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="ticket-list.html">
+                        <div class="clearfix">
+                            <p class="p4">票务</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="quickSelection borNo">
+                    <a href="javascript:;">
+                        <p class="p5">私人订制</p>
+                    </a>
+                    <a href="javascript:;">
+                        <p class="p6">懒人模式</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="conference-list.html">
+                        <div class="clearfix">
+                            <p class="p7">会展婚宴</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="shopping-list-specialty.html">
+                        <div class="clearfix">
+                            <p class="p8">购物娱乐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p9">景区导览</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p10">语音导游</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p11">积分商城</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p12">卡券</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pageContent">
+            <!-- 页头 -->
+        	<header class="clearfix">
+                <div class="header-l">
+                    <a id="header-btn" class="btn" href="javascript:;"><img src="../images/header-btn.png"></a>
+                    <a class="logo" href="index.html"><img src="../images/logo.png"></a>
+                </div>
+                <div class="header-r">
+                    <a href="tel:13855555555"><img src="../images/tel.png"></a>
+                    <a class="personal" href="javascript:;"><img src="../images/geren.png"></a>
+                    <a href="javascript:;"><img src="../images/shopping-cart.png"></a>
+                </div>      
+            </header>
+            <!-- 内容 -->
+            <div class="ordersList">
+                <div class="ordersList-content">
+                    <div class="register-title">
+                        <h4 class="card-title">一卡通</h4>
+                        <p>绑定您的休闲卡</p>
+                    </div>
+                </div>
+                <div class="container minHeight" >
+                    <div class="card-options">
+                        <a href="javascript:;">消费卡</a>
+                        <a class="active" href="javascript:;">休闲卡</a>
+                        <a href="javascript:;">我的历史卡</a>
+                    </div>
+                    <div class="card-from">
+                        <form class="login-form">
+                            <div class="login-form-item">
+                                <p>卡号</p>
+                                <input type="text" name="" placeholder="请填写休闲卡卡号">
+                                <label>卡号格式不正确</label>
+                            </div>
+                            <p class="leisure-type">3-5万元等级</p>
+                            <div class="login-form-item">
+                                <p>校验码</p>
+                                <input type="text" name="" placeholder="请填写休闲卡校验码">
+                            </div>
+                            <div class="login-form-item">
+                                <p>支付密码</p>
+                                <input type="text" name="" placeholder="请填写休闲卡支付密码">
+                            </div>
+                            <div class="login-form-item">
+                                <p>持卡人姓名</p>
+                                <input type="text" name="" placeholder="">
+                            </div>
+                            <div class="login-form-item">
+                                <p>身份证号</p>
+                                <input type="text" name="" placeholder="">
+                            </div>
+                            <div class="login-form-item">
+                                <p>手机号</p>
+                                <input type="text" name="" placeholder="">
+                            </div>
+                        </form>
+                    </div>
+                    <div class="card-btn">
+                        <a class="bd" id="card_bd" href="javascript:;">立即绑定</a>
+                    </div>
+                </div>
+            </div>     
+
+            <!-- 页脚 -->
+            <footer class="footer2">
+                <div class="footer2-content">
+                    <div class="footer2-contact clearfix">
+                        <h5 class="left">联系我们</h5>
+                        <p class="left">0573-88731088</p>
+                    </div>
+                    <div class="footer2-copyright">
+                        <p>版权申明 | 乌镇旅游股份有限公司©版本所有©浙ICP备09047744号</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- 回到顶部及咨询 -->
+        <div class="sidebar">
+            <a class="help" href="javascript:;"></a>
+            <div class="gotop" id="gotop"></div>
+        </div> 
+
+        <!-- 确认绑定提示 -->
+        <div class="submit-prompt" id="confirmBinding">
+            <div class="sp-content">
+                <section>
+                    <p>绑定休闲卡号</p>
+                    <span>20160823000039232523</span>
+                </section>
+                <section>
+                    <p>绑定帐号</p>
+                    <span>138******98</span>
+                </section>
+                <div>
+                    <a class="bor cancel" href="javascript:;">取消</a>
+                    <a class="confirmbd" href="javascript:;">确认绑定</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 绑定成功提示 -->
+        <div class="submit-prompt" id="succBinding">
+            <div class="sp-content">
+                <section>
+                    <p>绑定成功</p>
+                </section>
+                <section>
+                    <p>您的休闲卡</p>
+                    <span>20160823000039232523</span>
+                </section>
+                <div>
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>

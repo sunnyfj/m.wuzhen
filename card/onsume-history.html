@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>消费卡消费记录</title>
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+        <link rel="stylesheet" href="../css/swiper.css">
+        <link rel="stylesheet" href="../css/public.css">
+        <link rel="stylesheet" href="../css/other-blocks.css">
+
+        <script src="../build/flexible_css.debug.js"></script>
+        <script src="../build/flexible.debug.js"></script>
+        <script src="../js/jquery.1.7.2.min.js"></script>
+        <script src="../js/public.js"></script>
+        <script src="../js/module.js"></script>
+
+        <link href="../css/mobiscroll.css" rel="stylesheet" type="text/css">
+        <script src="../js/mobiscroll.js" type="text/javascript"></script>
+    </head>
+    <body>
+        <!-- 侧边导航栏 -->
+        <div class="sidenav-opa"></div>
+        <div class="sidenav">
+            <ul>
+                <li>
+                    <a class="sidenav-a" href="package-list.html">
+                        <div class="clearfix">
+                            <p class="p1">套餐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="hotel-list.html">
+                        <div class="clearfix">
+                            <p class="p2">酒店</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="food-list.html">
+                        <div class="clearfix">
+                            <p class="p3">美食</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="ticket-list.html">
+                        <div class="clearfix">
+                            <p class="p4">票务</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="quickSelection borNo">
+                    <a href="javascript:;">
+                        <p class="p5">私人订制</p>
+                    </a>
+                    <a href="javascript:;">
+                        <p class="p6">懒人模式</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="conference-list.html">
+                        <div class="clearfix">
+                            <p class="p7">会展婚宴</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="shopping-list-specialty.html">
+                        <div class="clearfix">
+                            <p class="p8">购物娱乐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p9">景区导览</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p10">语音导游</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p11">积分商城</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p12">卡券</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pageContent">
+            <!-- 页头 -->
+            <header class="clearfix">
+                <div class="header-l">
+                    <a id="header-btn" class="btn" href="javascript:;"><img src="../images/header-btn.png"></a>
+                    <a class="logo" href="index.html"><img src="../images/logo.png"></a>
+                </div>
+                <div class="header-r">
+                    <a href="tel:13855555555"><img src="../images/tel.png"></a>
+                    <a class="personal" href="javascript:;"><img src="../images/geren.png"></a>
+                    <a href="javascript:;"><img src="../images/shopping-cart.png"></a>
+                </div>      
+            </header>
+            <!-- 内容 -->
+            <div class="ordersList">
+                <div class="ordersList-content">
+                    <div class="register-title">
+                        <h4 class="card-title">消费卡消费记录</h4>
+                        <p>查询您的消费记录</p>
+                        <div style="left: 0;">
+                            <a class="back" href="javascript:;">返回</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="record border-top">
+                        <div class="card-number" id="record-select-btn">
+                            <p>卡号：</p>
+                            <span>200102010100000000R</span>
+                            <a href="javascript:;"></a>
+                        </div>
+                        <div class="record-date">                            
+                            <div>
+                                <label for="startDate">开始时间</label>                                
+                                <input value="2017-08-03" class="" readonly="readonly" id="startDate" type="text">
+                            </div>
+                            <div>
+                                <label for="leaveDate">结束时间</label>                                
+                                <input value="2017-08-03" class="" readonly="readonly" id="leaveDate" type="text">
+                            </div>
+                        </div>
+                        <div class="record-options">
+                            <div id="onsume-scene">
+                                <span class="text">消费场景</span>
+                                <span class="arrow"></span>
+                            </div>
+                            <div id="onsume-type">
+                                <span class="text">交易类型</span>
+                                <span class="arrow"></span>
+                            </div>
+                        </div>
+                        <div class="codeShow-info record-code">
+                            <div class="ci-number">
+                                <p>卡号<b>200102010100000000R</b></p>
+                                <span>电子卡</span>
+                            </div>
+                            <div class="cl-price">
+                                <p>余额<b>5480元</b></p>
+                            </div>
+                        </div>
+                        <div class="record-list">
+                            <ul>
+                                <li>
+                                    <span>线上</span>
+                                    <div>
+                                        <h5>乌镇西栅景区门票消费120元</h5>
+                                        <p>2016-12-31 14:30</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>线下</span>
+                                    <div>
+                                        <h5>乌镇西栅景区门票消费120元</h5>
+                                        <p>2016-12-31 14:30</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>线上</span>
+                                    <div>
+                                        <h5>乌镇西栅景区门票消费120元</h5>
+                                        <p>2016-12-31 14:30</p>
+                                    </div>
+                                </li>
+                                <li>
+                                    <span>线下</span>
+                                    <div>
+                                        <h5>乌镇西栅景区门票消费120元</h5>
+                                        <p>2016-12-31 14:30</p>
+                                    </div>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- 页脚 -->
+            <footer class="footer2">
+                <div class="footer2-content">
+                    <div class="footer2-contact clearfix">
+                        <h5 class="left">联系我们</h5>
+                        <p class="left">0573-88731088</p>
+                    </div>
+                    <div class="footer2-copyright">
+                        <p>版权申明 | 乌镇旅游股份有限公司©版本所有©浙ICP备09047744号</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- 回到顶部及咨询 -->
+        <div class="sidebar">
+            <a class="help" href="javascript:;"></a>
+            <div class="gotop" id="gotop"></div>
+        </div>
+
+        <!-- 卡号下拉 -->
+        <div class="M_PageSelection" id="record-selectNum">
+            <div class="ordersList-content recordSelect">
+                <div class="register-title border-bottom">
+                    <h4 class="card-title">消费卡消费记录</h4>
+                    <p>查询您的卡号</p>
+                </div>
+            </div>
+            <div class="M_PageSelection_content padding-s">
+                <div class="container">
+                    <ul>
+                        <li class="active">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>200102010100000000R</p>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="M_btn S_btn">
+                <div class="container clearfix">
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 消费场景 -->
+        <div class="M_PageSelection" id="record-selectScene">
+            <div class="ordersList-content recordSelect">
+                <div class="register-title border-bottom">
+                    <h4 class="card-title">消费卡消费记录</h4>
+                    <p>消费场景</p>
+                </div>
+            </div>
+            <div class="M_PageSelection_content padding-s">
+                <div class="container">
+                    <ul>
+                        <li class="active">
+                            <p>线上</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>线下</p>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="M_btn S_btn">
+                <div class="container clearfix">
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+
+        <!-- 交易类型 -->
+        <div class="M_PageSelection" id="record-selectType">
+            <div class="ordersList-content recordSelect">
+                <div class="register-title border-bottom">
+                    <h4 class="card-title">消费卡消费记录</h4>
+                    <p>交易类型</p>
+                </div>
+            </div>
+            <div class="M_PageSelection_content padding-s">
+                <div class="container">
+                    <ul>
+                        <li class="active">
+                            <p>消费</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>退货</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>额度调整</p>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="M_btn S_btn">
+                <div class="container clearfix">
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+        <!-- 时间范围提示 -->
+
+        <div class="submit-prompt" id="dataRange">
+            <div class="sp-content">
+                <p>您选择的时间范围不正确，请重新选择。</p>
+                <div>
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+        <script type="text/javascript">
+            $(function () {
+                var currYear = (new Date()).getFullYear();  
+                var opt={};
+                opt.date = {preset : 'date'};
+                opt.datetime = {preset : 'datetime'};
+                opt.time = {preset : 'time'};
+                opt.default = {
+                    theme: 'android-ics light', //皮肤样式
+                    display: 'bottom', //显示方式 
+                    mode: 'scroller', //日期选择模式
+                    dateFormat: 'yyyy-mm-dd',
+                    lang: 'zh',
+                    startYear: currYear - 10, //开始年份
+                    endYear: currYear//结束年份
+                };
+
+                $("#startDate").mobiscroll($.extend(opt['date'], opt['default']));
+                $("#leaveDate").mobiscroll($.extend(opt['date'], opt['default']));
+                
+            });
+        </script>
+    </body>
+</html>

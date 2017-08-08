@@ -560,7 +560,25 @@ body .package-btn a {
 .newList-title {
 	text-align: center;
 	padding: 0.4rem 0;
+	position: relative;
 }
+.newList-title div {
+	height: 1.04rem;
+    position: absolute;
+    left: 0;
+    top: 0.426667rem;
+}
+.newList-title div a.home {
+	display: inline-block;
+    padding-top: 0.693333rem;
+    width: 0.72rem;
+    background: url(../images/custom-home.png) no-repeat;
+    background-size: 0.693333rem 0.693333rem;
+    font-size: 0.266667rem;
+    color: #7E808A;
+}
+
+
 .newList-title h4 {
 	padding-left: 0.613333rem;
     display: inline-block;
@@ -575,6 +593,11 @@ body .package-btn a {
 }
 .newList-title h4.newList-title-hotel{
     background: url(../images/product2.png) left center no-repeat;
+    -webkit-background-size: 0.56rem 0.56rem;
+    background-size:0.56rem 0.56rem;
+}
+.newList-title h4.custom-title{
+    background: url(../images/custom-title.png) left center no-repeat;
     -webkit-background-size: 0.56rem 0.56rem;
     background-size:0.56rem 0.56rem;
 }
@@ -1022,7 +1045,7 @@ body .package-btn a {
 	padding-top: 0.426667rem;*/
 	padding: 0.213333rem;
 	text-align: center;
-	border-top: 0.013333rem solid #D4DAE1;
+	/*border-top: 0.013333rem solid #D4DAE1;*/
 }
 
 .nio-bottom-btn .btn-a{
@@ -1711,9 +1734,21 @@ body .package-btn a {
 	font-size: 0.373333rem;
 	color: #7E808A;
 	line-height: 1.7;
-	padding: 0.053333rem 0;
+	/*padding: 0.053333rem 0;*/
+	display: -webkit-box;
+    display: flex;
 }
-.room-details-info ul li span{
+.room-details-info ul li b {
+	display: block;
+	width: 1.066667rem;
+	font-weight: normal;
+	color: #2A2A2F;
+}
+.room-details-info ul li p{
+	-webkit-box-flex: 1;
+    flex: 1;
+}
+.room-details-info ul li p span{
 	color: #000;
 }
 .room-detailsPrompt{
@@ -2443,7 +2478,258 @@ body .package-btn a {
 	border: 0.013333rem solid #2A2A2F;
 }
 
+/*私人订制*/
+.custom {
+	width: 100%;
+	padding-top: 0.426667rem;
+}
+.custom-discount {
+	width: 100%;
+	height: 0.88rem;
+	line-height:0.88rem;
+	background: #F3F4F8;
+	padding-right: 0.213333rem;
+}
+.custom-discount span {
+	display: block;
+	width: 100%;
+	height: 100%;
+	overflow: hidden;
+	text-overflow:ellipsis;
+	white-space: nowrap;
+	font-size: 0.32rem;
+	padding-left: 0.213333rem;
+	padding-right:0.32rem;
+	color: #2A2A2F;
+	background: url(../images/right.png) right center no-repeat;
+	background-size: 0.32rem 0.32rem;
+}
+.custom-list {
+	padding-top: 0.64rem;
+	position: relative;
+}
+.custom-tab {
+	position: absolute;
+	left: 0;
+	top: 0;
+	padding-top: 0.64rem;
+	background-color: #fff;
+	padding-right: 0.64rem;
+}
+.custom-tab.scrolled {
+	position: fixed;
+	left: 0.426667rem;
+	top: 0;
+	padding-top: 0.64rem;
+	background-color: #fff;
+	padding-right: 0.64rem;
+}
+.custom-tab ul li {
+	width: 1.28rem;
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	background: #F3F4F8;
+	border-radius: 2.666667rem;
+	text-align: center;
+	padding: 0.186667rem 0;
+	line-height: 1;
+	margin-bottom: 0.426667rem;
+	position: relative;
+}
+.custom-tab ul li.active{
+	background: #2A2A2F;
+	color: #fff;
+}
+.custom-tab ul li i {
+	position: absolute;
+	top: 0;
+	left:0.853333rem;
+	font-style: normal;
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	background-color:  #FF1431;
+	display: block;
+	padding: 0.053333rem 0.133333rem;
+    border-radius: 0.32rem;
+    line-height: 1;
+}
+.custom-content {
+	width: 100%;
+	padding-left: 1.92rem;
+}
+.custom-showblock {
+	display: none;
+}
+.custom-showblock.active {
+	display: block;
+}
+.custom-item {
+	margin-bottom: 0.426667rem;
+}
+.custom-item-top {
+	width: 100%;
+	display: -webkit-box;
+	display: flex;
+}
+.custom-item-top div.custom-img{
+	width: 2.56rem;
+	height: 2.56rem;
+}
+.custom-item-top div.custom-img img{
+	width:100%;
+	height:100%;
+}
+.custom-item-top div.custom-text-title {
+	-webkit-box-flex: 1;
+    flex: 1;
+    margin-left: 0.426667rem;
+}
+.custom-item-top div.custom-text-title  h4 {
+	font-size: 0.426667rem;
+	color: #2A2A2F;
+	display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+    overflow: hidden;
+    margin-bottom: 0.186667rem;
+}
+.custom-item-top div.custom-text-title  h4 a{
+	color: #2A2A2F;
+    text-decoration: none;
+}
+.custom-item-top div.custom-text-title  h5{
+	font-size: 0.32rem;
+	color: #000000;
+}
+.custom-item-top div.custom-text-title  h5 span {
+	font-size: 0.533333rem;
+	font-family: myfont;
+}
+.custom-item-top div.custom-text-title  h5 i {
+	font-style: normal;
+    color: #7E808A;
+    padding-left: 0.213333rem;
+}
 
+.custom-item-top div.custom-text-title p {
+	font-size: 0.32rem;
+	color: #7E808A;
+	margin-top: 0.213333rem;
+}
+.custom-item-top div.custom-text-title p span {
+	margin-right: 0.213333rem;
+}
+.custom-item-bottom {
+	background: #F3F4F8;
+	margin-top: 0.426667rem;
+	padding: 0 0.4rem;
+	position: relative;
+}
+.custom-item-bottom ul {
+	transition: 0.3s ease all;
+}
+.custom-item-bottom ul.merge {
+	height: 3.52rem;
+	overflow:hidden;
+	transition: 0.3s ease all;
+}
+.custom-item-bottom ul li {
+	width: 100%;
+	height: 1.76rem;
+	padding: 0.32rem 0;
+	border-bottom: 0.013333rem solid #D4DAE1;
+}
+.custom-item-bottom ul li p {
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	margin-bottom: 0.213333rem;
+}
+.custom-item-bottom li .price {
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	display: -webkit-box;
+	display: flex;
+}
+
+
+.custom-item-bottom li div b{
+	-webkit-box-flex: 1;
+    flex: 1;
+}
+
+
+.custom-item-bottom li .modifyNum {
+	text-align: center;
+	display: -webkit-box;
+	display: flex;
+}
+.custom-item-bottom li .modifyNum span {
+	display: inline-block;
+	vertical-align: top;
+	line-height: 0.426667rem;
+	margin:0 0.213333rem;
+}
+.custom-item-bottom li .modifyNum a.custom-add {
+	display: inline-block;
+	width: 0.426667rem;
+	height: 0.426667rem;
+	background: url(../images/custom-add.png) no-repeat;
+	background-size: cover;
+	vertical-align: top;
+}
+.custom-item-bottom li .modifyNum a.custom-reduce {
+	display: inline-block;
+	width: 0.426667rem;
+	height: 0.426667rem;
+	background: url(../images/custom-reduce.png) no-repeat;
+	background-size: cover;
+	vertical-align: top;
+}
+.custom-item-open {
+	width: 100%;
+	text-align: center;
+	padding: 0.16rem 0;
+	/*padding: 0.213333rem;*/
+    text-align: center;
+    /*border-top: 0.013333rem solid #D4DAE1;*/
+}
+.custom-item-open a {
+	display: inline-block;
+	text-align: center;
+	font-size: 0.266667rem;
+	color: #2A2A2F;
+	line-height: 1;
+	/*border: 0.013333rem solid #7E808A;*/
+}
+/*.custom-noMore {
+	width: 100%;
+	text-align: center;
+	height: 1.76rem;
+    text-align: center;
+    line-height: 1.76rem;
+    font-size: 0.32rem;
+    color: #7E808A;
+    background-color: #fff;
+}
+<!-- <div class="custom-noMore">
+    <p>已无更多产品</p>
+</div> -->*/
+
+
+
+
+
+
+.point-triangle {
+	position: absolute;
+    width: 0;
+    height: 0;
+    left: 0.213333rem;
+    top:-0.213333rem;
+    border-left: 0.24rem solid transparent;
+    border-right: 0.24rem solid transparent;
+    border-bottom: 0.24rem solid #F3F4F8;;
+}
 
 
 

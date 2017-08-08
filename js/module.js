@@ -566,4 +566,56 @@ $(function(){
 	$('.confirm-pay-mode .mode-list-item').on('click',function(){
 		$(this).addClass('active').siblings().removeClass('active');
 	})
+
+
+
+	//消费记录 日历选择
+	function compareArr(arr1,arr2){
+        if( parseInt(arr1[0]) > parseInt(arr2[0]) ){
+            return true;
+        }else if(parseInt(arr1[0]) < parseInt(arr2[0])){
+            return false;
+        }else{
+            if( parseInt(arr1[1]) > parseInt(arr2[1]) ){
+                return true;
+            }else if( parseInt(arr1[1]) < parseInt(arr2[1]) ){
+                return false;
+            }else{
+                if( parseInt(arr1[2]) >= parseInt(arr2[2]) ){
+                    return true;
+                }else{
+                    return false;
+                }
+            }
+        }
+    };
+	$('#leaveDate').on('change',function(){
+        var leaveVal = $(this).val();
+        var startVal = $('#startDate').val();
+        var leaveArr = leaveVal.split('-');
+        var startArr = startVal.split('-');
+        if(compareArr(leaveArr,startArr) ==false){
+            $('#dataRange').fadeIn(100);
+        }else{
+            //需要ajax加载的信息
+        }
+        
+    })
+    $('#startDate').on('change',function(){
+        var startVal= $(this).val();
+        var leaveVal = $('#leaveDate').val();
+        var leaveArr = leaveVal.split('-');
+        var startArr = startVal.split('-');
+
+        if(compareArr(leaveArr,startArr) ==false){
+            $('#dataRange').fadeIn(100);
+        }else{
+            //需要ajax加载的信息
+        }
+        
+    })
+
+    $('#dataRange .determine').on('click',function(){
+        $('#dataRange').fadeOut(100);
+    })
 })
