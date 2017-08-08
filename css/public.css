@@ -312,6 +312,7 @@ footer{
 	bottom: 1.566667rem;
 	width: 1.173333rem;
 	height: 2.666666rem;
+	z-index: 500;
 }
 .sidebar .help {
 	display: block;
