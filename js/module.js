@@ -618,4 +618,115 @@ $(function(){
     $('#dataRange .determine').on('click',function(){
         $('#dataRange').fadeOut(100);
     })
+
+
+    //私人订制 ↓
+
+    //判断房型或类型少于2个影藏展开按钮
+    for(var i=0; i<$('.merge').length; i++){
+        if($('.merge').eq(i).find('li').length<=2){
+            $('.merge').eq(i).next('.custom-item-open').hide();
+        }
+    }
+
+    //房型或类型展开 & 收起
+    $('.custom-item-open a').on('click',function(){
+        if($(this).parent().prev('ul').hasClass('merge')){
+            $(this).parent().prev('ul').removeClass('merge');
+            $(this).text('收起');
+            $(this).addClass('active');
+        }else{
+            $(this).parent().prev('ul').addClass('merge');
+            $(this).text('展开');
+            $(this).removeClass('active');
+        }
+    })
+    
+    //左侧tab 点击切换
+    $('.custom-tab li').on('click',function(){
+        $(this).addClass('active').siblings().removeClass('active');
+        var thisIndex = $(this).index();
+        $('.custom-content .custom-showblock').eq(thisIndex).addClass('active').siblings().removeClass('active');
+    })
+
+    //列表产品 加加按钮
+    $('.custom-add').on('click',function(){
+        if($(this).parent().find('a').length ==1){                
+            var span = $('<span>1</span>');
+            var reduce = $('<a class="custom-reduce" href="javascript:;"></a>');
+            $(this).before(span);
+            $(this).parent().prepend(reduce);
+            //底部购物车状态
+            var cart = $('<img src="../images/cart-wrap2.png"><span>1212</span>');
+            var cartInfo = $('<p>套餐价：<b><span>6506</span>元</b><a class="settlement" href="javascript:;">去结算</a></p>');
+            $('.cart-wrap .cart-icon').html(cart);
+            $('.cart-wrap .cart-info').html(cartInfo);
+
+        }else{    
+            var n = parseInt($(this).prev('span').text());
+            n++;
+            $(this).prev('span').text(n);
+        }                
+    })
+    //列表产品 减减按钮
+    $('.modifyNum').on('click','.custom-reduce',function(){
+        var n = parseInt($(this).next('span').text());
+        n--;
+        if(n<1){
+            $(this).parent('.modifyNum').find('span').remove();
+            $(this).remove();
+
+            //底部购物车状态
+            var cart = $('<img src="../images/cart-wrap1.png">');
+            var cartInfo = $('<p>选择3类以上产品可享受满立减优惠</p>');
+            $('.cart-wrap .cart-icon').html(cart);
+            $('.cart-wrap .cart-info').html(cartInfo);
+        }
+        $(this).next('span').text(n);
+    })
+
+    //cart-wrap点击显示 选中list
+    $('#cart-num').on('click',function(){
+        $('.cart-list').show();
+        $('.cart-data-opa').addClass('show');
+        $('html').addClass('more_prohibit_html');
+    })
+
+    //选中list隐藏
+    $('.cart-data-opa').on('click',function(){
+        $('.cart-list').hide();
+        $('.cart-data-opa').removeClass('show');
+        $('html').removeClass('more_prohibit_html');
+    })
+
+    //选中list清空
+    $('#clearAll').on('click',function(){
+        $('.cart-list-content').html('');
+        $('.cart-list').hide();
+        $('.cart-data-opa').removeClass('show');
+        $('html').removeClass('more_prohibit_html');
+    })
+
+    //选中list 减减按钮
+    $('.cart-item-reduce').on('click',function(){
+        var n = $(this).next('span').text();
+        n--;
+        if(n<1){                    
+            if($(this).parents('.cart-lc-blocks').find('li').length ==1){
+                $(this).parents('.cart-lc-blocks').remove();
+            }else{
+                $(this).parents('li').remove();
+            }
+        }  
+        $(this).next('span').text(n);
+    })
+
+    //选中list 加加按钮
+    $('.cart-item-add').on('click',function(){
+        var n = $(this).prev('span').text();
+        n++;
+        $(this).prev('span').text(n);
+    })
+
+    //私人订制 ↑
 })

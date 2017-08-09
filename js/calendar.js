@@ -248,12 +248,14 @@
 
         var thisStartAvtive = null;
         var thisLeaveAvtive = null;
+        var thisCartModTime = null;
+        var isEnd = 0;
         //给可选日期加事件
         $('.calendar').on('click','td.optional',function(){
             var allTd = $('.calendar').find('td.optional');
-            for(var i=0; i<allTd.length; i++){
+            /*for(var i=0; i<allTd.length; i++){
                 allTd.eq(i).removeClass('selected-start');
-            }
+            }*/
             $(this).addClass('selected-start');
 
             //显示日期
@@ -264,8 +266,41 @@
                     var startDate = new Date(startTime);
                     $('.activeStart').eq(thisStartAvtive).next('.activeLeave').find('span').text(getDateStr(startDate,1));
                 }
-            }else{
+                $('html').removeClass('more_prohibit_html');
+            }else if(dateType =='leave'){
                 $('.activeLeave').eq(thisLeaveAvtive).find('span').text($(this).attr('data-date-format'));
+                $('html').removeClass('more_prohibit_html');
+            }else if(dateType =='cart'){
+                if($('.cart-modTime').eq(thisCartModTime).attr('data-end')!='true'){
+                    $('.cart-modTime').eq(thisCartModTime).parent().prev().find('span').text($(this).attr('data-date-format'))
+                }else{
+                    if(isEnd == 0){
+                        $('.cart-modTime').eq(thisCartModTime).parent().prev().find('span').eq(0).text($(this).attr('data-date-format'));
+                        var spanTime = $(this).attr('data-date-format');
+                        var spanDate = new Date(spanTime);
+                        var spanEndDate = new Date(spanTime);
+                        $('.cart-modTime').eq(thisCartModTime).parent().prev().find('span').eq(1).text(getDateStr(spanEndDate,1));
+                        setTimeout(function(){
+                            isEnd=1;
+                            var endDate = new Date(getDateStr(spanDate,1));
+                            $('.calendar .calendar-content').find('.cartPrompt').text(modTimePrompt[1]);
+
+                            $('.calendar').show();
+                            $('.calendar-opa').css({'background-color': 'rgba(0,0,0,.5)'});
+                            $('.calendar-content').addClass('active');
+                            
+                            showDate($('.calendar-day'),spanDate.getFullYear(),spanDate.getMonth(),2);
+                            showColor($('.calendar table').eq(0).find('td.optional'),spanDate.getFullYear(),spanDate.getMonth()+1,endDate);
+                            trHide();
+                            pastDay();
+                            $('html').addClass('more_prohibit_html');
+                        },600)
+                    }else{
+                        $('.cart-modTime').eq(thisCartModTime).parent().prev().find('span').eq(1).text($(this).attr('data-date-format'));
+                        isEnd=0;
+                        $('.calendar .cartPrompt').remove();
+                    }
+                }
             }
             $('.calendar-content').removeClass('active');
             $('.calendar-opa').css({'background-color': 'rgba(0,0,0,0)'});
@@ -275,8 +310,6 @@
                     allTd.eq(i).removeClass('selected-start');
                 }
             },300);
-
-            $('html').removeClass('more_prohibit_html');
         });
 
         $('.activeStart').each(function(index,item){
@@ -328,8 +361,42 @@
                 $('.calendar').hide();
             },300);
             $('html').removeClass('more_prohibit_html');
-        });    
+        }); 
 
+        $('.cart-modTime').each(function(index,item){
+            $(item).attr('data-target',index);
+            if($(item).parent().prev().find('span').length == 2){
+                $(item).attr('data-end',true);
+            }
+        })
+        var modTimePrompt = ['请选择入住日期','请选择离店日期','请选择到达日期'];
+        $('.cart-modTime').on('click',function(){
+            var resetDate = $(this).attr('data-reset');
+            if($('.calendar .calendar-content').find('.cartPrompt').length==0){
+                if($(this).attr('data-end')=='true'){
+                    var cartPrompt = $('<div class="cartPrompt">'+modTimePrompt[0]+'</div>');
+                }else{
+                    var cartPrompt = $('<div class="cartPrompt">'+modTimePrompt[2]+'</div>');
+                }
+                $('.calendar .calendar-content').append(cartPrompt);
+            }else{
+                $('.calendar .calendar-content').find('.cartPrompt').text(modTimePrompt[0]);
+            }
+
+
+
+            dateType = 'cart';
+            thisCartModTime = $(this).attr('data-target');
+
+            $('.calendar').show();
+            $('.calendar-opa').css({'background-color': 'rgba(0,0,0,.5)'});
+            $('.calendar-content').addClass('active');
+            
+            showDate($('.calendar-day'),myDate.getFullYear(),myDate.getMonth(),resetDate);
+            showColor($('.calendar table').eq(0).find('td.optional'),myDate.getFullYear(),myDate.getMonth()+1,Date());
+            trHide();
+            pastDay();
+        })
            
  	}
  )()
