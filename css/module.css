@@ -2515,14 +2515,21 @@ body .package-btn a {
 	padding-top: 0.64rem;
 	background-color: #fff;
 	padding-right: 0.64rem;
+	width: 1.92rem;
 }
+/*!*Android*!*/
 .custom-tab.scrolled {
 	position: fixed;
 	left: 0.426667rem;
 	top: 0;
-	padding-top: 0.64rem;
-	background-color: #fff;
-	padding-right: 0.64rem;
+}
+/*!*iOS*!*/
+.custom-tab.scrolled{
+   	position: -webkit-sticky;
+  	position: sticky;
+  	left: 0.426667rem;
+	top: 0;
+	float: left;
 }
 .custom-tab ul li {
 	width: 1.28rem;

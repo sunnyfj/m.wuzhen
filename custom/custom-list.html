@@ -1297,29 +1297,14 @@
             })
             //左侧tab 固定
             var customTab = $('.custom-tab').offset().top;
-            /*$(window).on('scroll touchmove',function(){
+            $(window).on('scroll touchmove',function(){
                 var scrollTop = $(this).scrollTop();
                 if(scrollTop>=customTab){
                     $('.custom-tab').addClass('scrolled');     
                 }else{
                     $('.custom-tab').removeClass('scrolled');   
                 }
-            })*/
-            function scrollTop(value){
-                var scrollTop = $(window).scrollTop();
-                if(scrollTop>=value){
-                    $('.custom-tab').addClass('scrolled');     
-                }else{
-                    $('.custom-tab').removeClass('scrolled');   
-                }
-            }
-            scrollTop(customTab);
-            $(document).on('touchmove touchend',function(){
-                scrollTop(customTab);
-            });
-            /*$(window).on('scroll',function(){
-                scrollTop(customTab);
-            });*/
+            })
             //左侧tab 点击切换
             $('.custom-tab li').on('click',function(){
                 $(this).addClass('active').siblings().removeClass('active');
