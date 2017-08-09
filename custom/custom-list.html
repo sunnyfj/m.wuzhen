@@ -1295,22 +1295,45 @@
                     $(this).removeClass('active');
                 }
             })
-            //左侧tab 固定
-            var customTab = $('.custom-tab').offset().top;
-            $(window).on('scroll touchmove',function(){
-                var scrollTop = $(this).scrollTop();
-                if(scrollTop>=customTab){
-                    $('.custom-tab').addClass('scrolled');     
-                }else{
-                    $('.custom-tab').removeClass('scrolled');   
-                }
-            })
+            
             //左侧tab 点击切换
             $('.custom-tab li').on('click',function(){
                 $(this).addClass('active').siblings().removeClass('active');
                 var thisIndex = $(this).index();
                 $('.custom-content .custom-showblock').eq(thisIndex).addClass('active').siblings().removeClass('active');
             })
+
+            //左侧tab 固定
+            var customTab = $('.custom-tab').offset().top;
+            var u = navigator.userAgent; //获取显示器的信息
+            var isAndroid = u.indexOf('Android') > -1 || u.indexOf('Adr') > -1; //android终端
+            var isiOS = !!u.match(/\(i[^;]+;( U;)? CPU.+Mac OS X/); //ios终端
+            if(isiOS == true){  //苹果机，headhead隐藏，加类名headiOS
+                $(window).on('scroll touchmove',function(){
+                    var scrollTop = $(this).scrollTop();
+                    if(scrollTop>=customTab){
+                        $('.custom-tab').addClass('scrolledIos');     
+                    }else{
+                        $('.custom-tab').removeClass('scrolledIos');   
+                    }
+                })
+            }else{ //安卓机，加类名headAndr
+                $(window).on('scroll touchmove',function(){
+                    var scrollTop = $(this).scrollTop();
+                    if(scrollTop>=customTab){
+                        $('.custom-tab').addClass('scrolledAnd');     
+                    }else{
+                        $('.custom-tab').removeClass('scrolledAnd');   
+                    }
+                })
+            }
+
+
+
+
+
+
+
 
             //列表产品 加加按钮
             $('.custom-add').on('click',function(){

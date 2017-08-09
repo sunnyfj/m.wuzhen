@@ -2518,13 +2518,13 @@ body .package-btn a {
 	width: 1.92rem;
 }
 /*!*Android*!*/
-.custom-tab.scrolled {
+.custom-tab.scrolledAnd {
 	position: fixed;
 	left: 0.426667rem;
 	top: 0;
 }
 /*!*iOS*!*/
-.custom-tab.scrolled{
+.custom-tab.scrolledIos{
    	position: -webkit-sticky;
   	position: sticky;
   	left: 0.426667rem;
