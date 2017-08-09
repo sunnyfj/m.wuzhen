@@ -2516,6 +2516,7 @@ body .package-btn a {
 	background-color: #fff;
 	padding-right: 0.64rem;
 	width: 1.92rem;
+	z-index: 50;
 }
 /*!*Android*!*/
 .custom-tab.scrolledAnd {
