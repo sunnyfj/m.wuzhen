@@ -146,6 +146,14 @@ html {
 .padding-t16 {
 	padding-top: 0.213333rem;
 }
+.nothing{
+	width: 100%;
+	height: 1.306667rem;
+	line-height: 1.306667rem;
+	font-size: 0.32rem;
+	color: #7E808A;
+	text-align: center;
+}
 /*头部*/
 header {
 	width: 100%;
@@ -976,3 +984,4 @@ body{
 	height: 100%;
 	text-align: center;
 }
+

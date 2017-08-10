@@ -196,10 +196,10 @@
 
         var nextDate = new Date();//页面展示的初始时间
 
-        if($('.activeStart').find('span').attr('data-isShowTime') == 'true'){
-            $('.activeStart').find('span').text(getDateStr(nextDate,0));
+        if($('.activeStart').find('input').attr('data-isShowTime') == 'true'){
+            $('.activeStart').find('input').val(getDateStr(nextDate,0));
             if($('.activeLeave')){
-                $('.activeLeave').find('span').text(getDateStr(nextDate,1));
+                $('.activeLeave').find('input').val(getDateStr(nextDate,1));
             } 
         }
         //判断table多出的空行
@@ -260,26 +260,26 @@
 
             //显示日期
             if(dateType=='start'){
-                $('.activeStart').eq(thisStartAvtive).find('span').text($(this).attr('data-date-format'));
+                $('.activeStart').eq(thisStartAvtive).find('input').val($(this).attr('data-date-format'));
                 if($('.activeStart').eq(thisStartAvtive).next('.activeLeave')){
                     var startTime = $(this).attr('data-date-format');
                     var startDate = new Date(startTime);
-                    $('.activeStart').eq(thisStartAvtive).next('.activeLeave').find('span').text(getDateStr(startDate,1));
+                    $('.activeStart').eq(thisStartAvtive).next('.activeLeave').find('input').val(getDateStr(startDate,1));
                 }
                 $('html').removeClass('more_prohibit_html');
             }else if(dateType =='leave'){
-                $('.activeLeave').eq(thisLeaveAvtive).find('span').text($(this).attr('data-date-format'));
+                $('.activeLeave').eq(thisLeaveAvtive).find('input').val($(this).attr('data-date-format'));
                 $('html').removeClass('more_prohibit_html');
             }else if(dateType =='cart'){
                 if($('.cart-modTime').eq(thisCartModTime).attr('data-end')!='true'){
-                    $('.cart-modTime').eq(thisCartModTime).parent().prev().find('span').text($(this).attr('data-date-format'))
+                    $('.cart-modTime').eq(thisCartModTime).parent().prev().find('input').val($(this).attr('data-date-format'))
                 }else{
                     if(isEnd == 0){
-                        $('.cart-modTime').eq(thisCartModTime).parent().prev().find('span').eq(0).text($(this).attr('data-date-format'));
+                        $('.cart-modTime').eq(thisCartModTime).parent().prev().find('input').eq(0).val($(this).attr('data-date-format'));
                         var spanTime = $(this).attr('data-date-format');
                         var spanDate = new Date(spanTime);
                         var spanEndDate = new Date(spanTime);
-                        $('.cart-modTime').eq(thisCartModTime).parent().prev().find('span').eq(1).text(getDateStr(spanEndDate,1));
+                        $('.cart-modTime').eq(thisCartModTime).parent().prev().find('input').eq(1).val(getDateStr(spanEndDate,1));
                         setTimeout(function(){
                             isEnd=1;
                             var endDate = new Date(getDateStr(spanDate,1));
@@ -296,7 +296,7 @@
                             $('html').addClass('more_prohibit_html');
                         },600)
                     }else{
-                        $('.cart-modTime').eq(thisCartModTime).parent().prev().find('span').eq(1).text($(this).attr('data-date-format'));
+                        $('.cart-modTime').eq(thisCartModTime).parent().prev().find('input').eq(1).val($(this).attr('data-date-format'));
                         isEnd=0;
                         $('.calendar .cartPrompt').remove();
                     }
@@ -323,8 +323,8 @@
             $('.calendar').show();
             $('.calendar-opa').css({'background-color': 'rgba(0,0,0,.5)'});
             $('.calendar-content').addClass('active');
-            dateType = $(this).find('span').attr('data-type');
-            var resetDate = $(this).find('span').attr('data-reset');
+            dateType = $(this).find('input').attr('data-type');
+            var resetDate = $(this).find('input').attr('data-reset');
             showDate($('.calendar-day'),myDate.getFullYear(),myDate.getMonth(),resetDate);
             showColor($('.calendar table').eq(0).find('td.optional'),myDate.getFullYear(),myDate.getMonth()+1,Date());
             trHide();
@@ -340,10 +340,10 @@
             $('.calendar').show();
             $('.calendar-opa').css({'background-color': 'rgba(0,0,0,.5)'});
             $('.calendar-content').addClass('active');
-            dateType = $(this).find('span').attr('data-type');
-            var resetDate = $(this).find('span').attr('data-reset');
+            dateType = $(this).find('input').attr('data-type');
+            var resetDate = $(this).find('input').attr('data-reset');
 
-            var leaveText = $(this).prev('.activeStart').find('span').text();
+            var leaveText = $(this).prev('.activeStart').find('input').val();
             var leaveDate = new Date(leaveText);
             var leaveNextDayDate = getDateStr(leaveDate,1);
             var nextDayDate = new Date(leaveNextDayDate);
@@ -365,7 +365,7 @@
 
         $('.cart-modTime').each(function(index,item){
             $(item).attr('data-target',index);
-            if($(item).parent().prev().find('span').length == 2){
+            if($(item).parent().prev().find('input').length == 2){
                 $(item).attr('data-end',true);
             }
         })

@@ -729,4 +729,16 @@ $(function(){
     })
 
     //私人订制 ↑
+
+    //懒人模式
+    $('#shortcut-select-btn').on('click',function(){
+        $('#my_budget').show();
+        $('html').addClass('more_prohibit_html');
+    })
+    $('#my_budget .determine').on('click',function(){
+        var activeText = $('#my_budget').find('li.active p').text();
+        $('#shortcut-select-btn').find('input').val('我的预算约：'+activeText)
+        $('#my_budget').hide();
+        $('html').removeClass('more_prohibit_html');
+    })
 })
