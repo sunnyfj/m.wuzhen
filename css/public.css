@@ -46,6 +46,9 @@ body {
 .minHeight{
 	min-height: 12.4rem;
 }
+.minHeightList{
+	min-height: 9.2rem;
+}
 body .mybtn {
 	display: inline-block;
 	/*border: 1px solid #7E808A;
@@ -984,4 +987,62 @@ body{
 	height: 100%;
 	text-align: center;
 }
-
+/*弹出优惠卷*/
+.modal {
+	width: 100%;
+	height: 100%;
+	position: fixed;
+	top: 0;
+	left: 0;
+	z-index: 9999;
+}
+.modal .modal-opa {
+	width: 100%;
+	height: 100%;
+	background: rgba(0,0,0,0.40);
+}
+.modal .modal-content {
+	width: 7.2rem;
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%,-50%);
+	-webkit-transform: translate(-50%,-50%);
+	background:#FF1431 url(../images/modal.png) left top no-repeat;
+	border-radius: 0.32rem;
+	background-size: 100%;
+	padding: 0 0.426667rem 0.426667rem;
+}
+.modal .modal-content h4{
+	font-size: 0.533333rem;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 0.64rem 0 0.426667rem;
+}
+.modal .modal-content div {
+	font-size: 0.373333rem;
+	color: #FFFFFF;
+	text-align: center;
+	padding-bottom: 1.28rem;
+}
+.modal .modal-content div b{
+	font-size: 72px;
+	font-family: myfont;
+}
+.modal .modal-content p {
+	font-size: 0.32rem;
+	color: #FFFFFF;
+	line-height: 1.8;
+}
+.modal .modal-content a {
+	display: block;
+	width: 100%;
+	height: 1.066667rem;
+	line-height: 1.066667rem;
+	font-size: 0.373333rem;
+	color: #FF1431;
+	background: #FEF353;
+	border-radius: 0.133333rem;
+	margin-top: 0.826667rem;
+	text-align: center;
+}

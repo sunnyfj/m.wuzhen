@@ -175,4 +175,11 @@ $(function(){
 	});
 	
 
+	$('.modal .md-btn').on('click',function(){
+		$(this).parents('.modal').hide();
+		$('#modal-result').show();
+	})
+	$('#modal-result .back').on('click',function(){
+		$(this).parents('#modal-result').hide();
+	})
 })

@@ -741,4 +741,19 @@ $(function(){
         $('#my_budget').hide();
         $('html').removeClass('more_prohibit_html');
     })
+
+
+
+    //卡卷
+    $('#cardVolume-tab li').on('click',function(){
+    	$(this).addClass('active').siblings().removeClass('active');
+    	var index = $(this).index();
+    	$('.cardVolume .cardVolume-item').eq(index).addClass('active').siblings().removeClass('active');
+    })
+
+    //优惠卷专辑
+	$('.un-receive .re-btn').on('click',function(){
+	    $(this).text('已领取');
+	    $(this).parents('.un-receive').removeClass('un-receive').addClass('in-receive');
+	})
 })
