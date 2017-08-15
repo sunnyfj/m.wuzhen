@@ -2535,7 +2535,9 @@ body .package-btn a {
 	background: #F3F4F8;
 	padding-right: 0.213333rem;
 }
-.custom-discount span {
+.custom-discount input {
+	border: none;
+	outline: none;
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -2991,7 +2993,7 @@ body .package-btn a {
 	outline: none;
 	font-size: 0.32rem;
 	color: #7E808A;
-	width: 1.933333rem;
+	width: 2.2rem;
 	padding-left: 0.133333rem;
 }
 .cart-item-data-info p.price{
@@ -3078,17 +3080,25 @@ body .package-btn a {
 	color: #000000;
 }
 .shortcut-item-info {
-	display: -webkit-box;
-    display: flex;
+	overflow:hidden;
 }
-.shortcut-item-info div{
+.shortcut-item-info div.swiper-slide{
+	width: 2.88rem;
+	padding-right: 0.32rem;
+	position: relative;
+}
+.shortcut-item-info div.swiper-slide:last-child {
 	width: 2.56rem;
+	padding-right: 0;
 }
-.shortcut-item-info div img{
+.shortcut-item-info div.swiper-slide:last-child .shortcut-item-add{
+	display: none;
+}
+.shortcut-item-info div.swiper-slide img{
 	width: 100%;
 	height: 2.56rem;
 }
-.shortcut-item-info div p {
+.shortcut-item-info div.swiper-slide p {
 	font-size: 0.373333rem;
 	color: #2A2A2F;
 }
@@ -3096,9 +3106,12 @@ body .package-btn a {
 	display: block;
 	width: 0.426667rem;
 	height: 0.426667rem;
-	background: url(../images/custom-add.png) no-repeat;
+	background: url(../images/and.png) no-repeat;
 	background-size: cover;
-	margin-top: 1.04rem;
+	position: absolute;
+	top: 1.04rem;
+	right: -0.053333rem;
+	z-index: 50;
 }
 .shortcut-item-price {
 	width: 100%;

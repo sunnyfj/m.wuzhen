@@ -6,14 +6,14 @@
         <meta content="yes" name="apple-mobile-web-app-capable">
         <meta content="yes" name="apple-touch-fullscreen">
         <meta content="telephone=no,email=no" name="format-detection">
-        <link rel="stylesheet" href="css/swiper.css">
-        <link rel="stylesheet" href="css/public.css">
-        <link rel="stylesheet" href="css/index.css">
-        <script src="build/flexible_css.debug.js"></script>
-        <script src="build/flexible.debug.js"></script>
-        <script src="js/swiper.min.js"></script>
-        <script src="js/zepto.js"></script>
-        <script src="js/public.js"></script>
+        <link rel="stylesheet" href="../css/swiper.css">
+        <link rel="stylesheet" href="../css/public.css">
+        <link rel="stylesheet" href="../css/index.css">
+        <script src="../build/flexible_css.debug.js"></script>
+        <script src="../build/flexible.debug.js"></script>
+        <script src="../js/swiper.min.js"></script>
+        <script src="../js/zepto.js"></script>
+        <script src="../js/public.js"></script>
     </head>
     <body>
         <!-- 侧边导航栏 -->
@@ -114,13 +114,13 @@
             <!-- 页头 -->
             <header class="clearfix">
                 <div class="header-l">
-                    <a id="header-btn" class="btn" href="javascript:;"><img src="images/header-btn.png"></a>
-                    <a class="logo" href="index.html"><img src="images/logo.png"></a>
+                    <a id="header-btn" class="btn" href="javascript:;"><img src="../images/header-btn.png"></a>
+                    <a class="logo" href="index.html"><img src="../images/logo.png"></a>
                 </div>
                 <div class="header-r">
-                    <a href="tel:13855555555"><img src="images/tel.png"></a>
-                    <a class="personal" href="javascript:;"><img src="images/geren.png"></a>
-                    <a href="javascript:;"><img src="images/shopping-cart.png"></a>
+                    <a href="tel:13855555555"><img src="../images/tel.png"></a>
+                    <a class="personal" href="javascript:;"><img src="../images/geren.png"></a>
+                    <a href="javascript:;"><img src="../images/shopping-cart.png"></a>
                 </div>      
             </header>
             
@@ -128,9 +128,9 @@
             <div class="scroll-wrap">
                 <div class="swiper-container" id="swiper-container1">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-slide-active"><a href=""><img src="images/banner-img.png"></a></div>
-                        <div class="swiper-slide"><a href=""><img src="images/banner-img.png"></a></div>
-                        <div class="swiper-slide"><a href=""><img src="images/banner-img.png"></a></div>
+                        <div class="swiper-slide swiper-slide-active"><a href=""><img src="../images/banner-img.png"></a></div>
+                        <div class="swiper-slide"><a href=""><img src="../images/banner-img.png"></a></div>
+                        <div class="swiper-slide"><a href=""><img src="../images/banner-img.png"></a></div>
                     </div>
                     <div class="swiper-pagination" id="swiper-pagination1"></div>
                 </div>
@@ -142,7 +142,74 @@
                         <li class="last"><a href="food-list.html">美食</a></li>
                     </ul>
                 </div>
-
+                <div class="product">
+                    <div class="product-title-pre">
+                        <h4 class="pre">精选特惠</h4>
+                    </div>
+                    <p class="product-p">限时抢购，精选超值商品</p>
+                    <div class="pre-wrapper">
+                        <div class="swiper-container" id="pre-wrapper">
+                           <div class="swiper-wrapper">
+                               <div class="swiper-slide">
+                                    <div class="pre-item">
+                                        <div class="pre-img">
+                                            <a href="javascript:;"><img src="../images/pre-img.png"></a>
+                                        </div>
+                                        <div class="pre-info">
+                                            <h4><a href="javascript:;">乌镇锦堂行馆锦堂大床房</a></h4>
+                                            <div class="price">
+                                                <p><b>220</b>元</p>
+                                                <span>已抢22件</span>
+                                            </div>
+                                            <div class="pre-time">
+                                                <p>2017-07-29到期</p>
+                                                <a href="javascript:;">立即抢购</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="pre-item">
+                                        <div class="pre-img">
+                                            <a href="javascript:;"><img src="../images/pre-img.png"></a>
+                                        </div>
+                                        <div class="pre-info">
+                                            <h4><a href="javascript:;">乌镇锦堂行馆锦堂大床房</a></h4>
+                                            <div class="price">
+                                                <p><b>220</b>元</p>
+                                                <span>已抢22件</span>
+                                            </div>
+                                            <div class="pre-time">
+                                                <p>2017-07-29到期</p>
+                                                <a href="javascript:;">立即抢购</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="swiper-slide">
+                                    <div class="pre-item">
+                                        <div class="pre-img">
+                                            <a href="javascript:;"><img src="../images/pre-img.png"></a>
+                                        </div>
+                                        <div class="pre-info">
+                                            <h4><a href="javascript:;">乌镇锦堂行馆锦堂大床房</a></h4>
+                                            <div class="price">
+                                                <p><b>220</b>元</p>
+                                                <span>已抢22件</span>
+                                            </div>
+                                            <div class="pre-time">
+                                                <p>2017-07-29到期</p>
+                                                <a href="javascript:;">立即抢购</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                           </div>
+                           <div class="swiper-pagination" id="pre-pagination"></div>
+                       </div>
+                    </div>
+                    <a class="product-more" href="javascript:;">更多特惠</a>
+                </div>
                 <!-- 产品区块  套餐及酒店公用模块 -->
                 <div class="product">
                     <div class="product-title">
@@ -152,7 +219,7 @@
                     <ul class="product-ul">
                         <li>
                             <a href="package-details.html">
-                                <img src="images/package1.png">
+                                <img src="../images/package1.png">
                                 <span class="promotion">促销</span>
                                 <div class="product-info">
                                     <h3><span>687</span>元</h3>
@@ -163,7 +230,7 @@
                         </li>
                         <li>
                             <a href="package-details.html">
-                                <img src="images/package1.png">
+                                <img src="../images/package1.png">
                                 <span class="promotion">促销</span>
                                 <div class="product-info">
                                     <h3><span>687</span>元</h3>
@@ -174,7 +241,7 @@
                         </li>
                         <li>
                             <a href="package-details.html">
-                                <img src="images/package1.png">
+                                <img src="../images/package1.png">
                                 <span class="promotion">促销</span>
                                 <div class="product-info">
                                     <h3><span>687</span>元</h3>
@@ -216,7 +283,7 @@
                     <ul class="product-ul">
                         <li>
                             <a href="hotel-details.html">
-                                <img src="images/package1.png">
+                                <img src="../images/package1.png">
                                 <span class="promotion">促销</span>
                                 <div class="product-info">
                                     <h3><span>687</span>元</h3>
@@ -227,7 +294,7 @@
                         </li>
                         <li>
                             <a href="hotel-details.html">
-                                <img src="images/package1.png">
+                                <img src="../images/package1.png">
                                 <span class="promotion">促销</span>
                                 <div class="product-info">
                                     <h3><span>687</span>元</h3>
@@ -238,7 +305,7 @@
                         </li>
                         <li>
                             <a href="hotel-details.html">
-                                <img src="images/package1.png">
+                                <img src="../images/package1.png">
                                 <span class="promotion">促销</span>
                                 <div class="product-info">
                                     <h3><span>687</span>元</h3>
@@ -262,7 +329,7 @@
                                 <a class="clearfix slide-link" href="">
                                     <div class="slide-img left">
                                         <div class="line"></div>
-                                        <img src="images/oval.png">
+                                        <img src="../images/oval.png">
                                     </div>
                                     <div class="slide-text left">
                                         <h4>三白酒作坊</h4>
@@ -274,7 +341,7 @@
                                 <a class="clearfix slide-link" href="">
                                     <div class="slide-img left">
                                         <div class="line"></div>
-                                        <img src="images/oval.png">
+                                        <img src="../images/oval.png">
                                     </div>
                                     <div class="slide-text left">
                                         <h4>三白酒作坊</h4>
@@ -286,7 +353,7 @@
                                 <a class="clearfix slide-link" href="">
                                     <div class="slide-img left">
                                         <div class="line"></div>
-                                        <img src="images/oval.png">
+                                        <img src="../images/oval.png">
                                     </div>
                                     <div class="slide-text left">
                                         <h4>三白酒作坊</h4>
@@ -328,30 +395,9 @@
             <div class="gotop" id="gotop"></div>
         </div> 
 
-
-        <div class="modal" style="display: block;">
-            <div class="modal-opa"></div>
-            <div class="modal-content">
-                <h4>戏剧节订房优惠券</h4>
-                <div><b>160</b>元</div>
-                <p>有效期：2017.03.20~2017.05.28</p>
-                <p>使用说明：1.消费须满2000元可以使用；2.高级会员才可以领取；3.本优惠券仅限预定可放使用</p>
-                <a class="md-btn" href="javascript:;">领取</a>
-            </div>
-        </div>
-        <div class="submit-prompt" id="modal-result">
-            <div class="sp-content">
-                <p>优惠券领取成功</p>
-                <div>
-                    <a class="bor back" href="javascript:;">返回</a>
-                    <a href="javascript:;">优惠券</a>
-                </div>
-            </div>
-        </div>
-
         <script>
 
-            var swiper = new Swiper('#swiper-container1', {
+            var swiper1 = new Swiper('#swiper-container1', {
                 pagination: '#swiper-pagination1',
                 paginationClickable: true,
                 centeredSlides: true,
@@ -359,12 +405,19 @@
                 autoplayDisableOnInteraction: false,
                 loop: true
             });
-            var swiper = new Swiper('#swiper-container2', {
+            var swiper2 = new Swiper('#swiper-container2', {
                 pagination: '#swiper-pagination2',
                 paginationClickable: true,
                 centeredSlides: true,
                 autoplayDisableOnInteraction: false
             });
+            var preferential = new Swiper('#pre-wrapper', {
+                pagination: '#pre-pagination',
+                paginationClickable: true,
+                centeredSlides: true,
+                autoplayDisableOnInteraction: false
+            });
+            
         </script>
     </body>
 </html>

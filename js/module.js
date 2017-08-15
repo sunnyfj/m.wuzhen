@@ -657,7 +657,7 @@ $(function(){
             $(this).before(span);
             $(this).parent().prepend(reduce);
             //底部购物车状态
-            var cart = $('<img src="../images/cart-wrap2.png"><span>1212</span>');
+            var cart = $('<img src="../images/cart-wrap2.png"><span>99+</span>');
             var cartInfo = $('<p>套餐价：<b><span>6506</span>元</b><a class="settlement" href="javascript:;">去结算</a></p>');
             $('.cart-wrap .cart-icon').html(cart);
             $('.cart-wrap .cart-info').html(cartInfo);
@@ -687,9 +687,14 @@ $(function(){
 
     //cart-wrap点击显示 选中list
     $('#cart-num').on('click',function(){
-        $('.cart-list').show();
-        $('.cart-data-opa').addClass('show');
-        $('html').addClass('more_prohibit_html');
+    	if($(this).find('span').length ==0){
+    		return;
+    	}else{
+    		$('.cart-list').show();
+	        $('.cart-data-opa').addClass('show');
+	        $('html').addClass('more_prohibit_html');
+    	}
+        
     })
 
     //选中list隐藏
@@ -701,9 +706,16 @@ $(function(){
 
     //选中list清空
     $('#clearAll').on('click',function(){
-        $('.cart-list-content').html('');
+        $('.cart-list').html('');
         $('.cart-list').hide();
         $('.cart-data-opa').removeClass('show');
+
+        //底部购物车状态
+        var cart = $('<img src="../images/cart-wrap1.png">');
+        var cartInfo = $('<p>选择3类以上产品可享受满立减优惠</p>');
+        $('.cart-wrap .cart-icon').html(cart);
+        $('.cart-wrap .cart-info').html(cartInfo);
+
         $('html').removeClass('more_prohibit_html');
     })
 
@@ -726,6 +738,17 @@ $(function(){
         var n = $(this).prev('span').text();
         n++;
         $(this).prev('span').text(n);
+    })
+    //优惠卷选择
+    $('.custom-discount input').on('click',function(){
+    	$('#custom-select').show();
+    	$('html').addClass('more_prohibit_html');
+    })
+    $('#custom-select .determine').on('click',function(){
+    	var activeTxt = $(this).parents('#custom-select').find('li.active p').text();
+    	$('.custom-discount input').val(activeTxt);
+    	$('#custom-select').hide();
+    	$('html').removeClass('more_prohibit_html');
     })
 
     //私人订制 ↑
@@ -755,5 +778,14 @@ $(function(){
 	$('.un-receive .re-btn').on('click',function(){
 	    $(this).text('已领取');
 	    $(this).parents('.un-receive').removeClass('un-receive').addClass('in-receive');
+	})
+
+
+	//居民证申请反馈
+	$('#resident-sub').on('click',function(){
+		$('#resident-form-succ').show();
+	})
+	$('#resident-form-succ .determine').on('click',function(){
+		$('#resident-form-succ').hide();
 	})
 })

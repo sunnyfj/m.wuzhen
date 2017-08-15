@@ -272,7 +272,7 @@
                 $('html').removeClass('more_prohibit_html');
             }else if(dateType =='cart'){
                 if($('.cart-modTime').eq(thisCartModTime).attr('data-end')!='true'){
-                    $('.cart-modTime').eq(thisCartModTime).parent().prev().find('input').val($(this).attr('data-date-format'))
+                    $('.cart-modTime').eq(thisCartModTime).parent().prev().find('input').val($(this).attr('data-date-format'));
                 }else{
                     if(isEnd == 0){
                         $('.cart-modTime').eq(thisCartModTime).parent().prev().find('input').eq(0).val($(this).attr('data-date-format'));

@@ -995,6 +995,7 @@ body{
 	top: 0;
 	left: 0;
 	z-index: 9999;
+	display: none;
 }
 .modal .modal-opa {
 	width: 100%;
@@ -1026,7 +1027,7 @@ body{
 	padding-bottom: 1.28rem;
 }
 .modal .modal-content div b{
-	font-size: 72px;
+	font-size: 0.96rem;
 	font-family: myfont;
 }
 .modal .modal-content p {
@@ -1046,3 +1047,25 @@ body{
 	margin-top: 0.826667rem;
 	text-align: center;
 }
+/*限时特惠*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
