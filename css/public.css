@@ -323,7 +323,7 @@ footer{
 	bottom: 1.566667rem;
 	width: 1.173333rem;
 	height: 2.666666rem;
-	z-index: 500;
+	z-index: 200;
 }
 .sidebar .help {
 	display: block;
@@ -354,6 +354,12 @@ footer{
 	left: 0;
 	bottom: 0;
 	z-index: 10;
+	display: -webkit-box;
+    display: flex;
+}
+.bottom_bar a{
+	-webkit-box-flex: 1;
+    flex: 1;
 }
 .bottom_bar .sys_button{
 	width: 50%;
@@ -1048,18 +1054,6 @@ body{
 	text-align: center;
 }
 /*限时特惠*/
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 

@@ -6,17 +6,17 @@
         <meta content="yes" name="apple-mobile-web-app-capable">
         <meta content="yes" name="apple-touch-fullscreen">
         <meta content="telephone=no,email=no" name="format-detection">
-        <link rel="stylesheet" href="css/swiper.css">
-        <link rel="stylesheet" href="css/public.css">
-        <link rel="stylesheet" href="css/module.css">
-        <link rel="stylesheet" href="css/calendar.css">
+        <link rel="stylesheet" href="../css/swiper.css">
+        <link rel="stylesheet" href="../css/public.css">
+        <link rel="stylesheet" href="../css/module.css">
+        <link rel="stylesheet" href="../css/calendar.css">
 
-        <script src="build/flexible_css.debug.js"></script>
-        <script src="build/flexible.debug.js"></script>
-        <script src="js/swiper.min.js"></script>
-        <script src="js/zepto.js"></script>
-        <script src="js/public.js"></script>
-        <script src="js/module.js"></script>
+        <script src="../build/flexible_css.debug.js"></script>
+        <script src="../build/flexible.debug.js"></script>
+        <script src="../js/swiper.min.js"></script>
+        <script src="../js/zepto.js"></script>
+        <script src="../js/public.js"></script>
+        <script src="../js/module.js"></script>
     </head>
     <body>
         <!-- 侧边导航栏 -->
@@ -117,26 +117,44 @@
             <!-- 页头 -->
         	<header class="clearfix">
                 <div class="header-l">
-                    <a id="header-btn" class="btn" href="javascript:;"><img src="images/header-btn.png"></a>
-                    <a class="logo" href="index.html"><img src="images/logo.png"></a>
+                    <a id="header-btn" class="btn" href="javascript:;"><img src="../images/header-btn.png"></a>
+                    <a class="logo" href="index.html"><img src="../images/logo.png"></a>
                 </div>
                 <div class="header-r">
-                    <a href="tel:13855555555"><img src="images/tel.png"></a>
-                    <a class="personal" href="javascript:;"><img src="images/geren.png"></a>
-                    <a href="javascript:;"><img src="images/shopping-cart.png"></a>
+                    <a href="tel:13855555555"><img src="../images/tel.png"></a>
+                    <a class="personal" href="javascript:;"><img src="../images/geren.png"></a>
+                    <a href="javascript:;"><img src="../images/shopping-cart.png"></a>
                 </div>      
             </header>
             <!-- 内容 -->
             <div class="newDetail">
                 <div class="swiper-container">
                     <div class="swiper-wrapper">
-                        <div class="swiper-slide swiper-slide-active"><a href=""><img src="images/package1.png"></a></div>
-                        <div class="swiper-slide"><a href=""><img src="images/package1.png"></a></div>
-                        <div class="swiper-slide"><a href=""><img src="images/package1.png"></a></div>
+                        <div class="swiper-slide swiper-slide-active"><a href=""><img src="../images/package1.png"></a></div>
+                        <div class="swiper-slide"><a href=""><img src="../images/package1.png"></a></div>
+                        <div class="swiper-slide"><a href=""><img src="../images/package1.png"></a></div>
                     </div>
                     <div class="swiper-pagination"></div>
-                    <!-- 详情页收藏 -->
-                    <div class="collection details-collection"></div>
+                </div>
+                <div class="preferential">
+                    <div class="pre-expire">
+                        <div id="countdown">
+                            距结束 
+                            <span>00</span> 天
+                            <span>00</span> :
+                            <span>23</span> :
+                            <span>34</span>
+                        </div>
+                    </div>
+                    <div class="pre-conduct">
+                        <div class="pre-conduct-content">
+                            <div class="pre-conduct-bar">
+                                <div></div>
+                                <span>已抢10%</span>
+                            </div>
+                            <span>已抢525件</span>
+                        </div>
+                    </div>
                 </div>
                 <div class="main_layout">
                     <div class="title_share">
@@ -144,7 +162,7 @@
                     </div>
                     <div class="d-price clearfix" style="margin-top:0;border:none;">
                         <div class="d-price-l left">
-                            <h3><span>6144</span>元</h3>
+                            <h3><span>6144</span>元<em>8000元</em><b>限时抢购</b></h3>
                         </div>
                         <div class="d-price-r right">
                             <p class="mb">评分<span class="color">4.5</span></p>
@@ -184,7 +202,7 @@
                         <div class="package-info">
                             <p class="choice-title">客房详情</p>
                             <div class="hotel-content-img">
-                                <img src="images/package111.png">
+                                <img src="../images/package111.png">
                             </div>
                             <ol class="package-list">
                                 <li>古典硬山式明清园林建筑风格，毗邻乌镇洛神SPA，北可隔河眺望 湿地，配套设施精致、完备、豪华却又清幽雅致，十足“大隐隐于市”的气势。</li>
@@ -238,7 +256,7 @@
                             <li class="active">
                                 <div class="pe_div clearfix">
                                     <div class="pe_div_l left clearfix">
-                                        <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                        <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                         <div class="pe_div_name left">
                                             <h4>Hoyalox</h4>
                                             <h6>2016-08-18 18:24 乐享美食乐享美食</h6>
@@ -248,15 +266,15 @@
                                 </div>
                                 <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
                                 <div class="pe_img clearfix">
-                                    <div><img src="images/pe_img1.png"></div>
-                                    <div><img src="images/pe_img1.png"></div>
-                                    <div><img src="images/pe_img1.png"></div>
-                                    <div><img src="images/pe_img1.png"></div>
-                                    <div><img src="images/pe_img1.png"></div>
-                                    <div><img src="images/pe_img1.png"></div>
-                                    <div><img src="images/pe_img1.png"></div>
-                                    <div><img src="images/pe_img1.png"></div>
-                                    <div><img src="images/pe_img1.png"></div>
+                                    <div><img src="../images/pe_img1.png"></div>
+                                    <div><img src="../images/pe_img1.png"></div>
+                                    <div><img src="../images/pe_img1.png"></div>
+                                    <div><img src="../images/pe_img1.png"></div>
+                                    <div><img src="../images/pe_img1.png"></div>
+                                    <div><img src="../images/pe_img1.png"></div>
+                                    <div><img src="../images/pe_img1.png"></div>
+                                    <div><img src="../images/pe_img1.png"></div>
+                                    <div><img src="../images/pe_img1.png"></div>
                                 </div>
                                 <div class="pe_reply">
                                     酒店回复：<span>谢谢您的支持与好评，锦堂行馆将持续为您提供贴心服务</span>
@@ -265,7 +283,7 @@
                             <li>
                                 <div class="pe_div clearfix">
                                     <div class="pe_div_l left clearfix">
-                                        <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                        <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                         <div class="pe_div_name left">
                                             <h4>Hoyalox</h4>
                                             <h6>2016-08-18 18:24</h6>
@@ -314,7 +332,7 @@
                         <li class="active">
                             <div class="pe_div clearfix">
                                 <div class="pe_div_l left clearfix">
-                                    <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                     <div class="pe_div_name left">
                                         <h4>Hoyalox</h4>
                                         <h6>2016-08-18 18:24</h6>
@@ -327,7 +345,7 @@
                         <li>
                             <div class="pe_div clearfix">
                                 <div class="pe_div_l left clearfix">
-                                    <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                     <div class="pe_div_name left">
                                         <h4>Hoyalox</h4>
                                         <h6>2016-08-18 18:24</h6>
@@ -340,7 +358,7 @@
                         <li>
                             <div class="pe_div clearfix">
                                 <div class="pe_div_l left clearfix">
-                                    <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                     <div class="pe_div_name left">
                                         <h4>Hoyalox</h4>
                                         <h6>2016-08-18 18:24</h6>
@@ -353,7 +371,7 @@
                         <li>
                             <div class="pe_div clearfix">
                                 <div class="pe_div_l left clearfix">
-                                    <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                     <div class="pe_div_name left">
                                         <h4>Hoyalox</h4>
                                         <h6>2016-08-18 18:24</h6>
@@ -366,7 +384,7 @@
                         <li>
                             <div class="pe_div clearfix">
                                 <div class="pe_div_l left clearfix">
-                                    <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                     <div class="pe_div_name left">
                                         <h4>Hoyalox</h4>
                                         <h6>2016-08-18 18:24</h6>
@@ -379,7 +397,7 @@
                         <li>
                             <div class="pe_div clearfix">
                                 <div class="pe_div_l left clearfix">
-                                    <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                     <div class="pe_div_name left">
                                         <h4>Hoyalox</h4>
                                         <h6>2016-08-18 18:24</h6>
@@ -392,7 +410,7 @@
                         <li>
                             <div class="pe_div clearfix">
                                 <div class="pe_div_l left clearfix">
-                                    <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                     <div class="pe_div_name left">
                                         <h4>Hoyalox</h4>
                                         <h6>2016-08-18 18:24</h6>
@@ -405,7 +423,7 @@
                         <li>
                             <div class="pe_div clearfix">
                                 <div class="pe_div_l left clearfix">
-                                    <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                     <div class="pe_div_name left">
                                         <h4>Hoyalox</h4>
                                         <h6>2016-08-18 18:24</h6>
@@ -418,7 +436,7 @@
                         <li>
                             <div class="pe_div clearfix">
                                 <div class="pe_div_l left clearfix">
-                                    <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                     <div class="pe_div_name left">
                                         <h4>Hoyalox</h4>
                                         <h6>2016-08-18 18:24</h6>
@@ -431,7 +449,7 @@
                         <li>
                             <div class="pe_div clearfix">
                                 <div class="pe_div_l left clearfix">
-                                    <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                     <div class="pe_div_name left">
                                         <h4>Hoyalox</h4>
                                         <h6>2016-08-18 18:24</h6>
@@ -444,7 +462,7 @@
                         <li>
                             <div class="pe_div clearfix">
                                 <div class="pe_div_l left clearfix">
-                                    <div class="pe_div_img left"><img src="images/pe_div_img.png"></div>
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
                                     <div class="pe_div_name left">
                                         <h4>Hoyalox</h4>
                                         <h6>2016-08-18 18:24</h6>
@@ -473,7 +491,7 @@
                                 <p>水乡民宿，感受地道淳朴味</p>
                             </div>
                             <div class="more-package-content-img">
-                                <img src="images/more-package-content-img1.png">
+                                <img src="../images/more-package-content-img1.png">
                             </div>
                         </li>
                         <li>
@@ -482,7 +500,7 @@
                                 <p>水乡民宿，感受地道淳朴味</p>
                             </div>
                             <div class="more-package-content-img">
-                                <img src="images/more-package-content-img1.png">
+                                <img src="../images/more-package-content-img1.png">
                             </div>
                         </li>
                     </ul>
@@ -496,7 +514,7 @@
                                 <p>水乡民宿，感受地道淳朴味</p>
                             </div>
                             <div class="more-package-content-img">
-                                <img src="images/more-package-content-img1.png">
+                                <img src="../images/more-package-content-img1.png">
                             </div>
                         </li>
                         <li>
@@ -505,7 +523,7 @@
                                 <p>水乡民宿，感受地道淳朴味</p>
                             </div>
                             <div class="more-package-content-img">
-                                <img src="images/more-package-content-img1.png">
+                                <img src="../images/more-package-content-img1.png">
                             </div>
                         </li>
                     </ul>
@@ -517,8 +535,7 @@
 
         <!-- 加入购物车 -->
         <div class="bottom_bar">
-            <a class="sys_button cart" href="javascript:;">加入购物车</a>
-            <a class="sys_button buy" href="javascript:;">立即购买</a>
+            <a class="sys_button buy" href="javascript:;">立即抢购</a>
         </div>
         <!-- 日期选择部分 -->
         <div class="calendar" style="">
@@ -552,12 +569,14 @@
                 </div> -->
             </div>
         </div>
-        <script src="js/calendar.js"></script>
+        <script src="../js/calendar.js"></script>
         <script>
             var swiper = new Swiper('.swiper-container', {
                 pagination: '.swiper-pagination',
                 paginationType: 'fraction'
             });
+            //倒计时
+            setInterval(function(){ShowCountDown(2017,10,1,'countdown');}, interval);
         </script>
     </body>
 </html>

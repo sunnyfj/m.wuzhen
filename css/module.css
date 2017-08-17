@@ -3410,6 +3410,107 @@ body .package-btn a {
 	color: #000;
 }
 
+/*限时特惠*/
+
+.preferential {
+	width: 100%;
+	height: 1.333333rem;
+	background: #FF1431;
+	display: -webkit-box;
+    display: flex;
+    padding: 0.44rem 0.426667rem;
+    font-size: 0.32rem;
+}
+.preferential .pre-expire {
+	-webkit-box-flex: 1;
+    flex: 1;
+    color: #FFFFFF;
+    line-height: 1.4;
+}
+.preferential .pre-expire div {
+	position: relative;
+	top: -0.053333rem;
+}
+.preferential .pre-expire span {
+	display: inline-block;
+	padding: 0 0.053333rem;
+	height: 0.546667rem;
+	background: #FFFFFF;
+	border-radius: 0.066667rem;
+	text-align: center;
+	line-height: 0.546667rem;
+	font-size: 0.32rem;
+	color: #FF1431;
+}
+.preferential .pre-expire span:first-child {
+	margin-left: 0.213333rem;
+}
+.preferential .pre-conduct {
+	/*-webkit-box-flex: 1;
+    flex: 1;*/
+}
+.pre-conduct-content {
+	display: -webkit-box;
+    display: flex;
+    line-height: 1.4;
+}
+.preferential .pre-conduct .pre-conduct-bar {
+	-webkit-box-flex: 1;
+    flex: 1;
+	display: inline-block;
+	width: 2.1rem;
+	height: 0.453333rem;
+	position: relative;
+	vertical-align: top;
+	background: #F1C11B;
+	border-radius: 0.053333rem;
+	line-height: 1.4;
+	text-align: center;
+}
+.preferential .pre-conduct .pre-conduct-bar div {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 10%;
+	height: 100%;
+	background: #FEF353;
+	border-radius: 0.053333rem 0 0 0.053333rem;
+}
+.preferential .pre-conduct .pre-conduct-bar span {
+	font-size: 0.266667rem;
+	color: #FF1431;
+}
+.preferential .pre-conduct span {
+	font-size: 0.32rem;
+	color: #FEF353;
+	white-space:nowrap;
+	-webkit-box-flex: 1;
+    flex: 1;
+    text-align: right;
+}
+.d-price .d-price-l h3 em {
+	font-size: 0.373333rem;
+	color: #7E808A;
+	text-decoration: line-through;
+	margin-left: 0.213333rem;
+}
+.d-price .d-price-l h3 b {
+	font-weight: normal;
+	font-size: 0.266667rem;
+	color: #FF1431;
+	background: #FCFDFF;
+	border: 0.026667rem solid #FF1431;
+	border-radius: 0.053333rem;
+	line-height: 1;
+	margin-left: 0.213333rem;
+	position: relative;
+	top: -0.04rem;
+	padding: 0.026667rem 0.053333rem;
+	box-sizing: border-box;
+}
+
+
+
 
 
 

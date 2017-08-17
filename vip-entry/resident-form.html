@@ -14,74 +14,197 @@
         <script src="../build/flexible.debug.js"></script>
         <script src="../js/zepto.js"></script>
         <script src="../js/module.js"></script>
+        <script src="../js/public.js"></script>
 	</head>
 	<body>
-        <div class="resident">
-        	<div class="container">
-        		<div class="head-title head-title-bb">
-	        		<h4 class="none">乌镇居民证申请表</h4>
-	        		<p>持乌镇“居民证”，做“乌镇人”</p>
+		<!-- 侧边导航栏 -->
+        <div class="sidenav-opa"></div>
+        <div class="sidenav">
+            <ul>
+                <li>
+                    <a class="sidenav-a" href="package-list.html">
+                        <div class="clearfix">
+                            <p class="p1">套餐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="hotel-list.html">
+                        <div class="clearfix">
+                            <p class="p2">酒店</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="food-list.html">
+                        <div class="clearfix">
+                            <p class="p3">美食</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="ticket-list.html">
+                        <div class="clearfix">
+                            <p class="p4">票务</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="quickSelection borNo">
+                    <a href="javascript:;">
+                        <p class="p5">私人订制</p>
+                    </a>
+                    <a href="javascript:;">
+                        <p class="p6">懒人模式</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="conference-list.html">
+                        <div class="clearfix">
+                            <p class="p7">会展婚宴</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="shopping-list-specialty.html">
+                        <div class="clearfix">
+                            <p class="p8">购物娱乐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p9">景区导览</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p10">语音导游</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p11">积分商城</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p12">卡券</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pageContent">
+            <!-- 页头 -->
+        	<header class="clearfix">
+                <div class="header-l">
+                    <a id="header-btn" class="btn" href="javascript:;"><img src="../images/header-btn.png"></a>
+                    <a class="logo" href="index.html"><img src="../images/logo.png"></a>
+                </div>
+                <div class="header-r">
+                    <a href="tel:13855555555"><img src="../images/tel.png"></a>
+                    <a class="personal" href="javascript:;"><img src="../images/geren.png"></a>
+                    <a href="javascript:;"><img src="../images/shopping-cart.png"></a>
+                </div>      
+            </header>
+            <!-- 内容 -->
+	        <div class="resident">
+	        	<div class="container">
+	        		<div class="position"></div>
+	        		<div class="head-title head-title-bb">
+		        		<h4 class="none">乌镇居民证申请表</h4>
+		        		<p>持乌镇“居民证”，做“乌镇人”</p>
+		        	</div>
+		        	<div class="resident-form">
+	        			<div class="form-item">
+		        			<p>姓名</p>
+			                <input type="text" name="" placeholder="申请人姓名">
+			                <label>请填写正确的姓名</label>
+		        		</div>
+		        		<div class="form-item">
+		        			<p>籍贯</p>
+			                <input type="text" name="" placeholder="申请人姓名">
+		        		</div>
+		        		<div class="form-item">
+		        			<p>身份证号码</p>
+			                <input type="text" name="" placeholder="申请人姓名">
+		        		</div>
+		        		<div class="form-item form-item-photo">
+		        			<p>提交证件照</p>
+			                <div>
+			                	白底1寸白底证件照
+			                	<input type="file" value="白底1寸白底证件照">
+			                </div>
+		        		</div>
+		        		<div class="form-item">
+		        			<p>性别</p>
+			                <input type="text" name="" placeholder="">
+		        		</div>
+		        		<div class="form-item">
+		        			<p>民族</p>
+			                <input type="text" name="" placeholder="">
+		        		</div>
+		        		<div class="form-item">
+		        			<p>电话</p>
+			                <input type="text" name="" placeholder="联系电话">
+		        		</div>
+		        		<div class="form-item">
+		        			<p>公司名称</p>
+			                <input type="text" name="" placeholder="在职公司全称">
+		        		</div>
+		        		<div class="form-item">
+		        			<p>地址</p>
+			                <input type="text" name="" placeholder="公司地址">
+		        		</div>
+		        		<div class="form-item">
+		        			<p>E-mail</p>
+			                <input type="text" name="" placeholder="公司邮箱地址">
+		        		</div>
+		        		<div class="form-item">
+		        			<p>职位</p>
+			                <input type="text" name="" placeholder="您的职位">
+		        		</div>
+		        		<div class="form-item">
+		        			<p>其他联系方式</p>
+			                <input type="text" name="" placeholder="公司邮箱地址">
+		        		</div>
+		        		<p class="prompt-text">请填写真实信息便于审核通过</p>
+		        	</div>
+		        	<div class="submit-btn2">
+		        		<a class="cancel" href="javascript:;">取消</a>
+		        		<a class="sure" id="resident-sub" href="javascript:;">提交</a>
+		        	</div>
 	        	</div>
-	        	<div class="resident-form">
-        			<div class="form-item">
-	        			<p>姓名</p>
-		                <input type="text" name="" placeholder="申请人姓名">
-		                <label>请填写正确的姓名</label>
-	        		</div>
-	        		<div class="form-item">
-	        			<p>籍贯</p>
-		                <input type="text" name="" placeholder="申请人姓名">
-	        		</div>
-	        		<div class="form-item">
-	        			<p>身份证号码</p>
-		                <input type="text" name="" placeholder="申请人姓名">
-	        		</div>
-	        		<div class="form-item form-item-photo">
-	        			<p>提交证件照</p>
-		                <div>
-		                	白底1寸白底证件照
-		                	<input type="file" value="白底1寸白底证件照">
-		                </div>
-	        		</div>
-	        		<div class="form-item">
-	        			<p>性别</p>
-		                <input type="text" name="" placeholder="">
-	        		</div>
-	        		<div class="form-item">
-	        			<p>民族</p>
-		                <input type="text" name="" placeholder="">
-	        		</div>
-	        		<div class="form-item">
-	        			<p>电话</p>
-		                <input type="text" name="" placeholder="联系电话">
-	        		</div>
-	        		<div class="form-item">
-	        			<p>公司名称</p>
-		                <input type="text" name="" placeholder="在职公司全称">
-	        		</div>
-	        		<div class="form-item">
-	        			<p>地址</p>
-		                <input type="text" name="" placeholder="公司地址">
-	        		</div>
-	        		<div class="form-item">
-	        			<p>E-mail</p>
-		                <input type="text" name="" placeholder="公司邮箱地址">
-	        		</div>
-	        		<div class="form-item">
-	        			<p>职位</p>
-		                <input type="text" name="" placeholder="您的职位">
-	        		</div>
-	        		<div class="form-item">
-	        			<p>其他联系方式</p>
-		                <input type="text" name="" placeholder="公司邮箱地址">
-	        		</div>
-	        		<p class="prompt-text">请填写真实信息便于审核通过</p>
-	        	</div>
-	        	<div class="submit-btn2">
-	        		<a class="cancel" href="javascript:;">取消</a>
-	        		<a class="sure" id="resident-sub" href="javascript:;">提交</a>
-	        	</div>
-        	</div>
+	        </div>
+	       	<!-- 页脚 -->
+            <footer class="footer2">
+                <div class="footer2-content">
+                    <div class="footer2-contact clearfix">
+                        <h5 class="left">联系我们</h5>
+                        <p class="left">0573-88731088</p>
+                    </div>
+                    <div class="footer2-copyright">
+                        <p>版权申明 | 乌镇旅游股份有限公司©版本所有©浙ICP备09047744号</p>
+                    </div>
+                </div>
+            </footer>
         </div>
         <!-- 成功反馈 -->
         <div class="submit-prompt" id="resident-form-succ">

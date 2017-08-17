@@ -60,6 +60,32 @@ function imgRemove(el) {
     };
     
 };
+
+//限时抢购倒计时
+var interval = 1000; 
+function tuDou(n){
+    if(n<10) {
+        return '0'+n;
+    }else{
+        return n;
+    } 
+}
+function ShowCountDown(year,month,day,downname){ 
+    var now = new Date(); 
+    var endDate = new Date(year, month-1, day); 
+    var leftTime=endDate.getTime()-now.getTime(); 
+    var leftsecond = parseInt(leftTime/1000); 
+    var day1=Math.floor(leftsecond/(60*60*24)); 
+    var hour=Math.floor((leftsecond-day1*24*60*60)/3600); 
+    var minute=Math.floor((leftsecond-day1*24*60*60-hour*3600)/60); 
+    var second=Math.floor(leftsecond-day1*24*60*60-hour*3600-minute*60); 
+    var countdown = document.getElementById(downname); 
+    var showTimes = countdown.querySelectorAll('span');
+    showTimes[0].innerHTML = tuDou(day1);
+    showTimes[1].innerHTML = tuDou(hour);
+    showTimes[2].innerHTML = tuDou(minute);
+    showTimes[3].innerHTML = tuDou(second);
+}
 $(function(){
 
 	//页面加载完需要判断的内容
@@ -788,4 +814,38 @@ $(function(){
 	$('#resident-form-succ .determine').on('click',function(){
 		$('#resident-form-succ').hide();
 	})
+
+	//服务帮助
+	//意见提交反馈
+	$('#opinion-sub').on('click',function(){
+		$('#opinion-succ').show();
+	})
+	$('#opinion-succ .determine').on('click',function(){
+		$('#opinion-succ').hide();
+	})
+
+	//问卷调查 li选择
+	var sortNum = 0;
+    $('.questionnaire-item li').on('click',function(){
+    	//在题目及h5标签上有说明是单选、多选、排序等  
+    	//然后同样在标题标签自定义属性 data-opt的值 sort:排序;  multiple : 多选; 单选可以不写 或radio  
+        var method = $(this).parent().prev().attr('data-opt');
+        if(method == 'multiple'){ 				//<- 多选
+            $(this).toggleClass('active');
+        }else if(method == 'sort'){ 			//<- 排序
+            if($(this).hasClass('active')){
+                if($(this).find('i').text() == sortNum){
+                    $(this).removeClass('active');
+                    $(this).find('i').text('');
+                    sortNum--;
+                }
+            }else{
+                $(this).addClass('active');
+                sortNum++;
+                $(this).find('i').text(sortNum);
+            }
+        }else{ 									//<- 单选
+            $(this).addClass('active').siblings().removeClass('active');
+        }
+    })
 })

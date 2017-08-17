@@ -17,43 +17,165 @@
         <script src="../js/public.js"></script>
 	</head>
 	<body>
-        <div class="resident">
-        	<div class="container">
-        		<div class="head-title head-title-bb">
-	        		<h4 class="resident">居民证</h4>
-	        		<p>持乌镇“居民证”，做“乌镇人”</p>
-	        	</div>
-	        	<div class="resident-content">
-	        		<div class="rc-img">
-	        			<img src="../images/rc-img.png">
-	        		</div>
-	        		<div class="resident-text">
-	        			<h5 class="choice-title">持乌镇“居民证”，做“乌镇人”</h5>
-	        			<p>本证为有效期内免费出入乌镇西栅和享受优惠之用，不做其他身份证明。</p>
-	        			<h5 class="choice-title">申办条件</h5>
-	        			<p>1.本人在办证之日前一年内实际入住乌镇景区旗下酒店达三次（含）以上；</p>
-	        			<p>2.住宿费达3000元（含）以上。</p>
-	        			<p class="red">*注：同时满足以上俩个条件，且以上政策仅适用于散客。</p>
-	        			<h5 class="choice-title">特色权益</h5>
-	        			<p>1.居民身份，出入景区，持证免费进入西栅景区，有效期1年，让您真正融入乌镇西栅社区生活。</p>
-						<p>2.额外服务，惊喜连连，享受额外的优惠服务内容，如获赠西栅想、地图，生日当月入住获赠礼物等。</p>
-						<p>3.社区活动，精彩纷呈，乌镇全年主体活动覆盖12个月，持证者将不定期受邀参与乌镇主体活动（全年不少于2次），体验古镇千年民风民俗。</p>
-						<p>4.景区动态，一网打尽，乌镇旅游主体刊物《立志园》免费赠阅。</p>
-						<p>5.景区消费，居民特惠，持证人在景区内一下场所消费将享受特惠：</p>
-						<p>8.8折：似水年华红酒坊、洛神SPA、莲足道馆、望津里咖啡吧、枕水下午茶、望津里下午茶。</p>
-						<p>9.5折优惠（酒水除外）：乌镇行馆餐饮。枕水度假酒店餐饮。宜园精品酒店餐饮、望津里老运河餐饮、通安客栈餐饮。水阁餐饮、昭明书舍餐厅、水巷餐厅、水市客舍餐厅、锦岸私房菜、辣乌镇饭馆、水之屋乌镇料理、裕生餐馆、民国时代餐厅、茶艺街团餐厅。</p>
+		<!-- 侧边导航栏 -->
+        <div class="sidenav-opa"></div>
+        <div class="sidenav">
+            <ul>
+                <li>
+                    <a class="sidenav-a" href="package-list.html">
+                        <div class="clearfix">
+                            <p class="p1">套餐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="hotel-list.html">
+                        <div class="clearfix">
+                            <p class="p2">酒店</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="food-list.html">
+                        <div class="clearfix">
+                            <p class="p3">美食</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="ticket-list.html">
+                        <div class="clearfix">
+                            <p class="p4">票务</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="quickSelection borNo">
+                    <a href="javascript:;">
+                        <p class="p5">私人订制</p>
+                    </a>
+                    <a href="javascript:;">
+                        <p class="p6">懒人模式</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="conference-list.html">
+                        <div class="clearfix">
+                            <p class="p7">会展婚宴</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="shopping-list-specialty.html">
+                        <div class="clearfix">
+                            <p class="p8">购物娱乐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p9">景区导览</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p10">语音导游</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p11">积分商城</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p12">卡券</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pageContent">
+            <!-- 页头 -->
+        	<header class="clearfix">
+                <div class="header-l">
+                    <a id="header-btn" class="btn" href="javascript:;"><img src="../images/header-btn.png"></a>
+                    <a class="logo" href="index.html"><img src="../images/logo.png"></a>
+                </div>
+                <div class="header-r">
+                    <a href="tel:13855555555"><img src="../images/tel.png"></a>
+                    <a class="personal" href="javascript:;"><img src="../images/geren.png"></a>
+                    <a href="javascript:;"><img src="../images/shopping-cart.png"></a>
+                </div>      
+            </header>
+            <!-- 内容 -->
+	        <div class="resident">
+	        	<div class="container">
+	        		<div class="position"></div>
+	        		<div class="head-title head-title-bb">
+		        		<h4 class="resident">居民证</h4>
+		        		<p>持乌镇“居民证”，做“乌镇人”</p>
+		        	</div>
+		        	<div class="resident-content">
+		        		<div class="rc-img">
+		        			<img src="../images/rc-img.png">
+		        		</div>
+		        		<div class="resident-text">
+		        			<h5 class="choice-title">持乌镇“居民证”，做“乌镇人”</h5>
+		        			<p>本证为有效期内免费出入乌镇西栅和享受优惠之用，不做其他身份证明。</p>
+		        			<h5 class="choice-title">申办条件</h5>
+		        			<p>1.本人在办证之日前一年内实际入住乌镇景区旗下酒店达三次（含）以上；</p>
+		        			<p>2.住宿费达3000元（含）以上。</p>
+		        			<p class="red">*注：同时满足以上俩个条件，且以上政策仅适用于散客。</p>
+		        			<h5 class="choice-title">特色权益</h5>
+		        			<p>1.居民身份，出入景区，持证免费进入西栅景区，有效期1年，让您真正融入乌镇西栅社区生活。</p>
+							<p>2.额外服务，惊喜连连，享受额外的优惠服务内容，如获赠西栅想、地图，生日当月入住获赠礼物等。</p>
+							<p>3.社区活动，精彩纷呈，乌镇全年主体活动覆盖12个月，持证者将不定期受邀参与乌镇主体活动（全年不少于2次），体验古镇千年民风民俗。</p>
+							<p>4.景区动态，一网打尽，乌镇旅游主体刊物《立志园》免费赠阅。</p>
+							<p>5.景区消费，居民特惠，持证人在景区内一下场所消费将享受特惠：</p>
+							<p>8.8折：似水年华红酒坊、洛神SPA、莲足道馆、望津里咖啡吧、枕水下午茶、望津里下午茶。</p>
+							<p>9.5折优惠（酒水除外）：乌镇行馆餐饮。枕水度假酒店餐饮。宜园精品酒店餐饮、望津里老运河餐饮、通安客栈餐饮。水阁餐饮、昭明书舍餐厅、水巷餐厅、水市客舍餐厅、锦岸私房菜、辣乌镇饭馆、水之屋乌镇料理、裕生餐馆、民国时代餐厅、茶艺街团餐厅。</p>
 
-						<h5 class="choice-title">持有者义务</h5>
-						<p>热爱乌镇，支持乌镇旅游繁荣发展；</p>
-						<p>遵守乌镇社区居民公约的相关规定；</p>
-						<p>不得损害或侵犯乌镇景区及其他居民的声誉及合法权益。</p>
-	        		</div>
+							<h5 class="choice-title">持有者义务</h5>
+							<p>热爱乌镇，支持乌镇旅游繁荣发展；</p>
+							<p>遵守乌镇社区居民公约的相关规定；</p>
+							<p>不得损害或侵犯乌镇景区及其他居民的声誉及合法权益。</p>
+		        		</div>
+		        	</div>
 	        	</div>
-        	</div>
-        	<div class="submit-btn">
-        		<a class="cancel" href="javascript:;">取消</a>
-        		<a class="sure" href="javascript:;">我要申请</a>
-        	</div>
+	        	<div class="submit-btn">
+	        		<a class="cancel" href="javascript:;">取消</a>
+	        		<a class="sure" href="javascript:;">我要申请</a>
+	        	</div>
+	        </div>
+	        <!-- 页脚 -->
+            <footer class="footer2 footer2-pb">
+                <div class="footer2-content">
+                    <div class="footer2-contact clearfix">
+                        <h5 class="left">联系我们</h5>
+                        <p class="left">0573-88731088</p>
+                    </div>
+                    <div class="footer2-copyright">
+                        <p>版权申明 | 乌镇旅游股份有限公司©版本所有©浙ICP备09047744号</p>
+                    </div>
+                </div>
+            </footer>
         </div>
         <!-- 回到顶部及咨询 -->
 	    <div class="sidebar">
