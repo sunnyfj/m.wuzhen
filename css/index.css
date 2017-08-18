@@ -363,6 +363,20 @@
 	font-size: 0.746667rem;
 	font-family: myfont;
 }
+.pre-info .price p em {
+	    font-weight: normal;
+    font-size: 0.266667rem;
+    color: #FF1431;
+    background: #FCFDFF;
+    border: 0.026667rem solid #FF1431;
+    border-radius: 0.053333rem;
+    line-height: 1;
+    margin-left: 0.213333rem;
+    position: relative;
+    top: -0.04rem;
+    padding: 0.026667rem 0.053333rem;
+    box-sizing: border-box;
+}
 .pre-info .price span {
 	display: block;
 	-webkit-box-flex: 1;
@@ -383,6 +397,17 @@
     font-size: 0.32rem;
 	color: #7E808A;
 	line-height: 0.72rem;
+}
+.pre-info .pre-time p span {
+	display: inline-block;
+    padding: 0 0.053333rem;
+    height: 0.546667rem;
+    background: #F3F4F8;
+	border-radius: 0.066667rem;
+    text-align: center;
+    line-height: 0.546667rem;
+    font-size: 0.32rem;
+	color: #2A2A2F;
 }
 .pre-info .pre-time a {
 	display: block;

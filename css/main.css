@@ -75,6 +75,9 @@
 .resident-text p {
 	line-height: 1.7;
 }
+.resident-text p.red{
+	color: #FF1431;
+}
 .resident-text .choice-title {
 	margin-bottom:0.16rem;
 	margin-top: 0.32rem;

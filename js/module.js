@@ -875,14 +875,16 @@ $(function(){
         return result; 
     } 
     function getTime() {
-        setTimeout(function () {
-            var duration = $("#audio")[0].duration;
-            if(isNaN(duration)){
-                getTime();
-            }else{
-                $('#showTime span').text(formatSeconds($("#audio")[0].duration));
-            }
-        }, 10);
+        if($("#audio").length==1){
+        	setTimeout(function () {
+	            var duration = $("#audio")[0].duration;
+	            if(isNaN(duration)){
+	                getTime();
+	            }else{
+	                $('#showTime span').text(formatSeconds($("#audio")[0].duration));
+	            }
+	        }, 10);
+        }
     }
     getTime();
     var audio = $('#audio')[0];

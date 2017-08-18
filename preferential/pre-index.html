@@ -14,6 +14,7 @@
         <script src="../js/swiper.min.js"></script>
         <script src="../js/zepto.js"></script>
         <script src="../js/public.js"></script>
+        <script src="../js/module.js"></script>
     </head>
     <body>
         <!-- 侧边导航栏 -->
@@ -158,11 +159,16 @@
                                         <div class="pre-info">
                                             <h4><a href="javascript:;">乌镇锦堂行馆锦堂大床房</a></h4>
                                             <div class="price">
-                                                <p><b>220</b>元</p>
+                                                <p><b>220</b>元<em>限时抢购</em></p>
                                                 <span>已抢22件</span>
                                             </div>
                                             <div class="pre-time">
-                                                <p>2017-07-29到期</p>
+                                                <p id="countdown">
+                                                    <span>00</span> 天
+                                                    <span>00</span> :
+                                                    <span>00</span> :
+                                                    <span>00</span>
+                                                </p>
                                                 <a href="javascript:;">立即抢购</a>
                                             </div>
                                         </div>
@@ -417,7 +423,8 @@
                 centeredSlides: true,
                 autoplayDisableOnInteraction: false
             });
-            
+            //倒计时
+            setInterval(function(){ShowCountDown(2017,10,1,'countdown');}, interval);
         </script>
     </body>
 </html>
