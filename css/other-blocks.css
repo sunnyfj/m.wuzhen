@@ -2183,8 +2183,11 @@
 }
 .codeShow-btn {
 	width: 100%;
-	margin-top: 1.333333rem;
-	margin-bottom: 0.426667rem;
+	padding: 0 0.426667rem;
+	height: 1.066667rem;
+	position: fixed;
+	left: 0;
+	bottom: 0.64rem;
 }
 .codeShow-btn a {
 	display: block;

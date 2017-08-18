@@ -848,4 +848,66 @@ $(function(){
             $(this).addClass('active').siblings().removeClass('active');
         }
     })
+
+
+
+
+    //语音导游
+    function formatSeconds(value) { 
+        var theTime = parseInt(value);
+        var theTime1 = 0; 
+        var theTime2 = 0;
+        if(theTime > 60) { 
+            theTime1 = parseInt(theTime/60); 
+            theTime = parseInt(theTime%60); 
+            if(theTime1 > 60) { 
+                theTime2 = parseInt(theTime1/60); 
+                theTime1 = parseInt(theTime1%60); 
+            } 
+        } 
+        var result = ""+parseInt(theTime)+"秒"; 
+        if(theTime1 > 0) { 
+            result = ""+parseInt(theTime1)+"分"+result; 
+        } 
+        if(theTime2 > 0) { 
+            result = ""+parseInt(theTime2)+"时"+result; 
+        } 
+        return result; 
+    } 
+    function getTime() {
+        setTimeout(function () {
+            var duration = $("#audio")[0].duration;
+            if(isNaN(duration)){
+                getTime();
+            }else{
+                $('#showTime span').text(formatSeconds($("#audio")[0].duration));
+            }
+        }, 10);
+    }
+    getTime();
+    var audio = $('#audio')[0];
+    var bFlag = true;
+    var time = null;
+    var text = '';
+
+    setTimeout(function(){
+        text = $('#showTime').find('span').html();
+    },500);
+
+    $('#play').on('click',function(){
+        if($(this).hasClass('already')){
+        	if(bFlag == true){
+	            audio.play();
+	            bFlag = false;
+	            time = setInterval(function(){
+	                $('#showTime').html(formatSeconds(audio.currentTime)+'  /  '+text);
+	            },1000)
+	        }else{
+	            audio.pause();
+	            bFlag = true;
+	            clearInterval(time);
+	        } 
+        }
+    })
+
 })

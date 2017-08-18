@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+		<title>语音导游详情页</title>
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection">
+
+        <link rel="stylesheet" href="../css/swiper.css">  
+        <link rel="stylesheet" href="../css/public.css">  
+        <link rel="stylesheet" href="../css/main.css">
+
+        <script src="../build/flexible_css.debug.js"></script>
+        <script src="../build/flexible.debug.js"></script>
+        <script src="../js/zepto.js"></script>
+        <script src="../js/swiper.min.js"></script>
+        <script src="../js/module.js"></script>
+        <script src="../js/public.js"></script>
+    </head>
+    <body>
+        <!-- 侧边导航栏 -->
+        <div class="sidenav-opa"></div>
+        <div class="sidenav">
+            <ul>
+                <li>
+                    <a class="sidenav-a" href="package-list.html">
+                        <div class="clearfix">
+                            <p class="p1">套餐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="hotel-list.html">
+                        <div class="clearfix">
+                            <p class="p2">酒店</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="food-list.html">
+                        <div class="clearfix">
+                            <p class="p3">美食</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="ticket-list.html">
+                        <div class="clearfix">
+                            <p class="p4">票务</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="quickSelection borNo">
+                    <a href="javascript:;">
+                        <p class="p5">私人订制</p>
+                    </a>
+                    <a href="javascript:;">
+                        <p class="p6">懒人模式</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="conference-list.html">
+                        <div class="clearfix">
+                            <p class="p7">会展婚宴</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="shopping-list-specialty.html">
+                        <div class="clearfix">
+                            <p class="p8">购物娱乐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p9">景区导览</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p10">语音导游</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p11">积分商城</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p12">卡券</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pageContent">
+            <!-- 页头 -->
+        	<header class="clearfix">
+                <div class="header-l">
+                    <a id="header-btn" class="btn" href="javascript:;"><img src="../images/header-btn.png"></a>
+                    <a class="logo" href="index.html"><img src="../images/logo.png"></a>
+                </div>
+                <div class="header-r">
+                    <a href="tel:13855555555"><img src="../images/tel.png"></a>
+                    <a class="personal" href="javascript:;"><img src="../images/geren.png"></a>
+                    <a href="javascript:;"><img src="../images/shopping-cart.png"></a>
+                </div>      
+            </header>
+            <!-- 内容 -->
+            <div class="ag-details">
+                <div class="agd-picture">
+                    <div class="swiper-container" id="agd-picture">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide"><a href=""><img src="../images/package-details1.png"></a></div>
+                            <div class="swiper-slide"><a href=""><img src="../images/package-details1.png"></a></div>
+                            <div class="swiper-slide"><a href=""><img src="../images/package-details1.png"></a></div>
+                        </div>
+                        <div class="swiper-pagination" id="agd-pagination"></div>
+                    </div>
+                </div>
+                <div class="container">
+                    <div class="ag-content">
+                        <div class="ag-content-describe">
+                            <h2>财神湾</h2>
+                            <p>财神湾旧时称为转船湾，因乌镇水系呈“十”字型，故当地人就在这儿开塘挖河造了一个能使船只调头的地方，又因财神堂在附近，便命名为“财神湾”。</p>
+                        </div>
+                        <div class="ag-content-audio">
+                            <h4>购买后可直接点击播放</h4>
+                            <div class="agc-audio">
+                                <audio id="audio" src="../audio/1.mp3"></audio>
+                                <div class="agc-audio-show">
+                                    <div id="showTime">时长：<span></span> </div>
+                                    <a class="" href="javascript:;" id="play"></a>
+                                </div>
+                            </div>
+                            <div class="agc-audio-list">
+                                <ul>
+                                    <li>
+                                        <h5>财神湾</h5>
+                                        <p>1元</p>
+                                        <div>
+                                            <a class="purchase" href="javascript:;">立即购买</a>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <h5>东栅语音套餐</h5>
+                                        <p>20元</p>
+                                        <div>
+                                            <a class="see" href="javascript:;">查看详情</a>
+                                        </div>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="ag-remind">
+                            <h5>温馨提示</h5>
+                            <p class="title">语音购买48小时收听有效，逾期作废！</p>
+                            <div class="ag-remind-time">
+                                <ol>
+                                    <li>
+                                        <div>
+                                            <h6>东栅景区开放时间</h6>
+                                        </div>
+                                        <div>
+                                            <p>夏令 (7:00-18:00)</p>
+                                            <p>冬令 (7:00-17:30)</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h6>西栅景区开放时间</h6>
+                                        </div>
+                                        <div>
+                                            <p>(9:00-22:00)</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h6>乌村开放时间</h6>
+                                        </div>
+                                        <div>
+                                            <p>(9:00-18:00)</p>
+                                        </div>
+                                    </li>
+                                    <li>
+                                        <div>
+                                            <h6>西栅景点开放时间</h6>
+                                        </div>
+                                        <div>
+                                            <p>夏令 (8:00-17:30)</p>
+                                            <p>冬令 (8:00-17:00)</p>
+                                        </div>
+                                    </li>
+                                </ol>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        	<!-- 页脚 -->
+            <footer class="footer2">
+                <div class="footer2-content">
+                    <div class="footer2-contact clearfix">
+                        <h5 class="left">联系我们</h5>
+                        <p class="left">0573-88731088</p>
+                    </div>
+                    <div class="footer2-copyright">
+                        <p>版权申明 | 乌镇旅游股份有限公司©版本所有©浙ICP备09047744号</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- 回到顶部及咨询 -->
+        <div class="sidebar">
+            <a class="help" href="javascript:;"></a>
+            <div class="gotop" id="gotop"></div>
+        </div> 
+        <script>
+            var swiper = new Swiper('#agd-picture', {
+                pagination: '#agd-pagination',
+                paginationType: 'fraction'
+            });
+        </script>
+    </body>
+</html>
