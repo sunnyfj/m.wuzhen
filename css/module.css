@@ -1210,6 +1210,12 @@ body .package-btn a {
 .cfc-introduce {
 	padding: 0.426667rem 0 0.213333rem;
 }
+.cfc-introduce p {
+	width: 100%;
+    font-size: 0.373333rem;
+    color: #7E808A;
+    padding: 0.213333rem 0 0.426667rem;
+}
 .cfc-introduce .line {
 	width: 100%;
 	padding-right: 0.426667rem;
@@ -2535,6 +2541,116 @@ body .package-btn a {
 	background: #F3F4F8;
 	padding-right: 0.213333rem;
 }
+.custom-discount  a  {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.newList-title h4.none{
+	padding-left: 0;
+}
+.custom-rule  {
+	padding-bottom: 0.8rem;
+}
+.custom-rule h5{
+	font-size: 0.373333rem;
+	color: #7E808A;
+	font-weight: normal;
+	padding: 0.426667rem 0 0.213333rem;
+}
+.custom-rule p {
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	line-height: 1.7;
+}
+.custom-rule dl {
+	background: #F3F4F8;
+	border: 0.013333rem solid #7E808A;
+}
+.custom-rule dl dt {
+	background: #7E808A;
+	color: #fff;
+	display: -webkit-box;
+    display: flex;
+    font-size: 0.32rem;
+    height: 0.96rem;
+    line-height: 0.96rem;
+}
+.custom-rule dl dd {
+	display: -webkit-box;
+    display: flex;
+    font-size: 0.32rem;
+	color: #2A2A2F;
+	min-height: 0.96rem;
+	line-height: 0.96rem;
+	border-top: 0.013333rem solid #7E808A;
+}
+.custom-rule dl span{
+	display: block;
+	-webkit-box-flex: 1;
+    flex: 1;
+}
+.custom-rule dl dt span {
+	text-align: center;
+}
+.custom-rule dl dd span {
+	line-height: 1.4;
+	padding: 0.266667rem 0.426667rem;
+}
+.custom-rule dl dd span:first-child{
+	border-right: 0.013333rem solid #7E808A;
+}
+.custom-rule-btn {
+	display: block;
+	width: 100%;
+	height: 1.066667rem;
+	line-height: 1.066667rem;
+	font-size: 0.373333rem;
+	color: #FFFFFF;
+	background: #2A2A2F;
+	text-align: center;
+	margin-top: 0.32rem;
+}
+.custom-form {
+	padding-top: 0.213333rem;
+}
+.custom-form .custom-textarea textarea{
+	outline: none;
+	width: 100%;
+	height: 5.733333rem;
+	background: #F3F4F8;
+	border: 0.013333rem solid #D4DAE1;
+	padding: 0.213333rem;
+}
+.custom-subBtn {
+	width: 100%;
+	margin-bottom: 0.64rem;
+}
+.custom-subBtn input {
+	width: 100%;
+	height: 1.066667rem;
+	background: #2A2A2F;
+	border: none;
+	outline: none;
+	text-align: center;
+	line-height: 1.066667rem;
+	font-size: 0.373333rem;
+	color: #FFFFFF;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 .custom-discount input {
 	border: none;
 	outline: none;

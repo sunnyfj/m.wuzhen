@@ -766,7 +766,7 @@ $(function(){
         $(this).prev('span').text(n);
     })
     //优惠卷选择
-    $('.custom-discount input').on('click',function(){
+    /*$('.custom-discount input').on('click',function(){
     	$('#custom-select').show();
     	$('html').addClass('more_prohibit_html');
     })
@@ -775,8 +775,15 @@ $(function(){
     	$('.custom-discount input').val(activeTxt);
     	$('#custom-select').hide();
     	$('html').removeClass('more_prohibit_html');
-    })
+    })*/
 
+    //表单反馈
+    $('.custom-subBtn input').on('click',function(){
+    	$('#custom-form').show();
+    })
+    $('#custom-form .determine').on('click',function(){
+    	$('#custom-form').hide();
+    })
     //私人订制 ↑
 
     //懒人模式
