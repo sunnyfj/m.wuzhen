@@ -1922,9 +1922,8 @@ body .package-btn a {
 	background-size: 0.32rem 0.32rem;
 }*/
 .order-mcpi-r .order-date div input {
-	width: 2.533333rem;
+	width: 2.6rem;
 	color: #2A2A2F;
-	padding-right: 0.52rem;
 	background-size: 0.32rem 0.32rem;
 	border: none;
 	background-color: #fff;
@@ -1975,7 +1974,7 @@ body .package-btn a {
     font-size: 0.373333rem;
 	color: #7E808A;
 	background-color: #F3F4F8;
-	text-align: center;
+	padding-left: 0.213333rem;
 	overflow:hidden;
 	text-overflow:ellipsis;
 	white-space:nowrap;
@@ -3643,8 +3642,20 @@ body .package-btn a {
 	box-sizing: border-box;
 }
 
+.detail-total {
+	font-size: 0.373333rem;
+	color: #7E808A;
+}
+.modi-text {
+	font-size: 0.373333rem;
+	color: #7E808A;
+}
 
-
-
-
-
+.confirm-isVolume-title {
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	padding-top: 0.426667rem;
+}
+.confirm-isVolume .order-modify{
+	padding-top: 0.32rem;
+}

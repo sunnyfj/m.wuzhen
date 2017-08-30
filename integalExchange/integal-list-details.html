@@ -9,6 +9,7 @@
         <link rel="stylesheet" href="../css/swiper.css">
         <link rel="stylesheet" href="../css/public.css">
         <link rel="stylesheet" href="../css/module.css">
+        <link rel="stylesheet" href="../css/calendar.css">
 
         <script src="../build/flexible_css.debug.js"></script>
         <script src="../build/flexible.debug.js"></script>
@@ -139,10 +140,32 @@
                     <div class="title_share">
                         <h1>乌镇锦堂行馆锦堂大床房</h1>
                     </div>
-                    <div class="hotel-introduce">
-                        <div class="datails-text-hidden">
-                            <p>百年民宿、清晨游船体验、夜晚登塔特权，百年民宿、清晨游船体验、夜晚登塔特权。</p>
+                    <div class="d-price clearfix" style="margin-top:0;border:none;">
+                        <div class="d-price-l left">
+                            <h3><span>2048</span>积分</h3>
                         </div>
+                    </div>
+                    <p class="detail-total">共2晚（均价:4000积分 X 3晚） </p>
+                </div>
+                <div class="room-details-date">
+                    <div class="container">
+                        <div class="newList-co-option room-co-option">
+                            <div class="date clearfix">
+                                <div class="date-arrive left borderR activeStart">
+                                    <p>入住</p>
+                                    <input type="text" readonly="readonly"  data-reset="5" data-type="start" data-isShowTime="true">
+                                </div>
+                                <div class="date-leave left activeLeave">
+                                    <p>离店</p>
+                                    <input type="text" readonly="readonly"  data-reset="5" data-type="leave" data-isShowTime="true">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="container">
+                        <p class="modi-text">百年民宿、清晨游船体验、夜晚登塔特权，百年民宿、清晨游船体验、夜晚登塔特权，</p>
                     </div>
                 </div>
                 <div class="container">
@@ -184,7 +207,38 @@
         <div class="redeem-now">
             <a href="javascript:;">立即兑换</a>
         </div>
-
+        <!-- 日期选择部分 -->
+        <div class="calendar" style="">
+            <div class="calendar-opa"></div>
+            <div class="calendar-content">
+                <div class="newList-co-option calendar-top">
+                    <div class="week-bar"> 
+                        <div class="container">
+                            <ul> 
+                                <li class="weekend">日</li> 
+                                <li>一</li> 
+                                <li>二</li> 
+                                <li>三</li> 
+                                <li>四</li> 
+                                <li>五</li> 
+                                <li class="weekend">六</li> 
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-scroll">
+                    <div class="container">
+                        <div class="calendar-day" id="calendar-day">
+                            
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="calendar-btn">
+                    <a class="cancel" href="javascript:;">取消</a>
+                    <a class="determine" href="javascript:;">确定</a>
+                </div> -->
+            </div>
+        </div>
 
         <script>
             var swiper = new Swiper('.swiper-container', {
@@ -192,5 +246,6 @@
                 paginationType: 'fraction'
             });
         </script>
+        <script src="../js/calendar.js"></script>
     </body>
 </html>

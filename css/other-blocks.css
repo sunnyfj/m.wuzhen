@@ -2523,6 +2523,19 @@
 	padding-top: 0.213333rem;
 	padding-bottom: 0.106667rem;
 }
+.confirm-pay-info {
+	width: 100%;
+	padding-top: 0.426667rem;
+	margin-bottom: 0.32rem;
+}
+.confirm-pay-info p {
+	font-size: 0.373333rem;
+	color: #7E808A;
+	line-height: 1.7;
+}
+.confirm-pay-info p span {
+	color: #000000;
+}
 .pay-method p{
 	font-size: 0.373333rem;
 	color: #2A2A2F;
