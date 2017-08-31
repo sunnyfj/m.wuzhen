@@ -475,7 +475,7 @@ $(function(){
 	})
 
 	//账户管理
-	$('.acc-management li input').on('change',function(){
+	$('#avatar').on('change',function(){
 		var fileList = $(this).prop('files');
 		var imgUrl = window.URL.createObjectURL(fileList[0]);
 		$(this).prev().find('img').attr('src',imgUrl);
@@ -918,5 +918,21 @@ $(function(){
 	        } 
         }
     })
+
+
+
+    //实名认证上传身份证
+	$('#positive').on('change',function(){
+		var fileList = $(this).prop('files');
+		var imgUrl = window.URL.createObjectURL(fileList[0]);
+		$(this).prev().attr('src',imgUrl);
+		$(this).parent().find('p').hide();
+	})
+	$('#theback').on('change',function(){
+		var fileList = $(this).prop('files');
+		var imgUrl = window.URL.createObjectURL(fileList[0]);
+		$(this).prev().attr('src',imgUrl);
+		$(this).parent().find('p').hide();
+	})
 
 })

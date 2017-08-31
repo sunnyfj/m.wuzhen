@@ -653,6 +653,11 @@ body .package-btn a {
     -webkit-background-size: 0.56rem 0.56rem;
     background-size:0.56rem 0.56rem;
 }
+.newList-title h4.newList-title-pre{
+	background: url(../images/pre.png) left center no-repeat;
+    -webkit-background-size: 0.56rem 0.56rem;
+    background-size:0.56rem 0.56rem;
+}
 .newList-ticket-title h4 {
 	background: url(../images/product5.png) left center no-repeat;
     -webkit-background-size: 0.56rem 0.56rem;
@@ -3659,3 +3664,151 @@ body .package-btn a {
 .confirm-isVolume .order-modify{
 	padding-top: 0.32rem;
 }
+
+
+.pre-tab {
+	width: 100%;
+	height: 1.173333rem;
+	/*border-top: 0.013333rem solid #D4DAE1;
+	border-bottom: 0.013333rem solid #7E808A;*/
+}
+.pre-tab .lineT {
+	width: 100%;
+	border-top: 0.013333rem solid #7E808A;
+}
+.pre-tab .lineB {
+	width: 100%;
+	border-top: 0.013333rem solid #7E808A;
+}
+.pre-tab .swiper-container {
+	padding: 0 0.426667rem;
+}
+.pre-tab a{
+	font-size: 0.373333rem;
+	color: #7E808A;
+}
+.pre-tab .swiper-slide {
+	height: 1.173333rem;
+	line-height: 1.173333rem;
+	width: 2.186667rem;
+}
+.pre-tab .swiper-slide.towdith {
+	width: 1.386667rem;
+}
+.pre-tab .swiper-slide.active a{
+	color: #2A2A2F;
+}
+
+.preList-content .pre-item {
+	width: 100%;
+	display: -webkit-box;
+    display: box;
+    padding: 0.426667rem 0 0.32rem;
+    border-bottom: 0.013333rem solid #D4DAE1;
+}
+.preList-content .pre-img {
+	width: 2.733333rem;
+	height: 2.733333rem;
+	margin-right: 0.32rem;
+}
+.preList-content .pre-img a {
+	display: block;
+	width: 100%;
+	height: 100%;
+}
+.preList-content .pre-img img{
+	width: 100%;
+	height: 100%;
+}
+.preList-content .pre-info {
+	-webkit-box-flex: 1;
+    flex: 1;
+}
+.preList-content .pre-info h4 {
+	margin-bottom: 0.213333rem;
+}
+.preList-content .pre-info h4 a{
+	font-size: 0.426667rem;
+	color: #2A2A2F;
+}
+.preList-content .pre-info .price{
+	display: -webkit-box;
+    display: box;
+}
+.preList-content .pre-info .price p {
+	font-size: 0.373333rem;
+	color: #000000;
+}
+.preList-content .pre-info .price p b{
+	font-size: 0.746667rem;
+	font-family: myfont;
+}
+.preList-content .pre-info .price p em {
+	    font-weight: normal;
+    font-size: 0.266667rem;
+    color: #FF1431;
+    background: #FCFDFF;
+    border: 0.026667rem solid #FF1431;
+    border-radius: 0.053333rem;
+    line-height: 1;
+    margin-left: 0.213333rem;
+    position: relative;
+    top: -0.04rem;
+    padding: 0.026667rem 0.053333rem;
+    box-sizing: border-box;
+}
+.preList-content .pre-info .price span {
+	display: block;
+	-webkit-box-flex: 1;
+    flex: 1;
+    text-align: right;
+    padding-top: 0.586667rem;
+    font-size: 0.32rem;
+	color: #7E808A;
+}
+.preList-content .pre-info .pre-time {
+	display: -webkit-box;
+    display: box;
+    margin-top: 0.106667rem;
+}
+.preList-content .pre-info .pre-time p{
+    -webkit-box-flex: 1;
+    flex: 1;
+    font-size: 0.32rem;
+	color: #7E808A;
+	line-height: 0.72rem;
+}
+.preList-content .pre-info .pre-time p span {
+	display: inline-block;
+    padding: 0 0.053333rem;
+    height: 0.546667rem;
+    background: #F3F4F8;
+	border-radius: 0.066667rem;
+    text-align: center;
+    line-height: 0.546667rem;
+    font-size: 0.32rem;
+	color: #2A2A2F;
+}
+.preList-content .pre-info .pre-time a {
+	display: block;
+	width: 1.973333rem;
+	padding: 0.16rem 0;
+	text-align: center;
+	font-size: 0.266667rem;
+	color: #FCFDFF;
+	background: #FF1431;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
