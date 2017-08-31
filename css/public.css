@@ -541,7 +541,7 @@ body{
 
 
 .sidenav ul {
-	padding-top:0.213333rem;
+	/*padding-top:0.213333rem;*/
 }
 .sidenav ul li {
 	width: 100%;
@@ -616,6 +616,14 @@ body{
 	background: url(../images/sidenav13.png) no-repeat;
 	background-size: contain;
 }
+.sidenav-a div p.p14 {
+	background: url(../images/sidenav24.png) no-repeat;
+	background-size: contain;
+}
+.sidenav-a div p.p15 {
+	background: url(../images/sidenav25.png) no-repeat;
+	background-size: contain;
+}
 .sidenav-a div i {
 	font-style: normal;
 	float: right;
@@ -647,7 +655,9 @@ body{
 .sidenav ul li.borNo {
 	border-bottom: none;
 }
-
+.sidenav ul li.pre{
+	background: #F3F4F8;
+}
 /*侧边导航栏*/
 
 /*单页删选*/
