@@ -186,8 +186,35 @@
             var m = dd.getMonth()+1;//获取当前月份的日期
             var d = dd.getDate();
             return y+"-"+tuDou(m)+"-"+tuDou(d);
-        }        
-           
+        }    
+
+        //data-disableday
+        function disableDay(data,td){
+            if(data != undefined){
+                var dayArr = data.split(',');
+                for(var i=0; i< td.length; i++){
+                    for(var j=0; j< dayArr.length; j++){
+                        if(td.eq(i).attr('data-date-format') == dayArr[j]){
+                            td.eq(i).removeClass('optional').addClass('gray');
+                        }
+                    }
+                }
+            }
+        }  
+        //data-disableweeks 
+        function disableWeeks(data,tr){
+            if(data != undefined){
+                var weeksArr = data.split(',');
+                for(var i=0; i< tr.length; i++){
+                    for(var j=0; j< weeksArr.length; j++){
+                        if(tr.eq(i).find('td').eq(weeksArr[j]).hasClass('optional')){
+                            tr.eq(i).find('td').eq(weeksArr[j]).removeClass('optional').addClass('gray');
+                        }
+                    }
+                }
+            }
+        }  
+
 
         
         //判断是否需要页面展示日期为当前
@@ -329,9 +356,16 @@
             showColor($('.calendar table').eq(0).find('td.optional'),myDate.getFullYear(),myDate.getMonth()+1,Date());
             trHide();
             pastDay();
+            //限定天
+            var alltds = $('.calendar table').find('td.optional');
+            var daydata = $(this).find('input').attr('data-disableDay');
+            disableDay(daydata,alltds);
+            //限定周
+            var alltr = $('.calendar table').find('tr');
+            var weeksdata = $(this).find('input').attr('data-disableWeeks');
+            disableWeeks(weeksdata,alltr)
             //替换当天日期
             //$('.calendar-content').find('td.optional span i').eq(0).text('今天');
-
             $('html').addClass('more_prohibit_html');
         });
 
@@ -352,6 +386,14 @@
             showColor($('.calendar table').eq(0).find('td.optional'),nextDayDate.getFullYear(),nextDayDate.getMonth()+1,nextDayDate);
             trHide();
             pastDay();
+            //限定天
+            var alltds = $('.calendar table').find('td.optional');
+            var daydata = $(this).find('input').attr('data-disableDay');
+            disableDay(daydata,alltds);
+            //限定周
+            var alltr = $('.calendar table').find('tr');
+            var weeksdata = $(this).find('input').attr('data-disableWeeks');
+            disableWeeks(weeksdata,alltr)
             $('html').addClass('more_prohibit_html');
         });
         $('.calendar-opa').click(function(event) {

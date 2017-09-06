@@ -162,3 +162,143 @@
 	color: #fff;
 	background: #2A2A2F;
 }
+
+
+
+
+
+
+
+
+
+.datebox {
+	position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 999;
+}
+.datebox-opa {
+	width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    top: 0;
+    background: rgba(0,0,0,0);
+    transform: background 0.3s ease;
+}
+.datebox-opa.active {
+	background: rgba(0,0,0,0.5);
+    transform: background 0.3s ease;
+}
+.datebox-content {
+	background-color: #fff;
+    width: 100%;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    transform: translateY(100%); 
+    transition: transform 0.3s ease;
+    z-index: 10;
+}
+.datebox-content.active {
+	transform: translateY(0);
+	transition: transform 0.3s ease;
+}
+.datebox-title {
+	width: 100%;
+	display: -webkit-box;
+    display: flex;
+    padding:0.213333rem 0.426667rem;
+    background: #F3F4F8;
+}
+.datebox-title .before ,.datebox-title .after{
+	width: 1.2rem;
+	height: 1.2rem;
+	text-align: center;
+	line-height: 1.2rem;
+	font-size: 0.64rem;
+	color: #2A2A2F;
+	background: url(../images/date-tab.png) center center no-repeat;
+	background-size: 0.64rem 0.64rem;
+}
+.datebox-title .before{
+	transform: rotateY(180deg);
+	-webkit-transform: rotateY(180deg);
+}
+.datebox-title .year-month {
+	-webkit-box-flex: 1;
+    flex: 1;
+    line-height: 1.2rem;
+    text-align: center;
+    font-size: 0.56rem;
+    color: #2A2A2F;
+}
+.datebox-week {
+	width: 100%;
+	padding:0 0.426667rem;
+	background-color: #F3F4F8;
+	margin-bottom: 0.213333rem;
+}
+.datebox-week ul {
+	display: -webkit-box;
+    display: flex;
+}
+.datebox-week ul li {
+	-webkit-box-flex: 1;
+    flex: 1;
+    padding: 0.32rem 0;
+    text-align: center;
+    font-size: 0.373333rem;
+    color: #7E808A;
+    line-height: 1;
+    -webkit-box-flex: 1;
+}
+.datebox-content .table {
+	width: 100%;
+}
+.datebox-content .table thead {
+	background: #F3F4F8;
+}
+.datebox-content .table th {
+	text-align: center;
+}
+/*.datebox-content .table tr:last-child td {
+	padding-bottom: 0;
+}*/
+.datebox-content .table td {
+	padding-bottom: 0.266667rem;
+    text-align: center;
+    color: #2A2A2F;
+}
+.datebox-content .table td i {
+	display: inline-block;
+    vertical-align: middle;
+    width: 1.2rem;
+    height: 1.2rem;
+    line-height: 1.2rem;
+    border-radius: 50%;
+    font-style: normal;
+    font-size: 0.426667rem;
+}
+
+.datebox-content .table td.gray i{
+	color: #ccc;
+}
+.datebox-content .table td.selected  i{
+	background-color: #2A2A2F;
+	color:#fff;
+}
+
+
+
+
+
+
+
+
+
+
+
