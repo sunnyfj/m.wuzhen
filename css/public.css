@@ -1043,6 +1043,19 @@ body{
 	text-align: center;
 	padding: 0.64rem 0 0.426667rem;
 }
+.modal .modal-content h1{
+	font-size: 0.853333rem;
+	color: #FFFFFF;
+	text-align: center;
+	padding: 0.626667rem 0 0.066667rem;
+	line-height: 1.4;
+}
+.modal .modal-content h6{
+	font-size: 0.373333rem;
+	color: #FEF353;
+	text-align: center;
+	padding-bottom: 1.786667rem;
+}
 .modal .modal-content div {
 	font-size: 0.373333rem;
 	color: #FFFFFF;
@@ -1057,6 +1070,9 @@ body{
 	font-size: 0.32rem;
 	color: #FFFFFF;
 	line-height: 1.8;
+}
+.modal .modal-content p.center {
+	text-align: center;
 }
 .modal .modal-content a {
 	display: block;
