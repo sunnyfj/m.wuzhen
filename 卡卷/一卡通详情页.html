@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>一卡通详情页</title>
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection">
+        <link rel="stylesheet" href="../css/swiper.css">
+        <link rel="stylesheet" href="../css/public.css">
+        <link rel="stylesheet" href="../css/module.css">
+        <link rel="stylesheet" href="../css/calendar.css">
+
+        <script src="../build/flexible_css.debug.js"></script>
+        <script src="../build/flexible.debug.js"></script>
+        <script src="../js/swiper.min.js"></script>
+        <script src="../js/zepto.js"></script>
+        <script src="../js/public.js"></script>
+        <script src="../js/module.js"></script>
+    </head>
+    <body>
+        <!-- 侧边导航栏 -->
+        <div class="sidenav-opa"></div>
+        <div class="sidenav">
+            <ul>
+                <li>
+                    <a class="sidenav-a" href="package-list.html">
+                        <div class="clearfix">
+                            <p class="p1">套餐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="hotel-list.html">
+                        <div class="clearfix">
+                            <p class="p2">酒店</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="food-list.html">
+                        <div class="clearfix">
+                            <p class="p3">美食</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="ticket-list.html">
+                        <div class="clearfix">
+                            <p class="p4">票务</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="quickSelection borNo">
+                    <a href="javascript:;">
+                        <p class="p5">私人订制</p>
+                    </a>
+                    <a href="javascript:;">
+                        <p class="p6">懒人模式</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="conference-list.html">
+                        <div class="clearfix">
+                            <p class="p7">会展婚宴</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="shopping-list-specialty.html">
+                        <div class="clearfix">
+                            <p class="p8">购物娱乐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p9">景区导览</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p10">语音导游</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p11">积分商城</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p12">卡券</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pageContent">
+            <!-- 页头 -->
+        	<header class="clearfix">
+                <div class="header-l">
+                    <a id="header-btn" class="btn" href="javascript:;"><img src="../images/header-btn.png"></a>
+                    <a class="logo" href="index.html"><img src="../images/logo.png"></a>
+                </div>
+                <div class="header-r">
+                    <a href="tel:13855555555"><img src="../images/tel.png"></a>
+                    <a class="personal" href="javascript:;"><img src="../images/geren.png"></a>
+                    <a href="javascript:;"><img src="../images/shopping-cart.png"></a>
+                </div>      
+            </header>
+            <!-- 内容 -->
+            <div class="newDetail">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide-active"><a href=""><img src="../images/cardDetail1.png"></a></div>
+                        <div class="swiper-slide"><a href=""><img src="../images/cardDetail1.png"></a></div>
+                        <div class="swiper-slide"><a href=""><img src="../images/cardDetail1.png"></a></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <!-- 详情页收藏 -->
+                    <div class="collection details-collection"></div>
+                </div>
+                <div class="main_layout">
+                    <div class="title_share">
+                        <h1>消费卡500元面值（电子卡）</h1>
+                    </div>
+                    <div class="hotel-introduce">
+                        <div class="datails-text-hidden">
+                            <p>消费卡分为电子卡和实体卡两种，此卡均为定额消费卡，不记名，不可充值，不可提现，不可退改, 有庭院标间、临水单。</p>
+                        </div>
+                        <p class="btn-more" id="datails-text-hidden-btn"><a href="javascript:;">查看更多 > </a></p>
+                    </div>
+                    <div class="d-price clearfix">
+                        <div class="d-price-l left">
+                            <h3><span>495</span>元</h3>
+                            <p>原价：<em>500</em></p>
+                        </div>
+                        <div class="d-price-r right">
+                            <p class="mb">评分<span class="color">4.5</span></p>
+                            <p>已售<span>1340</span></p>
+                        </div>
+                    </div>
+                    <div class="choice-package" style="padding-top: 0.213333rem;">
+                        <p class="choice-title">面值选择</p>
+                        <ul>
+                            <li>100元</li>
+                            <li>200元</li>
+                            <li class="active">500元</li>
+                            <li>1000元</li>
+                            <li>2000元</li>
+                            <li>5000元</li>
+                        </ul>
+                    </div>
+                    <div class="package-content">
+                        <div class="package-info">
+                            <p class="choice-title">消费卡介绍</p>
+                            <ol class="package-list">
+                                <li>消费卡分为电子卡和实体卡两种，此卡均为定额消费卡，不记名，不可充值，不可提现，不可退改</li>
+                            </ol>
+                            <div class="open-btn">
+                                <a class="mybtn" href="javascript:;" id="more_intro">查看全部</a>
+                            </div>
+                        </div>
+                        <div class="package-info" style="padding-top: 0.213333rem;">
+                            <p class="choice-title">如何购买</p>
+                            <ol class="package-list">
+                                <li>线上选择消费卡，可选电子卡或实体卡，实体卡可寄送</li>
+                            </ol>
+                            <div class="open-btn">
+                                <a class="mybtn" href="javascript:;" id="more_pur">查看全部</a>
+                            </div>
+                        </div>
+                        <div class="package-explain">
+                            <h3 class="choice-title">使用须知</h3>
+                            <div class="pe-pb">
+                                <h6 class="explain-title">预约须知</h6>
+                                <p>1.消费卡不挂失、不充值</p>
+                                <p>2.请将消费卡绑定至个人中心-一卡通，进行消费</p>
+                                <p>3.可绑定多张消费卡，不允许解绑</p>
+                                <p>4.消费卡有效期为三年，从绑定之日起算。超过有效期将收取年度手续费：50元/年/卡</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package-evaluate">
+                        <h3 class="choice-title">游客评价</h3>
+                        <ul>
+                            <li class="active">
+                                <div class="pe_div clearfix">
+                                    <div class="pe_div_l left clearfix">
+                                        <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                        <div class="pe_div_name left">
+                                            <h4>Hoyalox</h4>
+                                            <h6>2016-08-18 18:24</h6>
+                                        </div>
+                                    </div>
+                                    <div class="pe_div_r right">评分<span>4.5</span></div>
+                                </div>
+                                <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                            </li>
+                            <li>
+                                <div class="pe_div clearfix">
+                                    <div class="pe_div_l left clearfix">
+                                        <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                        <div class="pe_div_name left">
+                                            <h4>Hoyalox</h4>
+                                            <h6>2016-08-18 18:24</h6>
+                                        </div>
+                                    </div>
+                                    <div class="pe_div_r right">评分<span>4.5</span></div>
+                                </div>
+                                <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                            </li>
+                        </ul>
+                        <div class="open-btn">
+                            <a class="mybtn" href="javascript:;" id="btn_moreComment">查看全部</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+               
+
+            <!-- 页脚 -->
+            <footer class="footer2 footer2-pb">
+                <div class="footer2-content">
+                    <div class="footer2-contact clearfix">
+                        <h5 class="left">联系我们</h5>
+                        <p class="left">0573-88731088</p>
+                    </div>
+                    <div class="footer2-copyright">
+                        <p>版权申明 | 乌镇旅游股份有限公司©版本所有©浙ICP备09047744号</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- 回到顶部及咨询 -->
+        <div class="sidebar">
+            <a class="help" href="javascript:;"></a>
+            <div class="gotop" id="gotop"></div>
+        </div> 
+
+        <!-- 更多评论弹出 -->
+        <div class="more-comment">
+            <div class="more-comment-content">
+                <div class="package-evaluate">
+                    <h3 class="choice-title">游客评价</h3>
+                    <ul>
+                        <li class="active">
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src=""></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src=""></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src=""></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src=""></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src=""></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="more-comment-close">×</div>
+        </div>
+        <!-- 更多评论弹出 -->
+
+        <!-- 更多介绍弹出 -->
+        <div class="more-package" id="intro">
+            <div class="more-package-content">
+                <div>
+                    <h3 class="choice-title">消费卡介绍</h3>
+                    <ul>
+                        <li>
+                            <div class="more-package-content-text">
+                                <p>消费卡分为电子卡和实体卡两种，此卡均为定额消费卡，不记名，不可充值，不可提现，不可退改</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="more-package-close">×</div>
+        </div>
+        <!-- 更多介绍弹出 -->
+
+        <!-- 更多如何购买弹出 -->
+        <div class="more-package" id="pur">
+            <div class="more-package-content">
+                <div>
+                    <h3 class="choice-title">如何购买</h3>
+                    <ul>
+                        <li>
+                            <div class="more-package-content-text">
+                                <p>线上选择消费卡，可选电子卡或实体卡，实体卡可寄送</p>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="more-package-close">×</div>
+        </div>
+        <!-- 更多如何购买弹出 -->
+
+
+
+        <!-- 加入购物车 -->
+        <div class="bottom_bar">
+            <a class="sys_button cart" href="javascript:;">加入购物车</a>
+            <a class="sys_button buy" href="javascript:;">立即购买</a>
+        </div>
+        <script>
+            var swiper = new Swiper('.swiper-container', {
+                pagination: '.swiper-pagination',
+                paginationType: 'fraction'
+            });
+        </script>
+    </body>
+</html>

@@ -146,6 +146,28 @@ $(function(){
 		$('.more-H-detail').fadeOut(100);
 		$('html').removeClass('more_prohibit_html');
 	})
+
+	//一卡通详情页弹出
+
+	$('#more_intro').on('click',function(){
+		$('#intro').fadeIn(100);
+		$('html').addClass('more_prohibit_html');
+	})
+	$('#intro .more-package-close').on('click',function(){
+		$('#intro').fadeOut(100);
+		$('html').removeClass('more_prohibit_html');
+	})
+
+	$('#more_pur').on('click',function(){
+		$('#pur').fadeIn(100);
+		$('html').addClass('more_prohibit_html');
+	})
+	$('#pur .more-package-close').on('click',function(){
+		$('#pur').fadeOut(100);
+		$('html').removeClass('more_prohibit_html');
+	})
+
+
 	//房间详情预订须知弹出
 	/*$('#room-detailsNotice-btn').on('click',function(){
 		$('.more-detailsNotice').fadeIn(100);

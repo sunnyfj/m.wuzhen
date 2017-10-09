@@ -32,7 +32,11 @@
 	padding-right: 0.426667rem;
 	padding-left: 0.426667rem;
 }
-
+.main_layout .vd {
+	font-size: 0.373333rem;
+	color: #FF1431;
+	margin-bottom: 0.426667rem;
+}
 .title_share h1{
 	font-size: 0.586667rem;
 	color: #2A2A2F;
@@ -820,6 +824,84 @@ body .package-btn a {
 	background: url(../images/format1.png) no-repeat;
 	background-size: cover;
 }
+.voucher-option {
+	padding-bottom: 0.426667rem;
+}
+
+.voucher-option ul{
+	width: 7.733333rem;
+	height: 0.746667rem;
+	float: left;
+	overflow: hidden;
+}
+.voucher-option ul li{
+	float: left;
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	background: #F3F4F8;
+	border-radius: 2.666667rem;
+	line-height: 1;
+	margin-right: 0.4rem;
+	margin-bottom: 0.426667rem;
+}
+.voucher-option ul li a{
+	display: block;
+	width: 2.08rem;
+	padding: 0.186667rem 0;
+	text-align: center;
+	line-height: 1;
+	color: #2A2A2F;
+	text-decoration: none;
+}
+.voucher-option ul li.active{
+	background: #2A2A2F;
+}
+.voucher-option ul li.active a{
+	color: #FFFFFF;
+}
+.voucher-option ul li:last-child{
+	margin-right: 0;
+}
+.voucher-option div{
+	width: 0.8rem;
+	height: 0.8rem;
+	float: right;
+}
+.voucher-option div a {
+	display: block;
+	width: 0.8rem;
+	height: 0.8rem;
+	vertical-align: middle;
+	background:url(../images/open.png) no-repeat;
+	background-size: cover;
+	transition:0.3s all ease;
+}
+.voucher-option div a.open {
+	margin-top:1.146667rem;
+	background:url(../images/stop.png) no-repeat;
+	transition:1s all ease;
+	background-size: cover;
+}
+.voucher-option div img{
+	width: 0.746667rem;
+}
+#voucher-tab .swiper-slide.towdith {
+    width: 1.386667rem;
+}
+.validity {
+	font-size: 0.32rem;
+	color: #2A2A2F;
+	padding-bottom: 0.32rem;
+}
+.timevd {
+	width: 100%;
+	border-bottom: 0.013333rem solid #7E808A;
+}
+.timevd p {
+	font-size: 0.373333rem;
+	color: #FF1431;
+	padding: 0.426667rem 0;
+}
 .shopping-option {
 	padding-bottom: 0.426667rem;
 }
@@ -892,7 +974,6 @@ body .package-btn a {
 .shopping-option div img{
 	width: 0.746667rem;
 }
-
 .newList-modular-certain {
 	display: none;
 }
@@ -1770,6 +1851,11 @@ body .package-btn a {
 	/*padding: 0.053333rem 0;*/
 	display: -webkit-box;
     display: flex;
+}
+.room-details-info p.vd{
+	font-size: 0.373333rem;
+	color: #FF1431;
+	line-height: 1.7;
 }
 .room-details-info ul li b {
 	display: block;

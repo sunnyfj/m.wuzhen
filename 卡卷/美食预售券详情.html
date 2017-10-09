@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>美食详情页</title>
+        <meta content="yes" name="apple-mobile-web-app-capable">
+        <meta content="yes" name="apple-touch-fullscreen">
+        <meta content="telephone=no,email=no" name="format-detection">
+        <link rel="stylesheet" href="../css/swiper.css">
+        <link rel="stylesheet" href="../css/public.css">
+        <link rel="stylesheet" href="../css/module.css">
+        <link rel="stylesheet" href="../css/calendar.css">
+
+        <script src="../build/flexible_css.debug.js"></script>
+        <script src="../build/flexible.debug.js"></script>
+        <script src="../js/swiper.min.js"></script>
+        <script src="../js/zepto.js"></script>
+        <script src="../js/public.js"></script>
+        <script src="../js/module.js"></script>
+    </head>
+    <body>
+        <!-- 侧边导航栏 -->
+        <div class="sidenav-opa"></div>
+        <div class="sidenav">
+            <ul>
+                <li>
+                    <a class="sidenav-a" href="package-list.html">
+                        <div class="clearfix">
+                            <p class="p1">套餐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="hotel-list.html">
+                        <div class="clearfix">
+                            <p class="p2">酒店</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="food-list.html">
+                        <div class="clearfix">
+                            <p class="p3">美食</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="ticket-list.html">
+                        <div class="clearfix">
+                            <p class="p4">票务</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="quickSelection borNo">
+                    <a href="javascript:;">
+                        <p class="p5">私人订制</p>
+                    </a>
+                    <a href="javascript:;">
+                        <p class="p6">懒人模式</p>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="conference-list.html">
+                        <div class="clearfix">
+                            <p class="p7">会展婚宴</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="shopping-list-specialty.html">
+                        <div class="clearfix">
+                            <p class="p8">购物娱乐</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p9">景区导览</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p10">语音导游</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li>
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p11">积分商城</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+                <li class="borNo">
+                    <a class="sidenav-a" href="javascript:;">
+                        <div class="clearfix">
+                            <p class="p12">卡券</p>
+                            <i>&gt;</i>
+                        </div>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="pageContent">
+            <!-- 页头 -->
+        	<header class="clearfix">
+                <div class="header-l">
+                    <a id="header-btn" class="btn" href="javascript:;"><img src="../images/header-btn.png"></a>
+                    <a class="logo" href="index.html"><img src="../images/logo.png"></a>
+                </div>
+                <div class="header-r">
+                    <a href="tel:13855555555"><img src="../images/tel.png"></a>
+                    <a class="personal" href="javascript:;"><img src="../images/geren.png"></a>
+                    <a href="javascript:;"><img src="../images/shopping-cart.png"></a>
+                </div>      
+            </header>
+            <!-- 内容 -->
+            <div class="newDetail">
+                <div class="swiper-container">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide swiper-slide-active"><a href=""><img src="../images/package-details1.png"></a></div>
+                        <div class="swiper-slide"><a href=""><img src="../images/package-details1.png"></a></div>
+                        <div class="swiper-slide"><a href=""><img src="../images/package-details1.png"></a></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                    <!-- 详情页收藏 -->
+                    <div class="collection details-collection"></div>
+                </div>
+                <div class="main_layout">
+                    <div class="title_share">
+                        <h1>将军府火锅</h1>
+                        <div class="datails-text-hidden">
+                            <p>枕水度假酒枕水度假酒枕水度假酒店是西栅景区枕水度假酒店院标间、临水单枕水度假酒店是西栅景区枕水度假酒店院标间、临水单.</p>
+                        </div>
+                        <p class="btn-more" id="datails-text-hidden-btn"><a href="javascript:;">查看更多 > </a></p>
+                    </div>
+                    <div class="d-price clearfix">
+                        <div class="d-price-l left">
+                            <h3><span>200</span>元<i>/起</i></h3>
+                            <p>原价：<em>300</em></p>
+                        </div>
+                        <div class="d-price-r right">
+                            <p class="mb">评分<span class="color">4.5</span></p>
+                            <p>已售<span>1340</span></p>
+                        </div>
+                    </div>
+                    <div class="choice-date clearfix">
+                        <div class="left choice-date-number" style="padding-left:0;">
+                            <p class="choice-title">数量</p>
+                            <div class="number clearfix">
+                                <a class="reduce" href="javascript:;">-</a>
+                                <span>1</span>
+                                <a class="add" href="javascript:;">+</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="vd">有效期：2017-06-30至2017-08-31</div>
+                    <div class="choice-package">
+                        <p class="choice-title">套餐选择</p>
+                        <ul>
+                            <li class="active">6人套餐</li>
+                            <li>2人套餐</li>
+                        </ul>
+                    </div>
+                    <div class="choice-package">
+                        <p class="choice-title">用餐时段</p>
+                        <ul>
+                            <li class="active">午餐</li>
+                            <li>晚餐</li>
+                        </ul>
+                    </div>
+                    <div class="package-content">
+                        <div class="package-info">
+                            <p class="choice-title">套餐内容</p>
+                            <div class="package-content-img">
+                                <div class="pci-item">
+                                    <img src="../images/pci-item1.png">
+                                </div>
+                            </div>
+                            <ol class="package-list">
+                                <li>1.民宿标间/大床一间一晚</li>
+                                <li>2.西栅门票2张</li>
+                                <li>3.民宿标间/大床一间一晚</li>
+                            </ol>
+                            <div class="open-btn">
+                                <a class="mybtn" href="javascript:;" id="btn_morePackage">查看全部</a>
+                            </div>
+                        </div>
+                        <div class="package-explain">
+                            <h3 class="choice-title">注意事项</h3>
+                            <div class="pe-pb">
+                                <p><i>1.</i><span>网上预订需支付全额餐费，提前一天取消订单不收取违约金；若在当天取消，需收取订单总额的50%作为违约金；（注：所有特价和优惠活动产品均不作退换处理）</span></p>
+                                <p><i>2.</i><span>订单提交成功后，请在30分钟内完成网上支付，超时订单将无效处理；</span></p>
+                                <p><i>3.</i><span>订单取消后，积分不再退还。</span></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="package-evaluate">
+                        <h3 class="choice-title">游客评价</h3>
+                        <ul>
+                            <li class="active">
+                                <div class="pe_div clearfix">
+                                    <div class="pe_div_l left clearfix">
+                                        <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                        <div class="pe_div_name left">
+                                            <h4>Hoyalox</h4>
+                                            <h6>2016-08-18 18:24</h6>
+                                        </div>
+                                    </div>
+                                    <div class="pe_div_r right">评分<span>4.5</span></div>
+                                </div>
+                                <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                            </li>
+                            <li>
+                                <div class="pe_div clearfix">
+                                    <div class="pe_div_l left clearfix">
+                                        <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                        <div class="pe_div_name left">
+                                            <h4>Hoyalox</h4>
+                                            <h6>2016-08-18 18:24</h6>
+                                        </div>
+                                    </div>
+                                    <div class="pe_div_r right">评分<span>4.5</span></div>
+                                </div>
+                                <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                            </li>
+                        </ul>
+                        <div class="open-btn">
+                            <a class="mybtn" href="javascript:;" id="btn_moreComment">查看全部</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+                
+
+            <!-- 页脚 -->
+            <footer class="footer2 footer2-pb">
+                <div class="footer2-content">
+                    <div class="footer2-contact clearfix">
+                        <h5 class="left">联系我们</h5>
+                        <p class="left">0573-88731088</p>
+                    </div>
+                    <div class="footer2-copyright">
+                        <p>版权申明 | 乌镇旅游股份有限公司©版本所有©浙ICP备09047744号</p>
+                    </div>
+                </div>
+            </footer>
+        </div>
+        <!-- 回到顶部及咨询 -->
+        <div class="sidebar">
+            <a class="help" href="javascript:;"></a>
+            <div class="gotop" id="gotop"></div>
+        </div> 
+
+
+        <!-- 跟多评论弹出 -->
+        <div class="more-comment">
+            <div class="more-comment-content">
+                <div class="package-evaluate">
+                    <h3 class="choice-title">游客评价</h3>
+                    <ul>
+                        <li class="active">
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                        <li>
+                            <div class="pe_div clearfix">
+                                <div class="pe_div_l left clearfix">
+                                    <div class="pe_div_img left"><img src="../images/pe_div_img.png"></div>
+                                    <div class="pe_div_name left">
+                                        <h4>Hoyalox</h4>
+                                        <h6>2016-08-18 18:24</h6>
+                                    </div>
+                                </div>
+                                <div class="pe_div_r right">评分<span>4.5</span></div>
+                            </div>
+                            <p class="pe_text">不错的，很值得去玩玩，在景区里面走一走，逛一逛，然后再坐一坐乌蓬船，欣赏美景，很好的！</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="more-comment-close">×</div>
+        </div>
+        <!-- 跟多评论弹出 -->
+
+        <!-- 跟多套餐弹出 -->
+        <div class="more-package">
+            <div class="more-package-content">
+                <div>
+                    <h3 class="choice-title">套餐内容</h3>
+                    <ul>
+                        <li>
+                            <div class="more-package-content-text">
+                                <p>乌镇民宿1.5米大床A 或 民宿标间A一间一晚</p>
+                                <p>水乡民宿，感受地道淳朴味</p>
+                            </div>
+                            <div class="more-package-content-img">
+                                <img src="../images/more-package-content-img1.png">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="more-package-content-text">
+                                <p>乌镇民宿1.5米大床A 或 民宿标间A一间一晚</p>
+                                <p>水乡民宿，感受地道淳朴味</p>
+                            </div>
+                            <div class="more-package-content-img">
+                                <img src="../images/more-package-content-img1.png">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div>
+                    <h3 class="choice-title">套餐赠送</h3>
+                    <ul>
+                        <li>
+                            <div class="more-package-content-text">
+                                <p>乌镇民宿1.5米大床A 或 民宿标间A一间一晚</p>
+                                <p>水乡民宿，感受地道淳朴味</p>
+                            </div>
+                            <div class="more-package-content-img">
+                                <img src="../images/more-package-content-img1.png">
+                            </div>
+                        </li>
+                        <li>
+                            <div class="more-package-content-text">
+                                <p>乌镇民宿1.5米大床A 或 民宿标间A一间一晚</p>
+                                <p>水乡民宿，感受地道淳朴味</p>
+                            </div>
+                            <div class="more-package-content-img">
+                                <img src="../images/more-package-content-img1.png">
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="more-package-close">×</div>
+        </div>
+        <!-- 跟多套餐弹出 -->
+
+        <!-- 加入购物车 -->
+        <div class="bottom_bar">
+            <a class="sys_button cart" href="javascript:;">加入购物车</a>
+            <a class="sys_button buy" href="javascript:;">立即购买</a>
+        </div>
+        <!-- 日期选择部分 -->
+        <div class="calendar" style="">
+            <div class="calendar-opa"></div>
+            <div class="calendar-content">
+                <div class="newList-co-option calendar-top">
+                    <div class="week-bar"> 
+                        <div class="container">
+                            <ul> 
+                                <li class="weekend">日</li> 
+                                <li>一</li> 
+                                <li>二</li> 
+                                <li>三</li> 
+                                <li>四</li> 
+                                <li>五</li> 
+                                <li class="weekend">六</li> 
+                            </ul> 
+                        </div>
+                    </div>
+                </div>
+                <div class="calendar-scroll">
+                    <div class="container">
+                        <div class="calendar-day" id="calendar-day">
+
+                        </div>
+                    </div>
+                </div>
+                <!-- <div class="calendar-btn">
+                    <a class="cancel" href="javascript:;">取消</a>
+                    <a class="determine" href="javascript:;">确定</a>
+                </div> -->
+            </div>
+        </div>
+    <script src="../js/calendar.js"></script>
+    <script>
+        var swiper = new Swiper('.swiper-container', {
+            pagination: '.swiper-pagination',
+            paginationType: 'fraction'
+        });
+    </script>
+    </body>
+</html>
