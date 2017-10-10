@@ -182,4 +182,7 @@ $(function(){
 	$('#modal-result .back').on('click',function(){
 		$(this).parents('#modal-result').hide();
 	})
+	$('.modal .close').on('click',function(){
+		$(this).parents('.modal').hide();
+	})
 })
