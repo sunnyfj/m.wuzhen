@@ -49,6 +49,9 @@ body {
 .minHeightList{
 	min-height: 9.2rem;
 }
+.minHeight2{
+	min-height: 11.12rem;
+}
 body .mybtn {
 	display: inline-block;
 	/*border: 1px solid #7E808A;

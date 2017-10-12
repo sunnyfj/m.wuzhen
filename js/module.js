@@ -957,4 +957,42 @@ $(function(){
 		$(this).parent().find('p').hide();
 	})
 
+	//一卡通支付  
+	//消费卡选择
+	$('.cardpay-cards .codeShow-info').on('click',function(){
+		$(this).toggleClass('active');
+	})
+
+	//密码输入
+	function inputPass(){
+		$('#showpass').find('li').text('');
+		$('#paypass').val('');
+		$('.payModal').show();
+		$('#paypass').focus();
+		$('#paypass').on('input',function(){
+			var val = $(this).val();
+			if(val.length > 6){
+				val = val.substring(0,6);
+				$(this).val(val);
+			}
+			$('#showpass').find('li').text('');
+			for(var i=0; i<val.length; i++){
+				$('#showpass').find('li').eq(i).text(val[i]);
+			}
+		})
+	}
+	$('#subpay').on('click',function(){
+		inputPass();
+	})
+	//点击确认付款
+	$('.payModal .pay-confirm').on('click',function(){
+		alert('密码输入错误');
+		inputPass();
+	})
+	//点击放弃付款
+	$('.payModal .pay-cancel').on('click',function(){
+		$('#paypass').blur();
+		$(this).parents('.payModal').hide();
+	})
+
 })

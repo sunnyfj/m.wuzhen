@@ -2216,6 +2216,20 @@
 .codeShow-info {
 	background: #F3F4F8;
 	border: 0.026667rem solid #D4DAE1;
+	position: relative;
+}
+.codeShow-info .cardpay-icon {
+	position: absolute;
+	top: 0.48rem;
+	left: 0.426667rem;
+	width: 0.96rem;
+	height: 0.96rem;
+	background: url(../images/card-active.png) no-repeat;
+	background-size: cover;
+	display: none;
+}
+.codeShow-info.active .cardpay-icon {
+	display: block;
 }
 .codeShow-info .ci-number {
 	background: #367DCD;
@@ -2224,6 +2238,9 @@
 	font-size: 0.373333rem;
 	color: #FFFFFF;
 	padding: 0.186667rem 0.426667rem;
+}
+.codeShow-info .ci-number.blue2 {
+	background: #36AFCD;
 }
 .codeShow-info .ci-number.orange {
 	background: #EC9E19;
@@ -2744,22 +2761,229 @@ p.unbinding-text {
 .unbinding-btn {
 	margin-top: 0.213333rem; 
 }	
+/*一卡通付款*/
 
+.cardpay-tab {
+	width: 100%;
+	text-align: center;
+    padding: 0.32rem 0;
+    border-bottom:0.013333rem solid #7E808A;
+}
+.cardpay-tab a{
+	display: inline-block;
+    padding: 0.16rem 0.266667rem;
+    background: #F3F4F8;
+    border-radius: 2.666667rem;
+    line-height: 1;
+    font-size: 0.373333rem;
+    color: #2A2A2F;
+    background: #F3F4F8;
+    border-radius: 2.666667rem;
+    margin: 0 0.32rem;
+}
+.cardpay-tab a.active {
+    color: #FFFFFF;
+    background: #2A2A2F;
+}
+.cardpay-content{
+	padding-top: 0.426667rem;
+}
+.cardpay-content.height{
+	min-height: 10.133333rem;
+}
+.cardpay-content .text{
+	text-align: center;
+}
+.cardpay-content .text h3{
+	font-size: 0.48rem;
+	color: #7E808A;
+	margin-bottom: 0.426667rem;
+}
+.cardpay-content .text p{
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+}
+.cardpay-content .prompt{
+	font-size: 0.32rem;
+	color: #7E808A;
+	padding-bottom: 0.426667rem;
+}
+.cardpay-content .title{
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	margin-bottom: 0.853333rem;
+}
+.cardpay-cards .codeShow-info {
+	margin-bottom: 0.426667rem;
+}
+.cardpay-price {
+	width: 100%;
+}
+.cardpay-price .notice {
+	font-size: 0.32rem;
+	color: #FF1431;
+}
+.cardpay-price ul li {
+	display: -webkit-box;
+	display: flex;
+	padding: 0.426667rem 0;
+	border-bottom: 0.013333rem solid #D4DAE1;
+}
+.cardpay-price ul li:last-child{
+	border-bottom:none;
+}
+.cardpay-price ul li p{
+	-webkit-box-flex: 1;
+    flex: 1;
+    font-size: 0.373333rem;
+	color: #2A2A2F;
+}
+.cardpay-price ul li span{
+	display: block;
+	-webkit-box-flex: 1;
+    flex: 1;
+    text-align: right;
+    font-size: 0.373333rem;
+	color: #2A2A2F;
+}
 
+.cardpay-b {
+	display: -webkit-box;
+	display: flex;
+	width: 100%;
+    height: 1.333333rem;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    z-index: 120;
 
+}
+.cardpay-b div{
+	-webkit-box-flex: 1;
+    flex: 1;
+    background: #FFFFFF;
+    font-size: 0.373333rem;
+	color: #7E808A;
+	padding-left: 0.426667rem;
+	line-height: 1.333333rem;
+}
+.cardpay-b div span {
+	font-size: 0.373333rem;
+	color: #000000;
+	padding-left: 0.213333rem;
+}
+.cardpay-b div span b{
+	font-weight: normal;
+	font-size: 0.533333rem;
+	color: #2A2A2F;
+	font-family: myfont;
+}
+.cardpay-b a {
+	display: block;
+	width: 3.413333rem;
+	font-size: 0.373333rem;
+	color: #FCFDFF;
+	text-align: center;
+	line-height: 1.333333rem;
+	background: #FE150C;
+	outline: none;
+	border: none;
+}
+.cardpay-b input.gray {
+	background: #7E808A;
+}
 
+.payModal {
+	position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,.4);
+    display: none;
+    z-index: 999;
+}
+.payModal-content {
+	width: 70%;
+    position: absolute;
+    top: 2.0rem;
+    left: 50%;
+    margin-left:-35%;
+    background-color: #fff;
+    border-radius: 0.32rem;
+    text-align: center;
+    background: rgba(252,252,252,0.95);
+	border-radius: 24px;
+}
+.payModal-content h3{
+	font-size: 0.453333rem;
+	color: #030303;
+	margin-bottom: 0.32rem;
+	margin-top:0.64rem;
+}
+.payModal-content p {
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	line-height: 1.7;
+}
+.pc-input {
+	width: 100%;
+	height: 1.146667rem;
+	margin-top: 0.426667rem;
+	position: relative;
+}
+.pc-input input{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 0.64rem;
+	z-index: 2;
+	opacity: 0;
+}
+.pc-input ul {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	text-align: center;
+}
+.pc-input ul li{
+	vertical-align: top;
+	display: inline-block;
+	width: 0.64rem;
+	height: 0.64rem;
+	background: #D4DAE1;
+	border: 1px solid #7E808A;
+	border-radius: 0.026667rem;
+	text-align: center;
+	line-height: 0.64rem;
+	margin-right: 0.32rem;
+	font-size: 0.373333rem;
+}
+.pc-input ul li:last-child{
+	margin-right: 0;
+}
 
-
-
-
-
-
-
-
-
-
-
-
+.pc-btn {
+	border-top: 0.013333rem solid #4D4D4D;
+    display: -webkit-box;
+    display: flex;
+}
+.pc-btn a {
+	display: block;
+    -webkit-box-flex: 1;
+    flex: 1;
+    text-align: center;
+    height: 1.173333rem;
+    line-height: 1.173333rem;
+    -webkit-box-flex: 1;
+    font-size: 0.426667rem;
+    color: #0076FF;
+}
+.pc-btn a:first-child{
+	border-right: 0.013333rem solid #4D4D4D;
+}
 
 
 
