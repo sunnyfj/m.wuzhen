@@ -15,7 +15,18 @@
         <script src="../js/jquery.1.7.2.min.js"></script>
         <script src="../js/public.js"></script>
         <script src="../js/module.js"></script>
-
+        <style type="text/css">
+            .newList-title {
+                text-align: center;
+                padding: 0.4rem 0;
+                position: relative;
+            }
+            .newList-title p {
+                font-size: 0.266667rem;
+                color: #7E808A;
+                padding-top: 0.08rem;
+            }
+        </style>
         <link href="../css/mobiscroll.css" rel="stylesheet" type="text/css">
         <script src="../js/mobiscroll.js" type="text/javascript"></script>
     </head>
@@ -70,7 +81,7 @@
                                 </a>
                             </li>
                             <li>
-                                <a href="javascript:;">
+                                <a href="javascript:;" id="sex-choice">
                                     <p>性别</p>
                                     <div>
                                         <span>保密</span>
@@ -156,6 +167,43 @@
                 </div>
             </div>
         </div>
+
+        <!-- 性别选择 -->
+        <div class="M_PageSelection" id="sex_modal">
+            <div class="newList-title M_PageSelection-title">
+                <h5>性别选择</h5><br>
+                <p>个人信息</p>
+                <div class="title_line">
+                    <div class="container">
+                        <div class="line" style="height: 1px;"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="M_PageSelection_content padding-s">
+                <div class="container">
+                    <ul>
+                        <li class="">
+                            <p>男</p>
+                            <i></i>
+                        </li>
+                        <li class="">
+                            <p>女</p>
+                            <i></i>
+                        </li>
+                        <li class="active">
+                            <p>保密</p>
+                            <i></i>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <div class="M_btn S_btn">
+                <div class="container clearfix">
+                    <a class="determine" href="javascript:;">确定</a>
+                </div>
+            </div>
+        </div>
+
         <script type="text/javascript">
             $(function () {
                 var currYear = (new Date()).getFullYear();  

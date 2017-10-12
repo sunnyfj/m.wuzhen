@@ -1639,8 +1639,20 @@ body .package-btn a {
 	float: left;
 	width: 73%;
 }
-
-
+.tx-btn {
+	width: 100%;
+	margin-top: 0.426667rem;
+	margin-bottom: 0.64rem;
+}
+.tx-btn a {
+	height: 1.066667rem;
+	line-height: 1.066667rem;
+	text-align: center;
+	display: block;
+	border: 0.013333rem solid #2A2A2F;
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+}
 
 
 
@@ -1809,6 +1821,24 @@ body .package-btn a {
 	margin-right: 0.426667rem;
 }
 .co-option .options a.active{
+	color: #fff;
+	background: #2A2A2F;
+}
+.special-time {
+	display: none;
+}
+.special-option .options a{
+	display: inline-block;
+	text-decoration: none;
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	padding: 0.106667rem 0.266667rem;
+	line-height: 1;
+	background: #F3F4F8;
+	border-radius: 2.666667rem;
+	margin-right: 0.426667rem;
+}
+.special-option .options a.active{
 	color: #fff;
 	background: #2A2A2F;
 }

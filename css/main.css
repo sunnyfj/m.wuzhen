@@ -193,6 +193,14 @@
 	padding: 0.266667rem 0.213333rem;
 	line-height: 1.3;
 }
+.form-item.code div {
+    display: -webkit-box;
+    display: flex;
+}
+.form-item.code div input {
+    width: 6.053333rem;
+    margin-right: 0.426667rem;
+}
 .resident-form p.prompt-text{
 	font-size: 0.32rem;
 	color: #7E808A;

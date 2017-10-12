@@ -274,6 +274,16 @@ $(function(){
 	$('.co-option .options a').click(function(){
 		$(this).addClass('active').siblings().removeClass('active');
 	})
+	//桐乡市民证件选择
+	$('.special-option .options a:first').click(function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		$(this).parents('.special-option').next().hide();
+	})
+	$('.special-option .options a:last').click(function(){
+		$(this).addClass('active').siblings().removeClass('active');
+		$(this).parents('.special-option').next().show();
+	})
+
 	//桐乡市民from反馈
 	$('#t-sm').on('click',function(event) {
 		$('#t-Prompt').show();
@@ -993,6 +1003,38 @@ $(function(){
 	$('.payModal .pay-cancel').on('click',function(){
 		$('#paypass').blur();
 		$(this).parents('.payModal').hide();
+	})
+
+
+
+	//账户管理性别选择
+	$('#sex-choice').on('click',function(){
+		$('#sex_modal').show();
+		$('html').addClass('popup_prohibit_html');
+	})
+	$('#sex_modal').find('.determine').on('click',function(){
+		var thisval = $('#sex_modal').find('li.active').find('p').text();
+		$('#sex-choice').find('span').text(thisval);
+		$('#sex_modal').hide();
+		$('html').removeClass('popup_prohibit_html');
+	})
+
+
+	//桐乡 查询与预约取消反馈 tx_cancel
+	$('#tx_cancel').on('click',function(){
+		$('#tx_confirm').show();
+
+		$('#tx_confirm .back').on('click',function(){
+			$('#tx_confirm').hide();
+		})
+		$('#tx_confirm .Determine').on('click',function(){
+			$('#tx_confirm').hide();
+			$('#tx_succ').show();
+		})
+
+		$('#tx_succ .Determine').on('click',function(){
+			$('#tx_succ').hide();
+		})
 	})
 
 })
