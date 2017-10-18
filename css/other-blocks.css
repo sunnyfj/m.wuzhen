@@ -533,9 +533,22 @@
     background-size: 0.48rem 0.48rem;
     padding-left: 0.693333rem;
 }
-
-
-
+.orders-list .list-title b.oneCard{
+	background: url(../images/sidenav12.png) left center no-repeat;
+    background-size: 0.48rem 0.48rem;
+    padding-left: 0.693333rem;
+}
+.orders-list .list-title b.integral{
+	background: url(../images/sidenav11.png) left center no-repeat;
+    background-size: 0.48rem 0.48rem;
+    padding-left: 0.693333rem;
+}
+.orders-list .list-title b.meeting{
+	background: url(../images/sidenav26.png) left center no-repeat;
+    background-size: 0.48rem 0.48rem;
+    padding-left: 0.693333rem;
+}
+    
 .orders-list .list-title div {
 	margin-top: 0.266667rem;
 }

@@ -2301,6 +2301,65 @@ body .package-btn a {
 
 
 /*反馈页 结果页*/
+.order-deduction-content h5{
+	font-size: 0.426667rem;
+	color: #2A2A2F;
+	padding:0.64rem 0 0.426667rem;
+}
+.deduction-use {
+	display: -webkit-box;
+	display: flex;
+	border-bottom: 0.013333rem solid #D4DAE1;
+	padding-bottom: 0.426667rem;
+	line-height: 0.88rem;
+}
+.deduction-use p {
+	flex: 1;
+	font-size: 0.426667rem;
+	color: #7E808A;
+}
+.deduction-use span {
+	display: block;
+	flex: 1;
+	text-align: right;
+	font-size: 0.373333rem;
+	color: #000000;
+}
+.deduction-use span b{
+	font-size: 0.746667rem;
+	color: #2A2A2F;
+	font-family: myfont;
+}
+.deduction-prompt {
+	font-size: 0.373333rem;
+	color: #7E808A;
+	padding-top: 0.64rem;
+}
+.order-deduction-btn{
+	display: -webkit-box;
+	display: flex;
+}
+.order-deduction-btn a{
+	display: block;
+	flex: 1;
+	text-align: center;
+	height: 1.066667rem;
+	line-height: 1.066667rem;
+	font-size: 0.373333rem;
+}
+.order-deduction-btn a.cancel{
+	border: 0.013333rem solid #2A2A2F;
+	color: #2A2A2F;
+	margin-right: 0.426667rem;
+}
+.order-deduction-btn a.determine{
+	border: 0.013333rem solid #FF1431;
+	color: #fff;
+	background: #FF1431;
+}
+.order-deduction-content .minh{
+	min-height: 10.2rem;
+}
 .order-result {
 	width: 100%;
 }
