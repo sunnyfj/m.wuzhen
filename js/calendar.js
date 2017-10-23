@@ -405,14 +405,15 @@
             $('html').removeClass('more_prohibit_html');
         }); 
 
-        $('.cart-modTime').each(function(index,item){
-            $(item).attr('data-target',index);
-            if($(item).parent().prev().find('input').length == 2){
-                $(item).attr('data-end',true);
-            }
-        })
+        
         var modTimePrompt = ['请选择入住日期','请选择离店日期','请选择到达日期'];
-        $('.cart-modTime').on('click',function(){
+        $('.cart-list').on('click','.cart-modTime',function(){
+            $('.cart-list .cart-modTime').each(function(index,item){
+                $(item).attr('data-target',index);
+                if($(item).parent().prev().find('input').length == 2){
+                    $(item).attr('data-end',true);
+                }
+            })
             var resetDate = $(this).attr('data-reset');
             if($('.calendar .calendar-content').find('.cartPrompt').length==0){
                 if($(this).attr('data-end')=='true'){

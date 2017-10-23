@@ -2907,6 +2907,15 @@ body .package-btn a {
 	padding-left: 1.92rem;
 	padding-bottom: 1.6rem;
 }
+.custom-content .loading{
+	font-size: 0.373333rem;
+	text-align: center;
+	/*padding: 0.2rem 0;*/
+	width: 3.2rem;
+	/*border:0.013333rem solid #2A2A2F;
+	border-radius: 6px;*/
+	margin: 0 auto;
+}
 .custom-showblock {
 	display: none;
 }
