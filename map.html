@@ -1,0 +1,87 @@
+<html>
+    <head>
+        <link rel="stylesheet" type="text/css" href="http://webapi.amap.com/theme/v1.3/style1503546983737.css" />
+        <meta charset="utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="initial-scale=1.0, user-scalable=no, width=device-width" />
+        <title>景区导览</title>
+        <script type="text/javascript" src="http://toqicdn.com/style/toqiapp.com/scenic/wztmp/js/jquery-2.1.1.min.js"></script>
+        <script type="text/javascript" src="http://cache.amap.com/lbs/static/addToolbar.js"></script>
+        <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main1106.css" />
+        <link rel="stylesheet" href="http://cache.amap.com/lbs/static/main.css?v=1.0" />
+        <style>.info-title { color: white; font-size: 14px; background-color: rgba(0, 155, 255, 0.8); line-height: 26px; padding: 0px 0 0 6px; font-weight: lighter; letter-spacing: 1px; } .info-content { padding: 4px; color: #666666; line-height: 23px; font: 12px/23px Helvetica,"Hiragino Sans GB","Microsoft Yahei","微软雅黑",Arial; } #tip { padding-left: 10px; padding-right: 2px; position: absolute; min-height:25px; top: 10px; font-size: 12px; right: 10px; border-radius: 3px; overflow: hidden; line-height: 20px; min-width:300px; left:1%; z-index:99; } #tip input[type="button"] { background-color: #0D9BF2; height: 25px; text-align: center; line-height: 25px; color: #fff; font-size: 12px; border-radius: 3px; outline: none; border: 0; cursor: pointer; } #tip input[type="text"]{ height: 25px; border: #ccc; padding-left: 5px; border-radius: 3px; outline: none; } #result1{ max-height: 300px; } .ico { position: fixed; left:-8%; top: 20%; width: 35%; } .ico-list{width: 40%} .ico li{ width: 100%; height: 46px; list-style:none; margin-top: 1px; } .ico-1 {border-bottom: 1px solid #666} .ico-2{border-bottom: 1px solid #666} .ico li img{width: 100%} #panel { position: absolute; background-color: white; overflow-y: auto; z-index:88888888; top: 50px; right: 10px; width: 200px; max-height: 90%; display:none; } .marker-route,.marker-marker-bus-from{ position: absolute; width: 20px; height: 44px; color: #ffffff; background: url(http://webapi.amap.com/theme/v1.3/markers/n/mark_bs.png) no-repeat; cursor: pointer; text-align:center; }</style>
+        <script src="http://webapi.amap.com/maps?v=1.3&amp;key=a57697ebe9ffcf1861576ca0aaa9b7ed&amp;plugin=AMap.PlaceSearch,AMap.AdvancedInfoWindow,AMap.Geocoder"></script>
+        <style>.amap-info-combo .tab{ font-size: 12px; } td{ font-size: 12px; } td:nth-child(2){ max-width: 108px; }</style>
+    </head>
+    <body>
+        <div id="container" class="amap-container">
+            <object type="text/html" data="about:blank"></object>
+            <div class="amap-maps">
+                <div class="amap-drags">
+                    <div class="amap-layers">
+                        <div class="amap-markers"></div>
+                    </div>
+                    <div class="amap-overlays"></div>
+                </div>
+            </div>
+            <div style="display: none;"></div>
+            <div class="amap-controls">
+                <div class="amap-geolocation-con">
+                    <div class="amap-geo"></div>
+                </div>
+                <div class="amap-toolbar amap-touch-toolbar" style="right: 10px; bottom: 110px; visibility: visible;">
+                    <div class="amap-pancontrol" style="display: none;">
+                        <div class="amap-pan-left"></div>
+                        <div class="amap-pan-top"></div>
+                        <div class="amap-pan-right"></div>
+                        <div class="amap-pan-bottom"></div>
+                    </div>
+                    <div class="amap-geo amap-toolbar-geo" style="display: none;"></div>
+                    <div class="amap-zoomcontrol">
+                        <div class="amap-zoom-touch-plus">
+                            <div>+</div>
+                        </div>
+                        <div class="amap-zoom-ruler" style="display: none;">
+                            <div class="amap-zoom-mask" style="height: 51px;"></div>
+                            <div class="amap-zoom-cursor" style="top: 51px;"></div>
+                            <div class="amap-zoom-labels">
+                                <div class="amap-zoom-label-street"></div>
+                                <div class="amap-zoom-label-city"></div>
+                                <div class="amap-zoom-label-province"></div>
+                                <div class="amap-zoom-label-country"></div>
+                            </div>
+                        </div>
+                        <div class="amap-zoom-touch-minus">
+                            <div>−</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div id="panel" name="panel"></div>
+        <div id="tip">
+            <input type="text" id="keyword" name="keyword" value="" style="width:95%;" placeholder="查找地点、公交、地铁" />
+            <div id="result1" name="result1"></div>
+        </div>
+        <div class="ico">
+            <ul class="ico-list">
+                <li class="ico-1">
+                    <a href="file:///E:/wamp/www/wuzhen.yi/map3.html?kw=卫生间&amp;tid=56373f3de4b034d328803e31" data-attr="1" id="toilet" class="alink">
+                        <img src="images/mapwc.jpg" /></a>
+                </li>
+                <li class="ico-2">
+                    <a href="file:///E:/wamp/www/wuzhen.yi/map3.html?kw=餐饮&amp;tid=563740eae4b034d328805eff" data-attr="1" id="restaurant" class="alink">
+                        <img src="images/mapfood.jpg" /></a>
+                </li>
+                <li class="ico-3">
+                    <a href="file:///E:/wamp/www/wuzhen.yi/map3.html?kw=酒店&amp;tid=563740cce4b034d328805e03" data-attr="1" id="hotel" class="alink">
+                        <img src="images/maphotel.jpg" /></a>
+                </li>
+            </ul>
+        </div>
+        <script>eval(function(p,a,c,k,e,d){e=function(c){return(c<a?'':e(parseInt(c/a)))+((c=c%a)>35?String.fromCharCode(c+29):c.toString(36))};if(!''.replace(/^/,String)){while(c--){d[e(c)]=k[c]||e(c)}k=[function(e){return d[e]}];e=function(){return'\\w+'};c=1};while(c--){if(k[c]){p=p.replace(new RegExp('\\b'+e(c)+'\\b','g'),k[c])}}return p}('4 V=[];4 m=[];4 I;4 b=k a.3N(\'2T\',{2S:y,1D:[2s.2Q,30.2L],2B:13,2H:y,2E:\'2D\'});b.1M(\'a.1Z\',5(){I=k a.1Z({3d:y,3b:1O,2X:0,34:y,32:y,2A:\'2W\',2Y:k a.2x(10,20),2Z:y,31:33,35:y,36:y});b.37(I);a.P.1u(I,\'1c\',21);a.P.1u(I,\'3a\',22)});5 1y(){I.1y()}5 21(j){}5 22(j){3e(\'定位失败\')}5 3f(j){4 3g=j.W.15();4 3h=j.W.Z()}4 27=k a.14();4 p=k a.39({});4 24=k a.2V({2K:2U,2C:"2F"});4 2G=b.X(\'1e\',5(e){25=[e.23.Z(),e.23.15()];24.2J(25,5(D,8){9(D===\'1c\'&&8.q===\'17\'){26(8)}})});5 26(j){4 N=j.2M.1p;4 v=N[0].v;p.1b(1Y(N[0]));p.T(b,v)}5 1Y(7){4 s=[];s.6(\'<c w="q-1k">\'+7.M+\'</c>\');s.6(\'<c w="q-F">\');9(7.Y){s.6("地址："+7.Y);s.6(\'<t>\')}9(7.1m){s.6("电话："+7.1m);s.6(\'<t>\')}9(7.C){s.6("类型："+7.C)}s.6(\'<c>\');11 s.1i("")}b.X(\'2N\',5(8){27.2O(8.2f,5(D,8){9(D===\'1c\'&&8.q===\'17\'){29(8)}})});5 29(j){4 N=j.2l.1p;4 v=N[0].v;p.1b(1r(N[0]));p.T(b,v)}5 1r(7){4 s=[];s.6(\'<c w="q-1k">\'+7.M+\'</c><c w="q-F">\'+"地址："+7.Y);s.6("电话："+7.1m);s.6("类型："+7.C);s.6(\'<c>\');11 s.1i("<t>")}f.h("l").2R=2w;5 1v(){4 1g=f.h("l").L;4 1n;a.1E(["a.2b"],5(){4 2c={2p:"2r"};1n=k a.2b(2c);9(1g.U>0){1n.O(1g,5(D,8){2e(8)})}E{f.h("x").r.1t="1K"}})}5 2e(j){4 18="";4 u=j.3i;9(u&&u.U>0){1s(4 i=0;i<u.U;i++){18+="<c 2f=\'1q"+(i+1)+"\' 3c=\'1V("+(i+1)+",2g)\' 3j=\'1o("+i+")\' 3L=\'1H("+(i+1)+",2g)\' r=\\"3Q-2j: 3R;3S:3T;3U:16 16 16 16;\\""+"j="+u[i].3V+">"+u[i].M+"<1X r=\'3X:#3W;\'>"+u[i].3O+"</1X></c>"}}E{18=" π3Yπ 亲,人家找不到结果!<t />要不试试：<t />1.请确保所有字词拼写正确<t />2.尝试不同的关键字<t />3.尝试更宽泛的关键字"}f.h("x").K=-1;f.h("x").u=u;f.h("x").2i=18;f.h("x").r.1t="3Z"}5 1V(12,S){S.r.H=\'#1h\'}5 1H(12,S){S.r.H=""}5 1o(19){9(19<0){11}9(1R.1S.1T("1U")>0){f.h("l").2h=44;f.h("l").43=1Q}4 1w=f.h("1q"+(19+1)).2i.41(/<[^>].*?>.*<\\/[^>].*?>/g,"");4 1P=f.h("1q"+(19+1)).3M(\'j\');f.h("l").L=1w;f.h("x").r.1t="1K";b.1M(["a.14"],5(){4 1d=k a.14();a.P.1u(1d,"1c",1C);1d.3o(1P);1d.O(1w)})}5 1Q(){9(1R.1S.1T("1U")>0){f.h("l").2h=1v}}5 3v(12,S){S.r.H=\'#1h\';V[12].T(b,m[12])}5 3x(i,d){4 A=d.v.Z();4 z=d.v.15();4 J={b:b,3z:"3A://3B.3C.3D/3E/3F.3/3G/n/3H"+(i+1)+".3I",W:[A,z]};4 B=k a.1F(J);m.6([A,z]);4 p=k a.3J({F:"<28></28>"+1r(d),2j:k a.3K(3u,0),3t:y,3s:k a.2x(0,-30)});V.6(p);4 Q=5(e){p.T(b,B.3r())};B.X("1e",Q)}5 2w(P){4 1f=(P||3p.P).3n;4 8=f.h("x");4 o=8.K;9(1f===40){9(o+1<8.G.U){9(8.G[o]){8.G[o].r.H=\'\'}8.K=o+1;8.G[o+1].r.H=\'#1h\';f.h("l").L=8.u[o+1].M}}E 9(1f===38){9(o-1>=0){9(8.G[o]){8.G[o].r.H=\'\'}8.K=o-1;8.G[o-1].r.H=\'#1h\';f.h("l").L=8.u[o-1].M}}E 9(1f===13){4 1x=f.h("x");9(1x&&1x[\'K\']!==-1){1o(f.h("x").K)}}E{1v()}}5 1C(j){V=[];m=[];b.2m();4 R=j.2l.1p;4 1a=R.U;1s(4 i=0;i<1a;i++){2z(i,R[i])}b.2o()}5 1W(j){V=[];m=[];b.2m();4 R=j.2P;4 1a=R.U;1s(4 i=0;i<1a;i++){2t(i,R[i])}b.2o()}5 2u(n,7){4 s=[];s.6(\'<c w="q-1k">\'+(n+1)+\'.\'+7.2I+\'</c>\');s.6(\'<c w="q-F">\');9(7.2q){s.6("地址："+7.2q);s.6(\'<t>\')}9(7.1j){s.6("电话："+7.1j);s.6(\'<t>\')}9(7.C){s.6("类型："+7.C)}s.6(\'<c>\');11 s.1i("")}5 2t(i,d){4 A=d.1l.Z();4 z=d.1l.15();4 J={b:b,F:\'<c w="m-1G m-m-1I-2y">\'+(i+1)+\'</c>\',W:[A,z]};4 B=k a.1F(J);m.6([A,z]);4 Q=5(e){p.1b(2u(i,d));p.T(b,d.1l)};B.X("1e",Q)}5 2z(i,d){4 A=d.v.Z();4 z=d.v.15();4 J={b:b,F:\'<c w="m-1G m-m-1I-2y">\'+(i+1)+\'</c>\',W:[A,z]};4 B=k a.1F(J);m.6([A,z]);V.6(p);4 Q=5(e){p.1b(2n(i,d));p.T(b,d.v)};B.X("1e",Q)}5 2n(n,7){4 s=[];s.6(\'<c w="q-1k">\'+(n+1)+\'.\'+7.M+\'</c>\');s.6(\'<c w="q-F">\');9(7.Y){s.6("地址："+7.Y);s.6(\'<t>\')}9(7.1j){s.6("电话："+7.1j);s.6(\'<t>\')}9(7.C){s.6("类型："+7.C)}s.6(\'<c>\');11 s.1i("")}5 2d(l){4 1A;a.1E(["a.14"],5(){1A=k a.14({2k:10,3P:1,2p:"2r"});1A.O(l,5(D,8){9(8.q===\'17\'){1C(8)}})})}5 2a(l,1N){4 1D=[2s.42,30.3m];4 O;4 1J={2v:\'2v\',1g:l,2k:3k,3l:\'3w:3q\'};a.1E(["a.1L"],5(){O=k a.1L(1N,1J);O.3y(1D,1O,5(D,8){9(8.q===\'17\'){1W(8)}})})}4 1z=\'\';4 1B=\'\';9(f.h("l").L){2d(f.h("l").L)}E 9(1z&&1B){2a(1z,1B)}E{1y()}',62,253,'||||var|function|push|poi|result|if|AMap|map|div|||document||getElementById||data|new|keyword|marker||cur|infoWindow|info|style||br|tipArr|location|class|result1|true|latY|lngX|mar|type|status|else|content|childNodes|background|geolocation|markerOption|curSelect|value|name|poiArr|search|event|aa|resultArr|thiss|open|length|windowsArr|position|on|address|getLng||return|pointid||PlaceSearch|getLat|5px|OK|resultStr|index|resultNum|setContent|complete|msearch|click|key|keywords|CAE1FF|join|telephone|title|_location|tel|auto|selectResult|pois|divid|createContent|for|display|addListener|autoSearch|text|res|getCurrentPosition|kw|MSearch|tableid|keywordSearch_CallBack|center|service|Marker|route|onmouseout_MarkerStyle|bus|searchOptions|none|CloudDataSearch|plugin|keytableid|10000|cityCode|focus_callback|navigator|userAgent|indexOf|MSIE|openMarkerTipById|cloudgeocoder_CallBack|span|createContentNew|Geolocation||onComplete|onError|lnglat|geocoder|lnglatXY|geocoder_CallBack|placeSearch|h3|placeSearch_CallBack|CloudFilterSearch|Autocomplete|autoOptions|FilterSearch|autocomplete_CallBack|id|this|onpropertychange|innerHTML|size|pageSize|poiList|clearMap|createContentSeach|setFitView|city|_address|0573|120|addmarkercloud|createContentCloud|panel|keydown|Pixel|from|addmarkersearch|buttonPosition|zoom|extensions|dom|renderer|all|clickEventListener|isHotspot|_name|getAddress|radius|750153|regeocode|hotspotclick|getDetails|datas|484508|onkeyup|resizeEnable|container|1000|Geocoder|LB|maximumAge|buttonOffset|showMarker||showCircle|showButton|false|convert|panToLocation|zoomToAccuracy|addControl||AdvancedInfoWindow|error|timeout|onmouseover|enableHighAccuracy|alert|gdMapFunction|lat|long|tips|onclick|100|orderBy|737172|keyCode|setCity|window|ASC|getPosition|offset|autoMove|300|openMarkerTipById1|_id|addmarker|searchNearBy|icon|http|webapi|amap|com|theme|v1|markers|mark_b|png|InfoWindow|Size|onmouseout|getAttribute|Map|district|pageIndex|font|13px|cursor|pointer|padding|adcode|C1C1C1|color|__|block||replace|497737|onfocus|null'.split('|'),0,{}))
+        </script>
+        <div class="amap-sug-result" style="visibility: hidden;"></div>
+    </body>
+
+</html>
