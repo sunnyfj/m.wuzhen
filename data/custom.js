@@ -190,45 +190,45 @@
 
             for(var i=0; i<hotelAll.length; i++){
                 if(type== '酒店'){
-                    var li = $(`<li>
-                                <div class="cart-item-title">
-                                    <h6>盛庭大床房盛庭大床房</h6>
-                                    <div class="cart-item-modifyNum">
-                                        <a class="cart-item-reduce" href="javascript:;"></a>
-                                        <span>5</span>
-                                        <a class="cart-item-add" href="javascript:;"></a>
-                                    </div>
-                                </div>
-                                <div class="cart-item-data">
-                                    <div class="cart-item-data-info">
-                                        <p class="price">1688元</p>
-                                        <p>1间1晚 <b><input type="text" readonly="readonly" value="2017-08-09">至<input readonly="readonly" type="text" value="2017-08-09"></b></p>
-                                    </div>
-                                    <div class="cart-item-btn">
-                                        <a class="cart-modTime" data-reset="5"  href="javascript:;">修改时间</a>
-                                    </div>
-                                </div>
-                            </li>`)
+                    var li = $('<li>'
+                            +    '<div class="cart-item-title">'
+                            +        '<h6>盛庭大床房盛庭大床房</h6>'
+                            +        '<div class="cart-item-modifyNum">'
+                            +            '<a class="cart-item-reduce" href="javascript:;"></a>'
+                            +            '<span>5</span>'
+                            +            '<a class="cart-item-add" href="javascript:;"></a>'
+                            +        '</div>'
+                            +    '</div>'
+                            +    '<div class="cart-item-data">'
+                            +        '<div class="cart-item-data-info">'
+                            +            '<p class="price">1688元</p>'
+                            +            '<p>1间1晚 <b><input type="text" readonly="readonly" value="2017-08-09">至<input readonly="readonly" type="text" value="2017-08-09"></b></p>'
+                            +        '</div>'
+                            +        '<div class="cart-item-btn">'
+                            +            '<a class="cart-modTime" data-reset="5"  href="javascript:;">修改时间</a>'
+                            +        '</div>'
+                            +    '</div>'
+                            +'</li>');
                 }else{
-                    var li = $(`<li>
-                                    <div class="cart-item-title">
-                                        <h6>盛庭大床房盛庭大床房</h6>
-                                        <div class="cart-item-modifyNum">
-                                            <a class="cart-item-reduce" href="javascript:;"></a>
-                                            <span>5</span>
-                                            <a class="cart-item-add" href="javascript:;"></a>
-                                        </div>
-                                    </div>
-                                    <div class="cart-item-data">
-                                        <div class="cart-item-data-info">
-                                            <p class="price">1688元</p>
-                                            <p>1间1晚 <b>游览日期：<input type="text" readonly="readonly" value="2017-08-09"></b></p>
-                                        </div>
-                                        <div class="cart-item-btn">
-                                            <a class="cart-modTime" data-reset="5"  href="javascript:;">修改时间</a>
-                                        </div>
-                                    </div>
-                                </li>`)
+                    var li = $('<li>'
+                            +        '<div class="cart-item-title">'
+                            +            '<h6>盛庭大床房盛庭大床房</h6>'
+                            +            '<div class="cart-item-modifyNum">'
+                            +                '<a class="cart-item-reduce" href="javascript:;"></a>'
+                            +                '<span>5</span>'
+                            +                '<a class="cart-item-add" href="javascript:;"></a>'
+                            +            '</div>'
+                            +        '</div>'
+                            +        '<div class="cart-item-data">'
+                            +            '<div class="cart-item-data-info">'
+                            +                '<p class="price">1688元</p>'
+                            +                '<p>1间1晚 <b>游览日期：<input type="text" readonly="readonly" value="2017-08-09"></b></p>'
+                            +            '</div>'
+                            +            '<div class="cart-item-btn">'
+                            +                '<a class="cart-modTime" data-reset="5"  href="javascript:;">修改时间</a>'
+                            +            '</div>'
+                            +        '</div>'
+                            +    '</li>');
                 }
                 ul.append(li);
             }
