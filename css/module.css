@@ -3472,6 +3472,73 @@ body .package-btn a {
 .cardVolume-item li:last-child{
 	margin-bottom: 0;
 }
+.cardVolume-info{
+	padding-top: 0.426667rem;
+	min-height: 5.6rem;
+}
+.cardVolume-info ul li {
+	display: -webkit-box;
+    display: flex;
+    margin-bottom: 0.426667rem;
+}
+.cardVolume-info ul li span{
+	display: block;
+	font-size: 0.373333rem;
+	color: #7E808A;
+	margin-right: 0.213333rem;
+}
+.cardVolume-info ul li b{
+	-webkit-box-flex: 1;
+    flex: 1;
+	display: block;
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	font-weight: normal;
+}
+.cardVolume-bot-btn{
+	display: -webkit-box;
+    display: flex;
+    margin-bottom: 0.64rem;
+}
+.cardVolume-bot-btn a{
+	-webkit-box-flex: 1;
+    flex: 1;
+	display: block;
+	text-align: center;
+    padding: 0.266667rem 0;
+    font-size: 0.373333rem;
+    color: #2A2A2F;
+    border: 0.013333rem solid #2A2A2F;
+}
+.cardVolume-bot-btn a.mr{
+	margin-right: 0.426667rem;
+}
+.cardVolume-bot-btn .vail{
+	background-color: #2A2A2F;
+	color: #fff;
+}
+
+.cardVolume-info .prompt{
+	font-size: 0.32rem;
+	color: #FF1431;
+}
+.cardVolume-info .attention{
+	padding-top: 0.426667rem;
+}
+.cardVolume-info .attention:last-child{
+	margin-bottom: 0.64rem;
+}
+.cardVolume-info .attention h4{
+	font-size: 0.373333rem;
+	color: #7E808A;
+	font-weight: normal;
+	margin-bottom: 0.213333rem;
+}
+.cardVolume-info .attention p{
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	line-height: 1.7;
+}
 .c-item-img {
 	width: 2.733333rem;
 	height: 2.733333rem;
