@@ -1,31 +1,4 @@
 {
-	"typeList":[
-		{
-			"type":"hotel",
-			"title":"酒店",
-			"num":"1"
-		},
-		{
-			"type":"ticket",
-			"title":"票务",
-			"num":"999"
-		},
-		{
-			"type":"food",
-			"title":"美食",
-			"num":"2"
-		},
-		{
-			"type":"service",
-			"title":"服务",
-			"num":"0"
-		},
-		{
-			"type":"other",
-			"title":"其他",
-			"num":"0"
-		}
-	],
 	"product":{
 		"hotel":[
 			{
@@ -38,16 +11,14 @@
 				"commentNum":"1340",
 				"roomType":[
 					{
-						"rId":"10111",
+						"rId":"2001",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"1"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10112",
+						"rId":"2002",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"2"
+						"rPrice":"996"
 					}
 				]
 			},
@@ -61,28 +32,24 @@
 				"commentNum":"1340",
 				"roomType":[
 					{
-						"rId":"10111",
+						"rId":"2003",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"1"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10112",
+						"rId":"2004",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"2"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10113",
+						"rId":"2005",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10114",
+						"rId":"2006",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					}
 				]
 			}
@@ -98,28 +65,24 @@
 				"commentNum":"1340",
 				"roomType":[
 					{
-						"rId":"10111",
+						"rId":"2007",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"1"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10112",
+						"rId":"2008",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"2"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10113",
+						"rId":"2009",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10114",
+						"rId":"2010",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					}
 				]
 			},
@@ -133,28 +96,24 @@
 				"commentNum":"1340",
 				"roomType":[
 					{
-						"rId":"10111",
+						"rId":"2011",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"1"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10112",
+						"rId":"2012",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"2"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10113",
+						"rId":"2013",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10114",
+						"rId":"2014",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					}
 				]
 			}
@@ -170,28 +129,24 @@
 				"commentNum":"1340",
 				"roomType":[
 					{
-						"rId":"10111",
+						"rId":"2015",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"1"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10112",
+						"rId":"2016",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"2"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10113",
+						"rId":"2017",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10114",
+						"rId":"2018",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					}
 				]
 			},
@@ -205,28 +160,24 @@
 				"commentNum":"1340",
 				"roomType":[
 					{
-						"rId":"10111",
+						"rId":"2019",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"1"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10112",
+						"rId":"2020",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"2"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10113",
+						"rId":"2021",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10114",
+						"rId":"2022",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					}
 				]
 			}
@@ -242,28 +193,24 @@
 				"commentNum":"1340",
 				"roomType":[
 					{
-						"rId":"10111",
+						"rId":"2023",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"1"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10112",
+						"rId":"2024",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"2"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10113",
+						"rId":"2025",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10114",
+						"rId":"2026",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					}
 				]
 			},
@@ -277,28 +224,24 @@
 				"commentNum":"1340",
 				"roomType":[
 					{
-						"rId":"10111",
+						"rId":"2027",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"1"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10112",
+						"rId":"2028",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"2"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10113",
+						"rId":"2029",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10114",
+						"rId":"2030",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					}
 				]
 			}
@@ -314,28 +257,24 @@
 				"commentNum":"1340",
 				"roomType":[
 					{
-						"rId":"10111",
+						"rId":"2031",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"1"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10112",
+						"rId":"2032",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"2"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10113",
+						"rId":"2033",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10114",
+						"rId":"2034",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					}
 				]
 			},
@@ -349,28 +288,24 @@
 				"commentNum":"1340",
 				"roomType":[
 					{
-						"rId":"10111",
+						"rId":"2035",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"1"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10112",
+						"rId":"2036",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"2"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10113",
+						"rId":"2037",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					},
 					{
-						"rId":"10114",
+						"rId":"2038",
 						"rName":"锦堂高级大床房",
-						"rPrice":"996",
-						"rNum":"0"
+						"rPrice":"996"
 					}
 				]
 			}

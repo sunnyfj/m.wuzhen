@@ -14,8 +14,8 @@
         <script src="../build/flexible_css.debug.js"></script>
         <script src="../build/flexible.debug.js"></script>
         <script src="../js/swiper.min.js"></script>
-        <script src="../js/zepto.js"></script>
-        <script src="../js/zepto.cookie.js"></script>
+        <script src="../js/jquery.1.7.2.min.js"></script>
+        <script src="../js/jquery.cookie.js"></script>
         <script src="../js/public.js"></script>
         <script src="../js/module.js"></script>
         
@@ -34,11 +34,11 @@
                 <div class="date clearfix" id="date">
                     <div class="date-arrive left borderR activeStart">
                         <p>到达</p>
-                        <input type="text" class="arrow-lower" readonly="readonly"  data-reset="5" data-type="start" data-isShowTime="true">
+                        <input type="text" id="opt-start" class="arrow-lower" readonly="readonly"  data-reset="5" data-type="start" data-isShowTime="true">
                     </div>
                     <div class="date-leave left activeLeave">
                         <p>离店</p>
-                        <input type="text" class="arrow-lower" readonly="readonly"  data-reset="2" data-type="leave" data-isShowTime="true">
+                        <input type="text" id="opt-leave" class="arrow-lower" readonly="readonly"  data-reset="2" data-type="leave" data-isShowTime="true">
                     </div>
                 </div>
             </div>
@@ -54,28 +54,23 @@
                 </div>
                 <div class="custom-list">
                     <div class="custom-tab">
-                        <!-- <ul>
+                        <ul>
                             <li class="active">
                                 酒店
-                                <i>1</i>
                             </li>
                             <li>
                                 票务
-                                <i>99+</i>
                             </li>
                             <li>
                                 美食
-                                <i>2</i>
                             </li>
                             <li>
                                 服务
-                                <i>3</i>
                             </li>
                             <li>
                                 其他
-                                <i>4</i>
                             </li>
-                        </ul> -->
+                        </ul>
                     </div>
                     <div class="custom-content">
                         <div class="loadingdiv"></div>
