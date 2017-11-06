@@ -19,6 +19,14 @@
         <script src="../js/public.js"></script>
         <script src="../js/module.js"></script>
         
+        <style>
+            #custom-date{
+                padding: 0.186667rem 0;
+            }
+            #custom-date .date-item{
+                display: none;
+            }
+        </style>
 
     </head>
     <body>
@@ -30,15 +38,53 @@
                     <a class="home" href="javascript:;">首页</a>
                 </div>
             </div>
-            <div class="newList-co-option">
-                <div class="date clearfix" id="date">
-                    <div class="date-arrive left borderR activeStart">
-                        <p>到达</p>
-                        <input type="text" id="opt-start" class="arrow-lower" readonly="readonly"  data-reset="5" data-type="start" data-isShowTime="true">
+            <div class="newList-co-option" id="custom-date">
+                <div class="date-item" style="display: block;">
+                    <div class="date clearfix" id="date" style="padding-bottom: 0;">
+                        <div class="date-arrive left borderR activeStart">
+                            <p>到达</p>
+                            <input type="text" id="hotel-start" class="arrow-lower" readonly="readonly"  data-reset="5" data-type="start" data-isShowTime="true" data-mindate="2017-11-08" data-maxdate="2017-12-08">
+                        </div>
+                        <div class="date-leave left activeLeave">
+                            <p>离店</p>
+                            <input type="text" id="hotel-leave" class="arrow-lower" readonly="readonly"  data-reset="2" data-type="leave" data-isShowTime="true">
+                        </div>
                     </div>
-                    <div class="date-leave left activeLeave">
-                        <p>离店</p>
-                        <input type="text" id="opt-leave" class="arrow-lower" readonly="readonly"  data-reset="2" data-type="leave" data-isShowTime="true">
+                </div>
+                <div class="date-item">
+                    <div class="single-date clearfix" id="choice_date">
+                        <div class="single-date-arrive left borderR activeStart">
+                            <p class="left">消费日期</p>
+                            <input type="text" id="ticket-start" readonly="readonly"  data-reset="5" data-type="start" data-isShowTime="true" data-mindate="2017-11-08" data-maxdate="2017-12-08">
+                            <i class="right"><img src="../images/format1.png"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="date-item">
+                    <div class="single-date clearfix" id="choice_date">
+                        <div class="single-date-arrive left borderR activeStart">
+                            <p class="left">消费日期</p>
+                            <input type="text" id="food-start" readonly="readonly"  data-reset="5" data-type="start" data-isShowTime="true">
+                            <i class="right"><img src="../images/format1.png"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="date-item">
+                    <div class="single-date clearfix" id="choice_date">
+                        <div class="single-date-arrive left borderR activeStart">
+                            <p class="left">消费日期</p>
+                            <input type="text" id="service-start" readonly="readonly"  data-reset="5" data-type="start" data-isShowTime="true">
+                            <i class="right"><img src="../images/format1.png"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="date-item">
+                    <div class="single-date clearfix" id="choice_date">
+                        <div class="single-date-arrive left borderR activeStart">
+                            <p class="left">消费日期</p>
+                            <input type="text" id="other-start" readonly="readonly"  data-reset="5" data-type="start" data-isShowTime="true">
+                            <i class="right"><img src="../images/format1.png"></i>
+                        </div>
                     </div>
                 </div>
             </div>

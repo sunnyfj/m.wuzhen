@@ -4,8 +4,11 @@
     var loadingHtml = '<div class="loading">加载中···</div>';
     var COOKIE_NAME = 'selected';
     var tabType = ['hotel','ticket','food','service','other'];
-    var optStartTime = $('#opt-start').val(); //开始日期
-    var optLeaveTime = $('#opt-leave').val(); //结束日期
+
+    var optStartTime = ''; //开始日期
+    var optLeaveTime = ''; //结束日期
+
+    
 
     var allData = new Array();
     allData['hotel']   = '';  //存放酒店信息
@@ -93,7 +96,6 @@
                 getCookieTypeData();
             },
             error:function(data){
-                console.log(data.status);
                 alert('请求酒店数据出错！');
             }
         })
@@ -120,7 +122,6 @@
 
             var allSelected = $.cookie(COOKIE_NAME).split('|');
             var single = new Array();
-            console.log(allSelected);
             for(var i=0; i<allSelected.length; i++){
 
                 single = allSelected[i].split('`');
@@ -603,6 +604,28 @@
         }
     }
 
+    //获取日期
+    function getTimeDate() {
+        switch(type){
+            case 'hotel':
+                optStartTime = $('#hotel-start').val();
+                optLeaveTime = $('#hotel-leave').val();
+            break;
+            case 'ticket':
+                optStartTime = $('#ticket-start').val();
+            break;
+            case 'food':
+                optStartTime = $('#food-start').val();
+            break;
+            case 'service':
+                optStartTime = $('#service-start').val();
+            break;
+            case 'other':
+                optStartTime = $('#other-start').val();
+            break;
+        }
+    }
+    getTimeDate();
     getData(type);
     getCookie();
     getCartList();
@@ -611,6 +634,8 @@
     $('.custom-tab').on('click','li',function(){
         $(this).addClass('active').siblings().removeClass('active');
         type = $(this).attr('data-type');
+        var index = $(this).index();
+        $('#custom-date .date-item').eq(index).show().siblings().hide();
         getData(type);
     })
 
@@ -637,7 +662,8 @@
     })
 
     //列表产品 加加按钮
-    $('#custom-lists').on('click','.custom-add',function(){ 
+    $('#custom-lists').on('click','.custom-add',function(){
+        getTimeDate();
         var count = 1;
         if($(this).parent().find('a').length ==1){
             var span = $('<span>'+count+'</span>');

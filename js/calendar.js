@@ -272,6 +272,62 @@
             }
         }
 
+        function limitDate(minDate,maxDate){
+
+            var alltd = $('#calendar-day').find('td.optional');
+            //无限制
+            if(minDate == '' || minDate == undefined && maxDate =='' || maxDate ==undefined){
+                return false;
+            //有开始无结束
+            }else if(minDate != '' && minDate != undefined && maxDate =='' || maxDate ==undefined){
+
+                var minArr = minDate.split('-');
+                var ltMinDate = new Date(minArr[0],minArr[1],minArr[2]);
+                var ltMinDateTime = ltMinDate.getTime();
+
+                for(var i=0; i<alltd.length; i++){
+                    if(alltd.eq(i).attr('date-sec') < ltMinDateTime){
+                        alltd.eq(i).removeClass('optional').addClass('gray');
+                    }
+                }
+
+            //无开始有结束
+            }else if(minDate == '' || minDate == undefined && maxDate !='' && maxDate !=undefined){ 
+
+                var maxArr = maxDate.split('-');
+                var ltMaxDate = new Date(maxArr[0],maxArr[1],maxArr[2]);
+                var ltMaxDateTime = ltMaxDate.getTime()+42000000;
+
+                for(var i=0; i<alltd.length; i++){                    
+                    if(alltd.eq(i).attr('date-sec') > ltMaxDateTime){
+                        alltd.eq(i).removeClass('optional').addClass('gray');
+                    }
+                }
+
+            //有开始有结束
+            }else if(minDate != '' && minDate != undefined && maxDate !='' && maxDate !=undefined){
+                
+                var minArr = minDate.split('-');
+                var maxArr = maxDate.split('-');
+
+                var ltMinDate = new Date(minArr[0],minArr[1],minArr[2]);
+                var ltMinDateTime = ltMinDate.getTime();
+
+                var ltMaxDate = new Date(maxArr[0],maxArr[1],maxArr[2]);
+                var ltMaxDateTime = ltMaxDate.getTime()+42000000;
+
+                for(var i=0; i<alltd.length; i++){
+                    if(alltd.eq(i).attr('date-sec') < ltMinDateTime){
+                        alltd.eq(i).removeClass('optional').addClass('gray');
+                    }
+
+                    if(alltd.eq(i).attr('date-sec') > ltMaxDateTime){
+                        alltd.eq(i).removeClass('optional').addClass('gray');
+                    }
+                }
+            }
+        }
+
 
         var thisStartAvtive = null;
         var thisLeaveAvtive = null;
@@ -346,6 +402,7 @@
             $(item).attr('data-target',index);
         })
         $('.activeStart').on('click',function(event) {
+
             thisStartAvtive = $(this).attr('data-target');
             $('.calendar').show();
             $('.calendar-opa').css({'background-color': 'rgba(0,0,0,.5)'});
@@ -356,6 +413,9 @@
             showColor($('.calendar table').eq(0).find('td.optional'),myDate.getFullYear(),myDate.getMonth()+1,Date());
             trHide();
             pastDay();
+
+            //限定范围
+            limitDate($(this).find('input').attr('data-mindate'),$(this).find('input').attr('data-maxdate'));
             //限定天
             var alltds = $('.calendar table').find('td.optional');
             var daydata = $(this).find('input').attr('data-disableDay');
@@ -386,6 +446,8 @@
             showColor($('.calendar table').eq(0).find('td.optional'),nextDayDate.getFullYear(),nextDayDate.getMonth()+1,nextDayDate);
             trHide();
             pastDay();
+            //限定范围
+            limitDate($(this).find('input').attr('data-mindate'),$(this).find('input').attr('data-maxdate'));
             //限定天
             var alltds = $('.calendar table').find('td.optional');
             var daydata = $(this).find('input').attr('data-disableDay');
