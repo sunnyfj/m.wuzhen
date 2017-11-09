@@ -1541,6 +1541,20 @@ body .package-btn a {
 .form-list-modular .small{
 	margin-bottom: 0.213333rem;
 }
+.form-list-modular .small.sex label{
+	display: inline-block;
+	margin-right: 0.64rem;
+}
+.form-list-modular .small.sex label em {
+	vertical-align: top;
+	font-size: 0.373333rem;
+	color: #2A2A2F;
+	position: relative;
+	top: 0.12rem;
+}
+.form-list-modular .small.sex input {
+	border: none;
+}
 .form-list-modular .small p{
 	font-size: 0.373333rem;
 	color: #2A2A2F;

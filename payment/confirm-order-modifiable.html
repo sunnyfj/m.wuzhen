@@ -256,6 +256,27 @@
                                     <div class="order-remarks">
                                         <div class="form-list-modular">
                                             <div class="small">
+                                                <p>入住人姓名：</p>
+                                                <input type="" name="" placeholder="">
+                                            </div>
+                                            <div class="small sex">
+                                                <p>入住人性别：</p>
+                                                <label>
+                                                    <input type="checkbox" class="check" name="" placeholder=""><em>男</em>
+                                                </label>
+                                                <label>
+                                                    <input type="checkbox" class="check" name="" placeholder=""><em>女</em>
+                                                </label>
+                                            </div>
+                                            <div class="small">
+                                                <p>入住人身份证号：</p>
+                                                <input type="" name="" placeholder="">
+                                            </div>
+                                            <div class="small">
+                                                <p>入住人手机号：</p>
+                                                <input type="" name="" placeholder="">
+                                            </div>
+                                            <div class="small">
                                                 <p>备注</p>
                                                 <input type="" name="" placeholder="选填">
                                             </div>
@@ -745,6 +766,12 @@
     <script>
         var valo = $("#area").attr("areaid");
         $('#area').scroller('destroy').scroller({ preset: 'area', theme: 'android-ics light', display: 'bottom',valueo:valo });
+        $(function(){
+            $('.small.sex input').on('click',function(){
+                $(this).prop('checked',true);
+                $(this).parent().siblings().find('input').prop('checked',false);
+            })
+        })
     </script>
     <!-- 地区选择 ↑-->
     </body>
