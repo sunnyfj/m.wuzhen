@@ -501,6 +501,8 @@
             showColor($('.calendar table').eq(0).find('td.optional'),myDate.getFullYear(),myDate.getMonth()+1,Date());
             trHide();
             pastDay();
+            //限定范围
+            limitDate($(this).attr('data-mindate'),$(this).attr('data-maxdate'));
         })
            
  	}

@@ -168,7 +168,7 @@
                                     +            '<p>1间1晚 <b><input type="text" readonly="readonly" value="'+single[6]+'">至<input readonly="readonly" type="text" value="'+single[5]+'"></b></p>'
                                     +        '</div>'
                                     +        '<div class="cart-item-btn">'
-                                    +            '<a class="cart-modTime" data-reset="5"  href="javascript:;">修改时间</a>'
+                                    +            '<a class="cart-modTime" data-reset="5" data-mindate="2017-11-28" data-maxdate="2017-12-08"  href="javascript:;">修改时间</a>'
                                     +        '</div>'
                                     +    '</div>'
                                     +'</li>');

@@ -3758,10 +3758,10 @@ body .package-btn a {
 }
 .couponList li .couponList-use{
 	width: 2.733333rem;
-	height: 2.733333rem;
+	/*height: 2.733333rem;*/
 	background: #FF9811;
 	border-radius: 0.066667rem;
-	padding: 0.666667rem 0;
+	padding: 0.8rem 0;
 	text-align: center;
 }
 .couponList li.un-receive .couponList-use {
