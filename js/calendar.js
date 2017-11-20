@@ -2,6 +2,9 @@
  	function() {
         var dateType = ''; //判断点击为start或者leave
 
+        var s = '';  //私人订制cart酒店 开始限定存放
+        var e = '';  //私人订制cart酒店 结束限定存放
+
  		function showDate(obj,year,month,resetDate){
             obj.html('');
  			var oDate = new Date();
@@ -376,6 +379,7 @@
                             showColor($('.calendar table').eq(0).find('td.optional'),spanDate.getFullYear(),spanDate.getMonth()+1,endDate);
                             trHide();
                             pastDay();
+                            limitDate(s,e);
                             $('html').addClass('more_prohibit_html');
                         },600)
                     }else{
@@ -502,7 +506,9 @@
             trHide();
             pastDay();
             //限定范围
-            limitDate($(this).attr('data-mindate'),$(this).attr('data-maxdate'));
+            s = $(this).attr('data-mindate');
+            e = $(this).attr('data-maxdate');
+            limitDate(s,e);
         })
            
  	}
